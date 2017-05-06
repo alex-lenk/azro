@@ -1,0 +1,139 @@
+.hide-placeholder {
+  &::-webkit-input-placeholder {
+    opacity: 1;
+    color: #939393;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+    @include RobotoLight;
+  }
+  &::-moz-placeholder {
+    opacity: 1;
+    color: #939393;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+    @include RobotoLight;
+  }
+  &:-moz-placeholder {
+    opacity: 1;
+    color: #939393;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+    @include RobotoLight;
+  }
+  &:-ms-input-placeholder {
+    opacity: 1;
+    color: #939393;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
+    @include RobotoLight;
+  }
+  &:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:focus:-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  &:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  height: 52px;
+  padding: 0 27px 2px;
+  font-size: 16px;
+  border-radius: 2px;
+  color: #585858;
+  border: 1px solid #E1E6E9;
+  background-color: #ffffff;
+  font-weight: normal;
+  display: block;
+  transition: all .3s ease;
+  @include RobotoLight;
+  &:focus, &:active {
+    border-color: #2FC0FF;
+  }
+}
+
+textarea.form-control {
+  height: 188px;
+  padding: 19px 47px 10px;
+  resize: none;
+  overflow: hidden;
+}
+
+.form-error {
+  position: relative;
+  @include RobotoLight;
+  .form-control {
+    border-color: #FF8C8C;
+  }
+}
+
+.form-error-text {
+  color: #FF3333;
+  position: absolute;
+  top: 16px;
+  left: 27px;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.modal-message {
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.modal-message-icon {
+  width: 42px;
+  height: 42px;
+  padding-top: 12px;
+  margin-right: 20px;
+  border-radius: 50%;
+  flex: 1 0 42px;
+  svg {
+    width: 19px;
+    height: 19px;
+    fill: #fff;
+  }
+}
+
+.modal-message-text {
+  margin-bottom: 0;
+  letter-spacing: 0;
+  text-align: left;
+  font-size: 16px;
+  @include RobotoLight;
+}
+
+.error-block {
+  .modal-message-icon {
+    background-color: #FF8C8C;
+  }
+  .modal-message-text {
+    color: #FF3333;
+  }
+}
+
+.message-successful {
+  .modal-message-icon {
+    background-color: #2FC0FF;
+  }
+  .modal-message-text {
+    color: #4580E0;
+  }
+}
