@@ -4,3 +4,6 @@ dist/
 app.yaml
 .idea
 bower_components
+azro.iml
+LICENSE
+README.md

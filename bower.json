@@ -19,6 +19,6 @@
     "jquery": "^3.*",
     "normalize-css": "^5.*",
     "bootstrap": "^3.*",
-    "slick-carousel": "^1.*",
+    "slick-carousel": "^1.*"
   }
 }
