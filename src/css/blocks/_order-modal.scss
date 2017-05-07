@@ -1,0 +1,88 @@
+.order-modal {
+  .modal-title {
+    padding: 20px 15px 13px;
+    border-bottom: 1px solid #E1E6E9;
+    position: relative;
+  }
+  .close {
+    position: absolute;
+    top: 33px;
+    right: 39px;
+    float: none;
+    opacity: 1;
+    z-index: 9;
+    &:hover .icon-close {
+      fill: #0c83e7;
+    }
+  }
+  .icon-close {
+    width: 19px;
+    height: 19px;
+    fill: #999999;
+    transition: all 0.3s ease;
+  }
+  .modal-body {
+    padding: 26px 39px 35px;
+  }
+  .nav-tabs {
+    padding-left: 0;
+    margin-bottom: 25px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    li {
+      height: 55px;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      font-size: 18px;
+      text-transform: uppercase;
+      padding-top: 13px;
+      text-align: center;
+      transition: color 0.3s ease;
+      @include RobotoMedium;
+      &:not(.active) {
+        cursor: pointer;
+        &:hover {
+          color: #4580E0;
+        }
+      }
+    }
+    .active {
+      padding-left: 33px;
+      padding-right: 33px;
+      color: #4580E0;
+      border: 2px solid #2FC0FF;
+      cursor: default;
+    }
+  }
+  .tab-content {
+    text-align: center;
+  }
+  .form-group {
+    text-align: left;
+  }
+  .under-core {
+    padding: 9px 0 9px;
+    line-height: 1;
+    display: flex;
+  }
+  .under-core-label {
+    margin-right: 32px;
+    padding-top: 3px;
+    font-weight: normal;
+    @include RobotoRegular;
+  }
+  .under-core-radio {
+    flex-grow: 1;
+    display: flex;
+  }
+  .btn {
+    margin-top: 17px;
+  }
+}
+
+.modal-open {
+  .wrapper {
+    filter: blur(2px);
+  }
+}
