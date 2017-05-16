@@ -5,11 +5,11 @@ body {
   color: #585858;
   font-size: 16px;
   line-height: 1.4;
-  @include RobotoRegular;
+  @include CeraGRLight;
 }
 
 a, .as-link {
-  color: #5A7CE5;
+  color: #E6E6E6;
   text-decoration: none;
   transition: all 0.3s ease;
   &:hover {
@@ -25,13 +25,11 @@ a, .as-link {
 }
 
 b, strong {
-  @include RobotoBold;
   font-weight: normal;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
-  @include RobotoBold;
 }
 
 h1 {
@@ -72,7 +70,6 @@ h4 {
     text-align: justify
   }
   &-bold {
-    @include RobotoBold;
     font-weight: normal;
   }
   &-nowrap {
@@ -129,7 +126,6 @@ h4 {
       font-size: 15px;
       letter-spacing: 1px;
       line-height: 27px;
-      @include RobotoLight;
       &::before {
         margin-right: 5px;
         display: inline;

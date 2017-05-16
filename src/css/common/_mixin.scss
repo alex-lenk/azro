@@ -35,19 +35,6 @@
   }
 }
 
-@mixin RobotoMedium {
-  font-family: 'Roboto-Medium', sans-serif;
-}
-
-@mixin RobotoBold {
-  font-family: 'robotobold', sans-serif;
-}
-
-@mixin RobotoRegular {
-  font-family: 'robotoregular', sans-serif;
-  font-weight: normal;
-}
-
-@mixin RobotoLight {
-  font-family: 'Roboto-Light', sans-serif;
+@mixin CeraGRLight {
+  font-family: 'CeraGR-Light', sans-serif;
 }
