@@ -1,166 +1,122 @@
-.header {
-  padding-top: 50px;
-  color: #fff;
-  position: relative;
-  background: #4580e0;
-  background: -moz-linear-gradient(-45deg, #4580e0 0%, #2fe9ff 100%);
-  background: -webkit-linear-gradient(-45deg, #4580e0 0%, #2fe9ff 100%);
-  background: linear-gradient(135deg, #4580e0 0%, #2fe9ff 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4580e0', endColorstr='#2fe9ff', GradientType=1);
-  &:not(.header-full) {
-    height: 820px;
-  }
-  &::after {
-    width: 100%;
-    height: 170px;
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    content: '';
-    background: url(../img/bg-header.png) no-repeat top center;
-  }
-  a {
-    color: inherit;
-  }
-}
-
-.top-panel {
-  margin-bottom: 150px;
-  display: flex;
-}
-
-.logo {
-  padding-top: 8px;
-  text-transform: uppercase;
-  @include RobotoBold;
-}
-
-.site-name {
-  font-size: 20px;
-  display: inherit;
-}
-
-.from-author {
-  font-size: 14px;
-  color: #FEBD00;
-  letter-spacing: 0.7px;
-
-}
-
-.menu {
-  padding-top: 13px;
-  flex-grow: 1;
-  text-align: right;
-  font-size: 0;
-  text-transform: uppercase;
-  li {
-    font-size: 14px;
-    display: inline-block;
-    vertical-align: top;
-    &:not(:first-child) {
-      margin-left: 30px;
-    }
-  }
-}
-
-.contact-btn {
-  width: 165px;
-  height: 45px;
-  line-height: 47px;
-  margin-left: 40px;
-  background-color: #4580E0;
-  border-radius: 2px;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 0.96px;
-  cursor: pointer;
-  @include RobotoBold;
-  .icon-vk {
-    width: 24px;
-    height: 14px;
-    margin-left: 5px;
-    fill: #ffffff;
-    top: 1px;
+header {
+  height: 100vh;
+  padding: 20px;
+  background: url(../img/bg/bg-header.png) no-repeat top center;
+  background-size: cover;
+  .container {
     position: relative;
+    left: 30px;
   }
-  &:hover {
-    background-color: #FFBE00;
-    color: inherit;
+}
+
+.header-wrap {
+  height: calc(100vh - 40px);
+  padding: 37px 80px 0;
+  background: url(../img/bg/bg-video@2x.jpg) no-repeat top center;
+  background-size: cover;
+}
+
+.header-panel {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-panel-right {
+  display: flex;
+  align-items: center;
+  .social {
+    align-self: center;
   }
 }
 
 .header-content {
-  margin-bottom: 125px;
+  margin-top: -50px;
   display: flex;
   justify-content: space-between;
 }
 
-.header-content-title {
-  margin-bottom: 27px;
-  font-size: 25px;
-  letter-spacing: 1.7px;
-  text-transform: uppercase;
-  @include RobotoBold;
+.header-content-right {
+  max-width: 525px;
+  padding: 83px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  svg {
-    width: 51px;
-    height: 44px;
-    margin-right: 27px;
+.header-content-text {
+  padding-top: 160px;
+  font-size: 20px;
+  color: #fff;
+  line-height: 1.2;
+  @include CeraGRLight;
+  img {
+    margin-bottom: 25px;
   }
 }
 
-.header-content-list {
-  margin-bottom: 37px;
-  letter-spacing: 1.1px;
-  font-size: 0;
+.social {
+  height: 30px;
+  margin-right: 38px;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
   li {
-    font-size: 16px;
-    &:nth-child(odd)::before {
-      width: 8px;
-      height: 8px;
-      margin-top: 6px;
-      margin-right: 10px;
-      border-radius: 50%;
-      background-color: #ffffff;
-      content: '';
-      display: inline-block;
-      vertical-align: top;
-      box-shadow: 2px 0 6px 0 rgba(77, 115, 254, 0.45);
+    padding-top: 6px;
+    display: inline-block;
+    vertical-align: top;
+    &:first-child {
+      padding-top: 4px;
+      margin-right: 26px;
     }
   }
+  a {
+    &:hover svg {
+      fill: #33ddfb;
+    }
+  }
+  svg {
+    fill: #fff;
+    transition: all 0.3s ease;
+  }
+  .icon-be {
+    width: 24px;
+    height: 24px;
+  }
+  .icon-fb {
+    width: 18px;
+    height: 18px;
+  }
 }
 
-.header-action {
-  font-size: 17px;
-  text-align: center;
+.logo {
+  display: block;
+  margin-left: -128px;
+}
+
+.menu {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  font-size: 18px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-}
+  display: flex;
+  justify-content: space-between;
+  @include CeraGRMedium;
+  li {
 
-.header-action-string {
-  line-height: 1;
-  margin-right: 75px;
-  color: #fff;
-  position: relative;
-  top: -3px;
-  text-decoration: underline;
-  @include RobotoMedium;
-  &:hover {
-    text-decoration: none;
   }
-}
-
-.header-full {
-  .container {
-    height: 100vh;
-    min-height: 740px;
-    padding-bottom: 170px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .top-panel, .header-content {
-    margin-bottom: 0;
+  a {
+    display: inline-block;
+    padding-bottom: 4px;
+    color: #fff;
+    border-bottom: 1px solid;
+    transition: all 0.3s ease;
+    &:hover {
+      border-bottom: transparent;
+      color: #fff;
+    }
   }
 }

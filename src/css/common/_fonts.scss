@@ -13,3 +13,19 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'CeraGR-Regular';
+  src: url('../fonts/CeraGR-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/CeraGR-Regular.otf') format('opentype'),
+  url('../fonts/CeraGR-Regular.woff') format('woff'), url('../fonts/CeraGR-Regular.ttf') format('truetype'), url('../fonts/CeraGR-Regular.svg#CeraGR-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CeraGR-Medium';
+  src: url('../fonts/CeraGR-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/CeraGR-Medium.otf') format('opentype'),
+  url('../fonts/CeraGR-Medium.woff') format('woff'), url('../fonts/CeraGR-Medium.ttf') format('truetype'), url('../fonts/CeraGR-Medium.svg#CeraGR-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
