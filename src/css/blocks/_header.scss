@@ -25,7 +25,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  width: 100%;
 }
 
 .header-wrap {
@@ -53,6 +53,9 @@ header {
 .header-panel-sound {
   display: flex;
   align-items: center;
+}
+
+.volume-control {
   svg {
     fill: #fff;
     transition: all 0.3s ease;
@@ -72,16 +75,9 @@ header {
   margin-top: -5px;
   margin-left: 45px;
   outline: none;
+  transition: all 0.3s ease;
   &:not(.slider-range-open) {
     opacity: 0;
-  }
-}
-
-.header-panel-right {
-  display: flex;
-  align-items: center;
-  .social {
-    align-self: center;
   }
 }
 
@@ -115,38 +111,6 @@ header {
   @include CeraGRLight;
   img {
     margin-bottom: 25px;
-  }
-}
-
-.social {
-  height: 30px;
-  margin-right: 38px;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
-  li {
-    padding-top: 6px;
-    display: inline-block;
-    vertical-align: top;
-    &:first-child {
-      padding-top: 4px;
-      margin-right: 26px;
-    }
-  }
-  a:hover svg {
-    fill: #33ddfb;
-  }
-  svg {
-    fill: #fff;
-    transition: all 0.3s ease;
-  }
-  .icon-be {
-    width: 24px;
-    height: 24px;
-  }
-  .icon-fb {
-    width: 18px;
-    height: 18px;
   }
 }
 
