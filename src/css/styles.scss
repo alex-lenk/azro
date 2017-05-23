@@ -4,8 +4,45 @@
 @import "common/fonts";
 @import "common/btn";
 @import "common/common";
-
 @import "blocks/header";
 @import "blocks/our-mission";
 @import "blocks/nav-left";
 @import "blocks/nav-panel";
+
+.cases {
+  color: #fff;
+  .container {
+    height: 100vh;
+    padding-top: 65px;
+    padding-bottom: 55px;
+    @include clearfix;
+  }
+}
+
+.first-work {
+}
+
+.cases-title-img {
+  margin-bottom: 120px;
+  //display: none;
+  clear: both;
+}
+
+.cases-left {
+  width: 50%;
+}
+
+.cases-title {
+  margin: 0 0 20px;
+  padding: 0;
+  font-size: 31px;
+  font-weight: normal;
+  @include CeraGRBold;
+}
+
+.cases-text {
+  margin-bottom: 40px;
+  font-size: 18px;
+  line-height: 1.2;
+  @include CeraGRLight;
+}
