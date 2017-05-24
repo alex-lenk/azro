@@ -1,3 +1,4 @@
+/*
 @font-face {
   font-family: 'CeraGR-Light';
   src: url('../fonts/CeraGR-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/CeraGR-Light.otf') format('opentype'),
@@ -37,6 +38,7 @@
   font-weight: normal;
   font-style: normal;
 }
+*/
 
 @font-face {
   font-family: 'CeraGR-Thin';
@@ -44,4 +46,44 @@
   url('../fonts/CeraGR-Thin.woff') format('woff'), url('../fonts/CeraGR-Thin.ttf') format('truetype'), url('../fonts/CeraGR-Thin.svg#CeraGR-Thin') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'ceragr-bolduploaded_file';
+  src: url('../fonts/era_gr_bold-webfont.woff2') format('woff2'),
+  url('../fonts/cera_gr_bold-webfont.woff') format('woff'),
+  url('../fonts/cera_gr_bold-webfont.svg#ceragr-bolduploaded_file') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'ceragr-lightuploaded_file';
+  src: url('../fonts/cera_gr_light-webfont.woff2') format('woff2'),
+  url('../fonts/cera_gr_light-webfont.woff') format('woff'),
+  url('../fonts/cera_gr_light-webfont.svg#ceragr-lightuploaded_file') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'ceragr-mediumuploaded_file';
+  src: url('../fonts/cera_gr_medium-webfont.woff2') format('woff2'),
+  url('../fonts/cera_gr_medium-webfont.woff') format('woff'),
+  url('../fonts/cera_gr_medium-webfont.svg#ceragr-mediumuploaded_file') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'ceragr-regularuploaded_file';
+  src: url('../fonts/cera_gr-webfont.woff2') format('woff2'),
+  url('../fonts/cera_gr-webfont.woff') format('woff'),
+  url('../fonts/cera_gr-webfont.svg#ceragr-regularuploaded_file') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
 }
