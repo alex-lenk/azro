@@ -50,3 +50,22 @@
 @mixin CeraGRBold {
   font-family: 'CeraGR-Bold', sans-serif;
 }
+
+@mixin CeraGRThin {
+  font-family: 'CeraGR-Thin', sans-serif;
+}
+
+@mixin hidePlaceholder {
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
