@@ -11,6 +11,17 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.3s ease;
+  &.fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    + .nav-panel {
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+  }
 }
 
 .navbar-toggle {
@@ -72,3 +83,6 @@
     margin-bottom: -.1em;
   }
 }
+
+.class {}
+jmfc

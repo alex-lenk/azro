@@ -1,45 +1,3 @@
-/*
-@font-face {
-  font-family: 'CeraGR-Light';
-  src: url('../fonts/CeraGR-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/CeraGR-Light.otf') format('opentype'),
-  url('../fonts/CeraGR-Light.woff') format('woff'), url('../fonts/CeraGR-Light.ttf') format('truetype'), url('../fonts/CeraGR-Light.svg#CeraGR-Light') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'WorkSans-Light';
-  src: url('../fonts/WorkSans-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/WorkSans-Light.otf') format('opentype'),
-  url('../fonts/WorkSans-Light.woff') format('woff'), url('../fonts/WorkSans-Light.ttf') format('truetype'), url('../fonts/WorkSans-Light.svg#WorkSans-Light') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'CeraGR-Regular';
-  src: url('../fonts/CeraGR-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/CeraGR-Regular.otf') format('opentype'),
-  url('../fonts/CeraGR-Regular.woff') format('woff'), url('../fonts/CeraGR-Regular.ttf') format('truetype'), url('../fonts/CeraGR-Regular.svg#CeraGR-Regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'CeraGR-Medium';
-  src: url('../fonts/CeraGR-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/CeraGR-Medium.otf') format('opentype'),
-  url('../fonts/CeraGR-Medium.woff') format('woff'), url('../fonts/CeraGR-Medium.ttf') format('truetype'), url('../fonts/CeraGR-Medium.svg#CeraGR-Medium') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'CeraGR-Bold';
-  src: url('../fonts/CeraGR-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/CeraGR-Bold.otf') format('opentype'),
-  url('../fonts/CeraGR-Bold.woff') format('woff'), url('../fonts/CeraGR-Bold.ttf') format('truetype'), url('../fonts/CeraGR-Bold.svg#CeraGR-Bold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-*/
-
 @font-face {
   font-family: 'CeraGR-Thin';
   src: url('../fonts/CeraGR-Thin.eot?#iefix') format('embedded-opentype'), url('../fonts/CeraGR-Thin.otf') format('opentype'),
@@ -50,12 +8,11 @@
 
 @font-face {
   font-family: 'ceragr-bolduploaded_file';
-  src: url('../fonts/era_gr_bold-webfont.woff2') format('woff2'),
+  src: url('../fonts/cera_gr_bold-webfont.woff2') format('woff2'),
   url('../fonts/cera_gr_bold-webfont.woff') format('woff'),
   url('../fonts/cera_gr_bold-webfont.svg#ceragr-bolduploaded_file') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
@@ -65,7 +22,6 @@
   url('../fonts/cera_gr_light-webfont.svg#ceragr-lightuploaded_file') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
@@ -75,7 +31,6 @@
   url('../fonts/cera_gr_medium-webfont.svg#ceragr-mediumuploaded_file') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
@@ -85,5 +40,4 @@
   url('../fonts/cera_gr-webfont.svg#ceragr-regularuploaded_file') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
