@@ -2,14 +2,14 @@ html,
 body {
   min-width: 768px;
   background: #181a1b;
-  color: #585858;
+  color: #ffffff;
   font-size: 16px;
   line-height: 1.4;
   @include CeraGRRegular;
 }
 
 a, .as-link {
-  color: #E6E6E6;
+  color: #33ddfb;
   text-decoration: none;
   transition: all 0.3s ease;
   &:hover {
@@ -91,7 +91,7 @@ button, input, select, textarea {
 }
 
 .container {
-  width: 1400px;
+  width: 1300px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -101,6 +101,12 @@ button, input, select, textarea {
   align-items: center;
   .social {
     align-self: center;
+  }
+  .btn-white {
+    min-width: 200px;
+    height: 60px;
+    line-height: 58px;
+    letter-spacing: 1px;
   }
 }
 
@@ -133,5 +139,17 @@ button, input, select, textarea {
   .icon-fb {
     width: 18px;
     height: 18px;
+  }
+}
+
+.title-block {
+  display: flex;
+  align-items: center;
+  &::before {
+    width: 50px;
+    height: 1px;
+    margin-right: 25px;
+    content: '';
+    background-color: #33ddfb;
   }
 }

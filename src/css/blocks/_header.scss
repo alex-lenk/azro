@@ -1,4 +1,4 @@
-header {
+.home-header {
   height: 100vh;
   padding: 20px;
   background: url(../img/bg/bg-header.png) no-repeat top center;
@@ -82,6 +82,7 @@ header {
 }
 
 .header-content {
+  width: 1400px;
   height: 100%;
   max-height: 776px;
   margin-top: -50px;
