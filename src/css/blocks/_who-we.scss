@@ -5,10 +5,13 @@
 .who-we-list {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+
   li {
     position: relative;
     transition: all 0.3s ease;
-    &::before, &::after {
+    &::before,
+    &::after {
       content: '';
       position: absolute;
       z-index: 3;
@@ -16,6 +19,7 @@
       left: 0;
       transition: all .3s ease;
     }
+
     &::before {
       width: 215px;
       height: 298px;
@@ -26,21 +30,20 @@
       height: 67px;
       background-color: #181a1b;
     }
-    &:hover {
-      &::before, &::after {
-        bottom: 72px;
-      }
-      img, .who-we-title, .who-we-title-position {
-        top: -25px;
-      }
+    &:first-child {
+      margin-top: 27px;
+    }
+    &:nth-child(3) {
+      margin-top: 30px;
+    }
+    &:last-child {
+      margin-top: 23px;
     }
   }
   img {
     margin-left: 33px;
     position: relative;
     z-index: 4;
-    top: 0;
-    transition: all .3s ease;
   }
 }
 
@@ -50,19 +53,15 @@
   font-size: 25px;
   line-height: 1;
   text-transform: uppercase;
+  color: #33ddfb;
   position: relative;
   z-index: 5;
-  top: 0;
-  transition: all .3s ease;
   @include CeraGRMedium;
 }
 
-.who-we-title-position {
+.who-we-position {
   font-size: 20px;
   color: #fff;
   line-height: 1;
-  position: relative;
-  top: 0;
-  transition: all .3s ease;
   @include CeraGRRegular;
 }
