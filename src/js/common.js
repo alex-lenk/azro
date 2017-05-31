@@ -1,32 +1,4 @@
 $(document).ready(function () {
-  $(function () {
-    $(".slider-horizontal").slider({
-      range: "min",
-      value: 50,
-      min: 1,
-      max: 100,
-      slide: function (event, ui) {
-        $("#amount").val("$" + ui.value);
-      }
-    });
-    $("#amount").val("$" + $("#slider-range-min").slider("value"));
-  });
-
-  $(function () {
-    $(".slider-vertical").slider({
-      orientation: "vertical",
-      range: "min",
-      value: 50,
-      min: 0,
-      max: 100,
-      slide: function (event, ui) {
-        $("#amount").val(ui.value);
-      }
-    });
-    $("#amount").val($(".slider-vertical").slider("value"));
-  });
-
-
   $(".volume-control").click(function () {
     $('.slider-range').toggleClass("slider-range-open");
   });
@@ -36,31 +8,9 @@ $(document).ready(function () {
     $('.nav-panel').toggleClass("nav-panel-open");
   });
 
+  //= lib/jquery-ui-init.js
 
-  var navPos, winPos, navHeight, nav = $(".nav-left");
-
-  function refreshVar() {
-    navPos = nav.offset().top;
-    navHeight = nav.outerHeight(true);
-  }
-
-  refreshVar();
-  $(window).resize(refreshVar);
-
-  $('<div class="clone-nav"></div>')
-    .insertBefore(".nav-left")
-    .css("height", navHeight)
-    .hide();
-
-  $(window).scroll(function() {
-    winPos = $(window).scrollTop();
-
-    if (winPos >= navPos) {
-      nav.addClass("fixed shadow");
-      $(".clone-nav").show();
-    } else {
-      nav.removeClass("fixed shadow");
-      $(".clone-nav").hide();
-    }
-  });
+  //= lib/nav-left.js
 });
+
+//= lib/animated-gradient.js
