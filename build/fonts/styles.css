@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'CeraGR-Medium';
+  src: url('CeraGR-Medium.eot?#iefix') format('embedded-opentype'),  url('CeraGR-Medium.otf')  format('opentype'),
+	     url('CeraGR-Medium.woff') format('woff'), url('CeraGR-Medium.ttf')  format('truetype'), url('CeraGR-Medium.svg#CeraGR-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

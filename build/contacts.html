@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>AZRO studio</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link rel="stylesheet" href="css/lib.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/media.css">
+
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+<meta content="telephone=no" name="format-detection">
+<meta name="msapplication-tap-highlight" content="no">
+
+<link rel="apple-touch-icon" sizes="180x180" href="img/touch/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/touch/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/touch/favicon-16x16.png">
+<link rel="manifest" href="img/touch/manifest.json">
+<link rel="mask-icon" href="img/touch/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="img/touch/favicon.ico">
+<meta name="msapplication-config" content="img/touch/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+<div class="nav-left">
+  <div class="navbar-toggle">
+    <svg class="close">
+      <use xlink:href="img/icons.svg#close"></use>
+    </svg>
+  </div>
+
+  <div class="panel-sound">
+    <div class="volume-control">
+      <svg class="volume">
+        <use xlink:href="img/icons.svg#volume"></use>
+      </svg>
+    </div>
+
+    <div class="slider-range slider-vertical"></div>
+  </div>
+</div>
+
+<nav class="nav-panel">
+  <ul class="nav-panel-menu">
+    <li><a href="about-us.html">About Us</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="contacts.html">Contacts</a></li>
+  </ul>
+
+  <div class="support-block">
+    <ul class="social">
+      <li>
+        <a href="#" rel="nofollow" target="_blank">
+          <svg class="icon-be">
+            <use xlink:href="img/icons.svg#be"></use>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="#" rel="nofollow" target="_blank">
+          <svg class="icon-fb">
+            <use xlink:href="img/icons.svg#fb"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <a href="#" class="btn btn-white"><span>Hire us</span></a>
+  </div>
+</nav>
+
+<div class="wrapper">
+  <div class="container">
+    <header class="header-page">
+      <h1 class="title-block">
+        <picture>
+          <source srcset="img/title/contacts@2x.png"
+                  media="(-webkit-min-device-pixel-ratio: 1.3), (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 4/3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.33dppx)">
+          <img src="img/title/contacts.png" alt="contacts" title="contacts">
+        </picture>
+      </h1>
+    </header>
+
+    <div class="contacts-page page-content">
+      <ul class="contacts-page-list list-unstyled">
+        <li>
+          <div class="decor-rhombus"></div>
+
+          <svg class="email">
+            <use xlink:href="img/icons.svg#email"></use>
+          </svg>
+
+          <span class="contacts-page-list-text">info@azro.studio</span>
+        </li>
+        <li>
+          <div class="decor-rhombus"></div>
+
+          <svg class="phone">
+            <use xlink:href="img/icons.svg#phone"></use>
+          </svg>
+
+          <span class="contacts-page-list-text">
+              +44 20 3287 7968;<br>
+              +7 926 000 77 96
+            </span>
+        </li>
+        <li>
+          <div class="decor-rhombus"></div>
+
+          <svg class="skype">
+            <use xlink:href="img/icons.svg#skype"></use>
+          </svg>
+
+          <span class="contacts-page-list-text">azro.studio</span>
+        </li>
+        <li>
+          <div class="decor-rhombus"></div>
+
+          <svg class="location">
+            <use xlink:href="img/icons.svg#location"></use>
+          </svg>
+
+          <span class="contacts-page-list-text">Ivana Franka Square 11A, Kiev</span>
+        </li>
+      </ul>
+
+      <div class="contacts-page-right">
+
+        <!--
+            You need to include this script tag on any page that has a Google Map.
+
+            The following script tag will work when opening this example locally on your computer.
+            But if you use this on a localhost server or a live website you will need to include an API key.
+            Sign up for one here (it's free for small usage):
+                https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+
+            After you sign up, use the following script tag with YOUR_GOOGLE_API_KEY replaced with your actual key.
+                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API_KEY"></script>
+        -->
+        <!--<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>-->
+
+        <script type="text/javascript">
+          //Generation map google
+          var map;
+          function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), this.mapOptions($lati, $longi));
+/*            {
+              center: {lat: -34.397, lng: 150.644},
+              zoom: 8
+            });*/
+          }
+
+
+          mapGoogle = {
+            init: function () {
+              var $lati = $('#map').attr('data-lat'),
+                $longi = $('#map').attr('data-long'),
+                map = {};
+              map = new google.maps.Map(document.getElementById('map-canvas'), this.mapOptions($lati, $longi));
+              this.addMarker($lati, $longi, map);
+            },
+            addMarker: function ($lati, $longi, map) {
+              var egglabs = new google.maps.LatLng($lati, $longi),
+                markers = [],
+                image = new google.maps.MarkerImage(
+                  '/wp-content/themes/locad_new/images/ico-marker.png',
+                  new google.maps.Size(101, 82),
+                  new google.maps.Point(0, 0),
+                  new google.maps.Point(42, 56)
+                );
+              markers.push(new google.maps.Marker({
+                position: egglabs,
+                raiseOnDrag: false,
+                icon: image,
+                map: map,
+                draggable: false
+              }));
+            },
+            mapOptions: function ($lati, $longi) {
+              var mapCoordinates = new google.maps.LatLng($lati, $longi);
+              var mapOptions = {
+                zoom: 15,
+                disableDefaultUI: false,
+                center: mapCoordinates,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                scrollwheel: false,
+                styles: [
+                  {
+                    "featureType": "administrative",
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"color": "#444444"}]
+                  },
+                  {"featureType": "landscape", "elementType": "all", "stylers": [{"color": "#f2f2f2"}]},
+                  {"featureType": "poi", "elementType": "all", "stylers": [{"visibility": "off"}]},
+                  {"featureType": "road", "elementType": "all", "stylers": [{"saturation": -100}, {"lightness": 45}]},
+                  {"featureType": "road.highway", "elementType": "all", "stylers": [{"visibility": "simplified"}]},
+                  {
+                    "featureType": "road.highway",
+                    "elementType": "geometry",
+                    "stylers": [{"visibility": "simplified"}, {"color": "#ff6a6a"}, {"lightness": "0"}]
+                  },
+                  {"featureType": "road.highway", "elementType": "labels.text", "stylers": [{"visibility": "on"}]},
+                  {"featureType": "road.highway", "elementType": "labels.icon", "stylers": [{"visibility": "on"}]},
+                  {"featureType": "road.arterial", "elementType": "all", "stylers": [{"visibility": "on"}]},
+                  {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#ff6a6a"}, {"lightness": "75"}]
+                  },
+                  {"featureType": "road.arterial", "elementType": "labels.icon", "stylers": [{"visibility": "off"}]},
+                  {"featureType": "road.local", "elementType": "geometry.fill", "stylers": [{"lightness": "75"}]},
+                  {"featureType": "transit", "elementType": "all", "stylers": [{"visibility": "off"}]},
+                  {"featureType": "transit.line", "elementType": "all", "stylers": [{"visibility": "on"}]},
+                  {"featureType": "transit.station.bus", "elementType": "all", "stylers": [{"visibility": "on"}]},
+                  {"featureType": "transit.station.rail", "elementType": "all", "stylers": [{"visibility": "on"}]},
+                  {
+                    "featureType": "transit.station.rail",
+                    "elementType": "labels.icon",
+                    "stylers": [{"weight": "0.01"}, {"hue": "#ff0028"}, {"lightness": "0"}]
+                  },
+                  {
+                    "featureType": "water",
+                    "elementType": "all",
+                    "stylers": [{"visibility": "on"}, {"color": "#80e4d8"}, {"lightness": "25"}, {"saturation": "-23"}]
+                  }
+                ]
+              };
+              return mapOptions;
+            }
+          };
+        </script>
+
+        <div id="map"></div>
+
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfNZKzqOfT_ah2saMCzO6ZH0KE2TcxoPg&callback=initMap"
+                async defer></script>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-left">
+      <a href="index.html"><picture>
+          <source srcset="img/logo-azro.studio@2x.png" media="(-webkit-min-device-pixel-ratio: 1.3), (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 4/3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.33dppx)">
+          <img src="img/logo-azro.studio.png" alt="azro.studio" title="azro.studio">
+        </picture></a>
+      <p class="copy">© AZRO Studio Ltd. 2017</p>
+    </div>
+
+    <div class="footer-center">
+      <div class="footer-title">Want to work with US?</div>
+      <form action="#" class="footer-form">
+        <div class="form-group">
+          <input type="text" class="form-control hide-placeholder" placeholder="Your Name">
+        </div>
+
+        <div class="form-group">
+          <input type="email" class="form-control hide-placeholder" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control hide-placeholder" placeholder="Phone Number">
+        </div>
+
+        <button class="btn btn-white"><span>Send Request</span></button>
+      </form>
+    </div>
+
+    <div class="footer-right">
+      ﻿Our mission is to challenge the limits of imagination and technology in order to deliver best content, create
+      value and make a difference.
+    </div>
+  </div>
+</footer>
+
+<script src="js/jquery.js"></script>
+<script src="js/lib.js"></script>
+<script src="js/common.js"></script>
+
+
+</body>
+</html>
