@@ -13,6 +13,9 @@ footer {
   max-width: 320px;
   flex-basis: 320px;
   flex-shrink: 0;
+  img {
+    max-width: 115px;
+  }
 }
 
 .footer-center {

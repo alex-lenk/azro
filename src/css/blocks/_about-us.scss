@@ -1,3 +1,7 @@
+.img-about-us {
+  max-width: 573px;
+}
+
 .about-us-advantages {
   padding-left: 71px;
   padding-right: 108px;
@@ -28,14 +32,6 @@
   margin: 0 0 0 -50px;
   z-index: 3;
   transform: rotateZ(45deg);
-}
-
-.about-us-advantages li::before {
-  background: #0f5c80;
-  background: -moz-linear-gradient(-45deg, #0f5c80 0%, #232525 100%);
-  background: -webkit-linear-gradient(-45deg, #0f5c80 0%, #232525 100%);
-  background: linear-gradient(135deg, #0f5c80 0%, #232525 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0f5c80', endColorstr='#232525', GradientType=1);
 }
 
 .about-us-advantages li::after {

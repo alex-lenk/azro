@@ -2,6 +2,9 @@
   height: 100vh;
   padding: 20px;
   background-size: cover;
+  .logo img {
+    max-width: 733px;
+  }
 }
 
 .video-bg {
@@ -113,6 +116,7 @@
   line-height: 1.2;
   @include CeraGRLight;
   img {
+    max-width: 340px;
     margin-bottom: 25px;
   }
 }
