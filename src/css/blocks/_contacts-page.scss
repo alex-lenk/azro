@@ -1,0 +1,138 @@
+.contacts-page {
+  display: flex;
+}
+
+.contacts-page-list {
+  max-width: 522px;
+  flex-basis: 522px;
+  color: #e6e6e6;
+  font-size: 0;
+  text-align: left;
+  @include CeraGRLight;
+
+  li {
+    min-width: 140px;
+    margin-bottom: 65px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 17px;
+    position: relative;
+    text-align: center;
+    &:first-child {
+      margin-right: 140px;
+    }
+    &:nth-child(3) {
+      margin-right: 112px;
+    }
+    &:last-child {
+      max-width: 200px;
+    }
+  }
+  a {
+    color: inherit;
+  }
+
+  svg {
+    width: 33px;
+    height: 33px;
+    top: 55px;
+    left: 50%;
+    fill: #33ddfb;
+    position: absolute;
+    z-index: 7;
+  }
+  .email {
+    width: 33px;
+    height: 33px;
+    top: 55px;
+    margin-left: -17px;
+  }
+  .phone {
+    width: 31px;
+    height: 30px;
+    top: 57px;
+    margin-left: -16px;
+  }
+  .skype {
+    width: 30px;
+    height: 32px;
+    top: 56px;
+    margin-left: -15px;
+  }
+  .location {
+    width: 32px;
+    height: 28px;
+    top: 59px;
+    margin-left: -17px;
+  }
+}
+
+.decor-rhombus {
+  padding-top: 160px;
+  position: relative;
+}
+
+.decor-rhombus::before,
+.contacts-page-list li::after {
+  width: 100px;
+  height: 100px;
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 50%;
+  margin: 0 0 0 -50px;
+  z-index: 3;
+  transform: rotateZ(45deg);
+}
+
+.decor-rhombus::before {
+  background: #0f5c80;
+  background: -moz-linear-gradient(-45deg, #0f5c80 0%, #232525 100%);
+  background: -webkit-linear-gradient(-45deg, #0f5c80 0%, #232525 100%);
+  background: linear-gradient(135deg, #0f5c80 0%, #232525 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0f5c80', endColorstr='#232525', GradientType=1);
+}
+
+.contacts-page-list li::after {
+  width: 94px;
+  height: 94px;
+  top: 26px;
+  margin-left: -47px;
+  background-color: #181a1b;
+}
+
+.contacts-page-right {
+  padding-left: 53px;
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    border: 14px solid #232525;
+    width: 740px;
+    height: 460px;
+    content: '';
+    z-index: 3;
+  }
+  &::after {
+    position: absolute;
+    top: 316px;
+    left: 0;
+    border: 14px solid #181a1b;
+    width: 195px;
+    height: 200px;
+    content: '';
+    z-index: 4;
+  }
+}
+
+#map-canvas {
+  width: 725px;
+  max-height: 450px;
+  position: relative;
+  z-index: 5;
+  canvas {
+    background: url(../img/ico-marker.png) no-repeat 148px 44px;
+    background-size: 27px 32px;
+  }
+}

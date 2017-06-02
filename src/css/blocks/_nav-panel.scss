@@ -12,13 +12,18 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transform: translate3d(-100%,0,0);
+  transform: translate3d(-100%, 0, 0);
   transition: transform 0.4s;
-  transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   will-change: transform;
 
   .social a:hover svg {
     fill: #181a1b;
+  }
+  .support-block .btn-white {
+    min-width: 200px;
+    height: 60px;
+    line-height: 58px;
   }
 }
 
@@ -56,9 +61,9 @@
 }
 
 .nav-panel-open {
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
   transition: transform 0.8s;
-  transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
 }
 
 .nav-left {
@@ -82,45 +87,6 @@
     + .nav-panel {
       position: fixed;
     }
-  }
-}
-
-.navbar-toggle {
-  width: 36px;
-  height: 24px;
-  padding: 11px 5px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  &::before {
-    content: '';
-    width: 25px;
-    height: 2px;
-    border-radius: 40px;
-    transition: all 0.3s ease;
-  }
-  .close {
-    width: 22px;
-    height: 22px;
-    fill: #fff;
-    position: absolute;
-    top: 0;
-    left: 7px;
-    transition: all 0.3s ease;
-  }
-  &:not(.navbar-toggle-open) {
-    &::before {
-      display: block;
-      background-color: #ffffff;
-      box-shadow: 0 8px 0 0 #ffffff, 0 -7px 0 0 #ffffff;
-    }
-    .close {
-      opacity: 0;
-    }
-  }
-  &:hover::before {
-    background-color: #3cc9e5;
-    box-shadow: 0 8px 0 0 #3cc9e5, 0 -7px 0 0 #3cc9e5;
   }
 }
 
@@ -149,4 +115,134 @@
   position: absolute;
   left: 0;
   top: 0;
+}
+
+$tcon-size: 40px !default;
+$tcon-transition: .3s !default;
+$tcon-jstransform: 'tcon-transform' !default;
+
+$tcon-menu-radius: ($tcon-size / 14) !default;
+$tcon-menu-color: #fff !default;
+$tcon-menu-arrowleft-transformation: (
+  transform: scale3d(.8, .8, .8) rotate3d(0, 0, 1, 90deg)
+) !default;
+$tcon-menu-arrow360left-transformation: (
+  transform: scale3d(.8, .8, .8) rotate3d(0, 0, 1, 360deg)
+) !default;
+.tcon {
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $tcon-size;
+  transition: $tcon-transition;
+  user-select: none;
+  width: $tcon-size;
+  background: transparent;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+
+  > * {
+    display: block;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+  &::-moz-focus-inner {
+    border: 0;
+  }
+}
+
+@mixin tcon-menu-lines {
+  display: inline-block;
+  height: ($tcon-size / 7);
+  width: $tcon-size;
+  transition: $tcon-transition;
+  background: $tcon-menu-color;
+}
+
+.tcon-menu__lines {
+  @include tcon-menu-lines;
+  position: relative;
+
+  &::before,
+  &::after {
+    @include tcon-menu-lines;
+    content: '';
+    position: absolute;
+    left: 0;
+    transform-origin: ($tcon-size / 14) center;
+    width: 100%;
+  }
+
+  &::before {
+    top: ($tcon-size / 4);
+  }
+
+  &::after {
+    top: -($tcon-size / 4);
+  }
+
+  .#{$tcon-jstransform} & {
+    transform: scale3d(.8, .8, .8);
+  }
+}
+
+.tcon-menu--xbutterfly {
+  width: auto;
+
+  .tcon-menu__lines {
+    &::before,
+    &::after {
+      transform-origin: 50% 50%;
+      transition: top .3s .6s ease, transform .3s ease;
+    }
+  }
+
+  &.#{$tcon-jstransform} {
+    .tcon-menu__lines {
+      background: transparent;
+
+      &::before,
+      &::after {
+        top: 0;
+        transition: top .3s ease, transform .3s .5s ease;
+        width: $tcon-size;
+      }
+
+      &::before {
+        transform: rotate3d(0, 0, 1, 45deg);
+      }
+
+      &::after {
+        transform: rotate3d(0, 0, 1, -45deg);
+      }
+    }
+  }
+}
+
+.tcon-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+
+  &:active,
+  &:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
 }

@@ -127,9 +127,6 @@ button, input, select, textarea {
     align-self: center;
   }
   .btn-white {
-    min-width: 200px;
-    height: 60px;
-    line-height: 58px;
     letter-spacing: 1px;
   }
 }
@@ -175,6 +172,9 @@ button, input, select, textarea {
     margin-right: 25px;
     content: '';
     background-color: #33ddfb;
+  }
+  img {
+    max-height: 83px;
   }
 }
 
