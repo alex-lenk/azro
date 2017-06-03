@@ -7,7 +7,6 @@
   ],
   "license": "MIT",
   "homepage": "artlenk.ru",
-  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",
