@@ -4,8 +4,20 @@ $(document).ready(function () {
   });
 
   $(".navbar-toggle").click(function () {
-    $('.navbar-toggle').toggleClass("navbar-toggle-open");
     $('.nav-panel').toggleClass("nav-panel-open");
+  });
+
+
+  var formControl = $(".form-control"),
+    formGroup = ".form-group",
+    formGroupFocus = "form-group-focus";
+
+  formControl.focus(function () {
+    $(this).closest(formGroup).addClass(formGroupFocus);
+  });
+
+  formControl.blur(function () {
+    $(this).closest(formGroup).removeClass(formGroupFocus);
   });
 
   //= init/jquery-ui-init.js
@@ -13,8 +25,6 @@ $(document).ready(function () {
   //= init/nav-left.js
 });
 
-//= init/animated-gradient.js
-
-//= init/mapgoogle.js
-
 //= init/transformicons.js
+
+//= init/animated-gradient.js
