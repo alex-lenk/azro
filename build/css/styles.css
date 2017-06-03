@@ -144,6 +144,23 @@
 
 .form-group {
   margin-bottom: 15px;
+  position: relative;
+}
+
+.form-group::after {
+  width: 0;
+  height: 2px;
+  position: relative;
+  top: -2px;
+  display: block;
+  content: '';
+  border-bottom: 2px solid #33ddfb;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.form-group-focus::after {
+  width: 100%;
 }
 
 .form-control {
@@ -175,6 +192,7 @@ body {
   color: #ffffff;
   font-size: 16px;
   line-height: 1.4;
+  overflow-x: hidden;
   font-family: 'ceragr-regularuploaded_file', sans-serif;
 }
 
@@ -677,6 +695,23 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   line-height: 58px;
 }
 
+.navbar-toggle::before {
+  content: '';
+  background-color: transparent;
+  width: 160rem;
+  height: 160rem;
+  position: absolute;
+  left: -webkit-calc(100% + 521px);
+  left: calc(100% + 521px);
+  top: 0;
+  display: none;
+  cursor: default;
+}
+
+.tcon-transform::before {
+  display: block;
+}
+
 .nav-panel-menu {
   width: 100%;
   padding-left: 102px;
@@ -707,6 +742,9 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .nav-panel-menu li {
   padding-left: 85px;
   position: relative;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 .nav-panel-menu li:not(:last-child) {
@@ -721,6 +759,12 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   top: 18px;
   left: 0;
   background-color: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.nav-panel-menu li:hover::before {
+  width: 100%;
 }
 
 .nav-panel-menu a {
@@ -825,14 +869,14 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  height: 40px;
+  height: 25px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  width: 40px;
+  width: 25px;
   background: transparent;
   outline: none;
   -webkit-tap-highlight-color: transparent;
@@ -853,8 +897,8 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .tcon-menu__lines {
   display: inline-block;
-  height: 5.71429px;
-  width: 40px;
+  height: 2px;
+  width: 25px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background: #fff;
@@ -863,26 +907,26 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .tcon-menu__lines::before, .tcon-menu__lines::after {
   display: inline-block;
-  height: 5.71429px;
-  width: 40px;
+  height: 2px;
+  width: 25px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   background: #fff;
   content: '';
   position: absolute;
   left: 0;
-  -webkit-transform-origin: 2.85714px center;
-  -ms-transform-origin: 2.85714px center;
-  transform-origin: 2.85714px center;
+  -webkit-transform-origin: 1.78571px center;
+  -ms-transform-origin: 1.78571px center;
+  transform-origin: 1.78571px center;
   width: 100%;
 }
 
 .tcon-menu__lines::before {
-  top: 10px;
+  top: 8px;
 }
 
 .tcon-menu__lines::after {
-  top: -10px;
+  top: -8px;
 }
 
 .tcon-transform .tcon-menu__lines {
@@ -914,7 +958,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   transition: top .3s ease, -webkit-transform .3s .5s ease;
   transition: top .3s ease, transform .3s .5s ease;
   transition: top .3s ease, transform .3s .5s ease, -webkit-transform .3s .5s ease;
-  width: 40px;
+  width: 25px;
 }
 
 .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::before {

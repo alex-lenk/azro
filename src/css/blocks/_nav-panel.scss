@@ -27,6 +27,22 @@
   }
 }
 
+.navbar-toggle::before {
+  content: '';
+  background-color: transparent;
+  width: 160rem;
+  height: 160rem;
+  position: absolute;
+  left: calc(100% + 521px);
+  top: 0;
+  display: none;
+  cursor: default;
+}
+
+.tcon-transform::before {
+  display: block;
+}
+
 .nav-panel-menu {
   width: 100%;
   padding-left: 102px;
@@ -42,6 +58,7 @@
   li {
     padding-left: 85px;
     position: relative;
+    align-self: flex-start;
     &:not(:last-child) {
       margin-bottom: 150px;
     }
@@ -53,6 +70,10 @@
       top: 18px;
       left: 0;
       background-color: #fff;
+      transition: all 0.3s ease;
+    }
+    &:hover::before {
+      width: 100%;
     }
   }
   a {
@@ -117,7 +138,7 @@
   top: 0;
 }
 
-$tcon-size: 40px !default;
+$tcon-size: 25px !default;
 $tcon-transition: .3s !default;
 $tcon-jstransform: 'tcon-transform' !default;
 
@@ -160,7 +181,7 @@ $tcon-menu-arrow360left-transformation: (
 
 @mixin tcon-menu-lines {
   display: inline-block;
-  height: ($tcon-size / 7);
+  height: 2px;
   width: $tcon-size;
   transition: $tcon-transition;
   background: $tcon-menu-color;
@@ -181,11 +202,11 @@ $tcon-menu-arrow360left-transformation: (
   }
 
   &::before {
-    top: ($tcon-size / 4);
+    top: 8px;
   }
 
   &::after {
-    top: -($tcon-size / 4);
+    top: -8px;
   }
 
   .#{$tcon-jstransform} & {
