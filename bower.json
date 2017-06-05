@@ -19,6 +19,7 @@
     "jquery-ui": "^1.*",
     "normalize-css": "^7.*",
     "bootstrap": "^3.*",
-    "slick-carousel": "^1.*"
+    "slick-carousel": "^1.*",
+    "fullpage.js": "^2.*"
   }
 }
