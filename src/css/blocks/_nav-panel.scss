@@ -20,10 +20,17 @@
   .social a:hover svg {
     fill: #181a1b;
   }
-  .support-block .btn-white {
-    min-width: 200px;
-    height: 60px;
-    line-height: 58px;
+
+  .support-block {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s ease-in;
+    .btn-white {
+      min-width: 200px;
+      height: 60px;
+      line-height: 58px;
+    }
   }
 }
 
@@ -70,7 +77,8 @@
       top: 18px;
       left: 0;
       background-color: #fff;
-      transition: all 0.3s ease;
+      transition: width 0.3s;
+      transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
     }
     &:hover::before {
       width: 100%;
@@ -85,6 +93,29 @@
   transform: translate3d(0, 0, 0);
   transition: transform 0.8s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+
+  .support-block {
+    animation: showSocials .9s ease .3s forwards;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .nav-panel-menu li {
+    animation: fadeRight-menu 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+    transition: all .75s ease-in-out;
+  }
+
+  .nav-panel-menu li:first-child {
+    animation-delay: .7s;
+  }
+
+  .nav-panel-menu li:nth-child(2) {
+    animation-delay: .85s;
+  }
+
+  .nav-panel-menu li:last-child {
+    animation-delay: .95s;
+  }
 }
 
 .nav-left {

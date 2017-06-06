@@ -4,14 +4,14 @@
 
 .contacts-page-list {
   max-width: 522px;
-  flex-basis: 522px;
+  flex: 1 0 522px;
   color: #e6e6e6;
   font-size: 0;
   text-align: left;
   @include CeraGRLight;
-
   li {
     min-width: 140px;
+    padding-top: 160px;
     margin-bottom: 65px;
     display: inline-block;
     vertical-align: top;
@@ -31,7 +31,6 @@
   a {
     color: inherit;
   }
-
   svg {
     width: 33px;
     height: 33px;
@@ -68,48 +67,63 @@
 }
 
 .decor-rhombus {
-  padding-top: 160px;
-  position: relative;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 23px;
+  left: 50%;
+  margin-left: -50px;
+  transform: rotateZ(45deg);
+  background: #0f5c80;
+  background: -moz-linear-gradient(-45deg, #0f5c80 0%, #232525 50%);
+  background: -webkit-linear-gradient(-45deg, #0f5c80 0%, #232525 50%);
+  background: linear-gradient(135deg, #0f5c80 0%, #232525 50%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0f5c80', endColorstr='#232525', GradientType=0.5);
 }
 
 .decor-rhombus::before,
 .contacts-page-list li::after {
-  width: 100px;
-  height: 100px;
   content: '';
   position: absolute;
-  top: 23px;
-  left: 50%;
-  margin: 0 0 0 -50px;
   z-index: 3;
-  transform: rotateZ(45deg);
 }
 
 .decor-rhombus::before {
-  background: #0f5c80;
-  background: -moz-linear-gradient(-45deg, #0f5c80 0%, #232525 100%);
-  background: -webkit-linear-gradient(-45deg, #0f5c80 0%, #232525 100%);
-  background: linear-gradient(135deg, #0f5c80 0%, #232525 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0f5c80', endColorstr='#232525', GradientType=1);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  margin: 0;
+  background: #232525;
+  background: -moz-linear-gradient(-45deg, #232525 0%, #0f5c80 100%);
+  background: -webkit-linear-gradient(-45deg, #232525 0%, #0f5c80 100%);
+  background: linear-gradient(135deg, #232525 0%, #0f5c80 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#232525', endColorstr='#0f5c80', GradientType=1);
+  animation: backgroundChange 3s alternate-reverse infinite;
 }
 
 .contacts-page-list li::after {
   width: 94px;
   height: 94px;
   top: 26px;
+  left: 50%;
   margin-left: -47px;
   background-color: #181a1b;
+  transform: rotateZ(45deg);
 }
 
 .contacts-page-right {
   padding-left: 53px;
   position: relative;
+  flex-grow: 1;
+  overflow: hidden;
   &::before {
     position: absolute;
     top: 56px;
     left: 0;
     border: 14px solid #232525;
-    width: 740px;
+    width: calc(100% - 40px);
     height: 460px;
     content: '';
     z-index: 3;
@@ -127,7 +141,7 @@
 }
 
 #map-canvas {
-  width: 725px;
+  width: 100%;
   max-height: 450px;
   position: relative;
   z-index: 5;

@@ -7,7 +7,6 @@ $(document).ready(function () {
     $('.nav-panel').toggleClass("nav-panel-open");
   });
 
-
   var formControl = $(".form-control"),
     formGroup = ".form-group",
     formGroupFocus = "form-group-focus";
@@ -15,7 +14,6 @@ $(document).ready(function () {
   formControl.focus(function () {
     $(this).closest(formGroup).addClass(formGroupFocus);
   });
-
   formControl.blur(function () {
     $(this).closest(formGroup).removeClass(formGroupFocus);
   });
@@ -23,6 +21,11 @@ $(document).ready(function () {
   //= init/jquery-ui-init.js
 
   //= init/nav-left.js
+
+  $('#fullpage').fullpage({
+    hybrid:true,
+    fitToSection: false
+  });
 });
 
 //= init/transformicons.js

@@ -1,9 +1,40 @@
 .home-header {
   height: 100vh;
   padding: 20px;
+  position: relative;
   background-size: cover;
-  .logo img {
+  .logo {
     max-width: 733px;
+  }
+  .fp-tableCell {
+    height: 100% !important;
+    padding: 37px 80px 0;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.header-down {
+  width: 1px;
+  height: 65px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+  z-index: 92;
+  position: absolute;
+  overflow: hidden;
+  background-color: #fff;
+  &::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    content: '';
+    background-color: #3cc9e5;
+    transform: translate3d(0, - 100%, 0);
+    animation: spin  .7s infinite linear;
   }
 }
 
@@ -32,16 +63,6 @@
   left: 50%;
   position: absolute;
   transform: translate(-50%, -50%);
-}
-
-.header-wrap {
-  height: 100%;
-  padding: 37px 80px 0;
-  background-size: cover;
-  position: relative;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .header-panel {
@@ -135,15 +156,45 @@
   display: flex;
   justify-content: space-between;
   @include CeraGRMedium;
-  a {
-    display: inline-block;
-    padding-bottom: 4px;
-    color: #fff;
-    border-bottom: 1px solid;
-    transition: all 0.3s ease;
-    &:hover {
-      border-bottom: transparent;
-      color: #fff;
+}
+
+.menu-link {
+  padding: 1em;
+  display: inline-block;
+  color: #fff;
+  position: relative;
+  transition: color 0.4s;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #3cc9e5;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.2s;
+  }
+  &::before {
+    top: 0;
+    transform-origin: 0 50%;
+  }
+  &::after {
+    bottom: 0;
+    transform-origin: 100% 50%;
+  }
+  &:hover {
+    color: #3cc9e5;
+  }
+}
+
+.menu-current {
+  .menu-link {
+    color: #3cc9e5;
+    &::before, &::after {
+      transform: scale3d(1, 1, 1);
+      transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+      transition-duration: 0.4s;
     }
   }
 }
