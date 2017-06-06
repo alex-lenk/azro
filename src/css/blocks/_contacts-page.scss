@@ -82,10 +82,9 @@
 }
 
 .decor-rhombus::before,
-.contacts-page-list li::after {
+.decor-rhombus::after {
   content: '';
   position: absolute;
-  z-index: 3;
 }
 
 .decor-rhombus::before {
@@ -95,6 +94,7 @@
   top: 0;
   left: 0;
   margin: 0;
+  z-index: 3;
   background: #232525;
   background: -moz-linear-gradient(-45deg, #232525 0%, #0f5c80 100%);
   background: -webkit-linear-gradient(-45deg, #232525 0%, #0f5c80 100%);
@@ -103,14 +103,26 @@
   animation: backgroundChange 3s alternate-reverse infinite;
 }
 
-.contacts-page-list li::after {
+.decor-rhombus::after {
   width: 94px;
   height: 94px;
-  top: 26px;
+  top: 3px;
   left: 50%;
   margin-left: -47px;
   background-color: #181a1b;
-  transform: rotateZ(45deg);
+  z-index: 5;
+}
+
+.decor-rhombus-text {
+  position: relative;
+  z-index: 5;
+  color: #33ddfb;
+  font-size: 44px;
+  line-height: 1;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  @include CeraGRMedium;
 }
 
 .contacts-page-right {
