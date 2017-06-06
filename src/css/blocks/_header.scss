@@ -3,9 +3,6 @@
   padding: 20px;
   position: relative;
   background-size: cover;
-  .logo {
-    max-width: 733px;
-  }
   .fp-tableCell {
     height: 100% !important;
     padding: 37px 80px 0;
@@ -109,12 +106,11 @@
 
 .header-content {
   width: 1400px;
-  height: 100%;
+  height: calc(100% - 95px);
   max-height: 776px;
   margin-top: -50px;
   position: relative;
   z-index: 3;
-  left: 30px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -124,7 +120,6 @@
 .header-content-right {
   max-width: 525px;
   height: inherit;
-  padding: 83px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -143,8 +138,11 @@
 }
 
 .logo {
+  max-width: 733px;
+  left: -68px;
+  bottom: -72px;
+  position: relative;
   display: block;
-  margin-left: -128px;
 }
 
 .menu {
@@ -153,13 +151,13 @@
   list-style: none;
   font-size: 18px;
   text-transform: uppercase;
+  line-height: 1;
   display: flex;
   justify-content: space-between;
   @include CeraGRMedium;
 }
 
 .menu-link {
-  padding: 1em;
   display: inline-block;
   color: #fff;
   position: relative;
@@ -176,20 +174,14 @@
     transition: transform 0.2s;
   }
   &::before {
-    top: 0;
+    top: -1rem;
     transform-origin: 0 50%;
   }
   &::after {
-    bottom: 0;
+    bottom: -1rem;
     transform-origin: 100% 50%;
   }
   &:hover {
-    color: #3cc9e5;
-  }
-}
-
-.menu-current {
-  .menu-link {
     color: #3cc9e5;
     &::before, &::after {
       transform: scale3d(1, 1, 1);
