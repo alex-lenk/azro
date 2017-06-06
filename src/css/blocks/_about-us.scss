@@ -7,18 +7,14 @@
   justify-content: space-between;
 }
 
-.about-us-advantages li {
+.about-us-advantages > li {
   padding: 55px 0 50px;
   position: relative;
-  color: #33ddfb;
-  font-size: 44px;
-  line-height: 1;
-  text-transform: uppercase;
   @include CeraGRMedium;
 }
 
 .about-us-advantages-decor,
-.about-us-advantages li::after {
+.about-us-advantages > li::after {
   width: 100px;
   height: 100px;
   content: '';
@@ -30,7 +26,7 @@
   transform: rotateZ(45deg);
 }
 
-.about-us-advantages li::after {
+.about-us-advantages > li::after {
   width: 94px;
   height: 94px;
   top: 26px;
@@ -41,4 +37,10 @@
 .about-us-advantages-text {
   position: relative;
   z-index: 5;
+  color: #33ddfb;
+  font-size: 44px;
+  line-height: 1;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
 }
