@@ -55,10 +55,7 @@ $(document).ready(function () {
   refreshVar();
   $(window).resize(refreshVar);
   
-  $('<div class="clone-nav"></div>')
-    .insertBefore(".nav-left")
-    .css("height", navHeight)
-    .hide();
+  //$('<div class="clone-nav"></div>').insertBefore(".nav-left").css("height", navHeight).hide();
   
   $(window).scroll(function () {
     winPos = $(window).scrollTop();

@@ -202,3 +202,85 @@ button, input, select, textarea {
 .section {
   padding: 0 90px 0 154px;
 }
+
+.title-line-bottom {
+  margin: 0 0 96px;
+  font-size: 26px;
+  color: rgb(230, 230, 230);
+  line-height: 1.2;
+  text-align: center;
+  @include CeraGRLight;
+  span {
+    display: block;
+    max-width: 98%;
+    margin: 0 auto 10px;
+  }
+  &::after {
+    width: 165px;
+    height: 1px;
+    background-color: #33ddfb;
+    display: inline-block;
+    content: '';
+  }
+}
+
+.list-line {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  li {
+    padding-left: 45px;
+    position: relative;
+    font-size: 23px;
+    @include CeraGRRegular;
+    &:not(:last-child) {
+      margin-bottom: 23px;
+    }
+    &::before {
+      width: 22px;
+      height: 1px;
+      top: 14px;
+      left: 0;
+      background-color: #fff;
+      position: absolute;
+      content: '';
+    }
+  }
+}
+
+.next-layer {
+  position: absolute;
+  bottom: 69px;
+  z-index: 10;
+  margin-left: -58px;
+  left: 50%;
+  &::before {
+    width: 1px;
+    height: 50px;
+    content: '';
+    position: absolute;
+    top: -16px;
+    left: 11px;
+    background-color: #33ddfb;
+    z-index: 5;
+  }
+  .arrow {
+    width: 32px;
+    height: 32px;
+    fill: #33ddfb;
+    position: absolute;
+    bottom: -35px;
+    left: -4px;
+  }
+}
+
+.next-layer-text {
+  color: #e6e6e6;
+  font-size: 30px;
+  line-height: 1;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 9;
+  @include CeraGRMedium;
+}
