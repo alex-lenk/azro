@@ -14,37 +14,168 @@
 @import "blocks/who-we";
 @import "blocks/contacts-page";
 
-.cases {
+.project {
   color: #fff;
-  background-color: #0b3e6f;
+  margin-bottom: 365px;
   .container {
-    height: 100vh;
     padding-top: 65px;
     padding-bottom: 55px;
-    @include clearfix;
+    position: relative;
+  }
+  .title-block {
+    margin-bottom: 205px;
+    img {
+      max-height: 98px;
+    }
   }
 }
 
-.cases-title-img {
+.project-big-title {
   margin-bottom: 120px;
-  clear: both;
+  display: block;
 }
 
-.cases-left {
-  width: 50%;
+.project-content {
+  line-height: 1.2;
+  display: inline-block;
+  position: relative;
+  z-index: 20;
 }
 
-.cases-title {
+.project-title {
   margin: 0 0 20px;
   padding: 0;
-  font-size: 31px;
+  font-size: 48px;
   font-weight: normal;
-  @include CeraGRBold;
+  @include CeraGRMedium;
 }
 
-.cases-text {
-  margin-bottom: 40px;
+.project-text {
+  margin-bottom: 80px;
   font-size: 18px;
-  line-height: 1.2;
   @include CeraGRLight;
+}
+
+.project-parallax {
+  width: 100%;
+  height: 552px;
+  position: absolute;
+  top: 320px;
+  right: 0;
+  z-index: 15;
+  text-align: right;
+}
+
+.project-parallax-layout {
+  max-width: 858px;
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  &::before, &::after {
+    content: '';
+    position: absolute;
+  }
+  &::before {
+    width: 867px;
+    height: 552px;
+    border: 14px solid #212324;
+    z-index: 3;
+    top: -40px;
+    right: 64px;
+  }
+  &::after {
+    width: 321px;
+    height: 138px;
+    background-color: #181a1b;
+    z-index: 4;
+    bottom: -35px;
+    left: -75px;
+  }
+}
+
+.project-parallax-img,
+.project-parallax-decor {
+  transition: transform 0.3s ease-out;
+}
+
+.project-parallax-img {
+  position: relative;
+  z-index: 7;
+}
+
+.project-parallax-decor {
+  width: 257px;
+  height: 94%;
+  position: absolute;
+  top: -4px;
+  left: 0;
+  background-color: #f51c25;
+  content: '';
+  z-index: 5;
+}
+
+.project-parallax-layout {
+  pointer-events: auto;
+}
+
+.next-work {
+  width: 122px;
+  height: 122px;
+  position: absolute;
+  bottom: -109px;
+  z-index: 10;
+  left: -112px;
+  &::before {
+    width: 1px;
+    height: 34px;
+    content: '';
+    position: absolute;
+    top: 65px;
+    left: 43px;
+    background-color: #33ddfb;
+    z-index: 9;
+  }
+  .arrow {
+    width: 32px;
+    height: 32px;
+    fill: #33ddfb;
+    position: absolute;
+    bottom: -8px;
+    left: 27px;
+  }
+}
+
+.next-layer-number {
+  top: 21px;
+  left: 25px;
+  font-size: 30px;
+  color: #f1f1f1;
+  position: absolute;
+  z-index: 10;
+  @include CeraGRMedium;
+}
+
+.next-work-decor {
+  width: 86px;
+  height: 86px;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 5;
+  transform: rotateZ(45deg);
+  content: '';
+  background: -moz-linear-gradient(-45deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.86) 34%, rgba(1, 128, 189, 0.65) 87%, rgba(1, 128, 189, 0.6) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.86) 34%, rgba(1, 128, 189, 0.65) 87%, rgba(1, 128, 189, 0.6) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.86) 34%, rgba(1, 128, 189, 0.65) 87%, rgba(1, 128, 189, 0.6) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#990180bd', GradientType=1);
+  &::after {
+    width: 80px;
+    height: 80px;
+    top: 3px;
+    background-color: #181a1b;
+    content: '';
+    position: absolute;
+    left: 3px;
+    z-index: 3;
+  }
 }

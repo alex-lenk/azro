@@ -31,3 +31,5 @@ $(document).ready(function () {
 //= init/transformicons.js
 
 //= init/animated-gradient.js
+
+//= init/demo1.js

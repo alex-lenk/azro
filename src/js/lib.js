@@ -6,6 +6,10 @@
 
 //= ../../bower_components/fullpage.js/jquery.fullPage.min.js
 
+//= lib/imagesloaded.pkgd.min.js
+//= lib/anime.min.js
+//= lib/scrollMonitor.js
+
 // = lib/bootstrap.min.js
 // = ../../bower_components/jquery-background-video/jquery.background-video.js
 // = lib/bootstrap.min.js
