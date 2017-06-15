@@ -91,7 +91,7 @@
 }
 
 .btn-offset {
-  width: 190px;
+  width: 191px;
   height: 55px;
   border: 2px solid #212324;
   color: #fff;
@@ -113,16 +113,16 @@
 }
 
 .btn-offset-text {
-  width: 100%;
-  height: 100%;
+  width: 190px;
+  height: 55px;
   line-height: 53px;
   border: 2px solid #33ddfb;
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transform: translate(-6px, -6px);
-  -ms-transform: translate(-6px, -6px);
-  transform: translate(-6px, -6px);
+  -webkit-transform: translate(-8px, -10px);
+  -ms-transform: translate(-8px, -10px);
+  transform: translate(-8px, -10px);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
@@ -1841,22 +1841,11 @@ footer .container {
   max-height: 98px;
 }
 
-.project-big-title {
-  margin-bottom: 120px;
-  display: block;
-}
-
-.project-content {
-  line-height: 1.2;
-  display: inline-block;
-  position: relative;
-  z-index: 20;
-}
-
 .project-title {
   margin: 0 0 20px;
   padding: 0;
   font-size: 48px;
+  line-height: 1.2;
   font-weight: normal;
   font-family: 'ceragr-mediumuploaded_file', sans-serif;
 }
@@ -1864,8 +1853,11 @@ footer .container {
 .project-text {
   margin-bottom: 80px;
   font-size: 18px;
+  line-height: 1.2;
   font-family: 'ceragr-lightuploaded_file', sans-serif;
 }
+
+/*
 
 .project-parallax {
   width: 100%;
@@ -1882,31 +1874,28 @@ footer .container {
   display: inline-block;
   position: relative;
   z-index: 10;
+  &::before, &::after {
+    content: '';
+    position: absolute;
+  }
+  &::before {
+    width: 867px;
+    height: 552px;
+    border: 14px solid #212324;
+    z-index: 3;
+    top: -40px;
+    right: 64px;
+  }
+  &::after {
+    width: 321px;
+    height: 138px;
+    background-color: #181a1b;
+    z-index: 4;
+    bottom: -35px;
+    left: -75px;
+  }
 }
-
-.project-parallax-layout::before, .project-parallax-layout::after {
-  content: '';
-  position: absolute;
-}
-
-.project-parallax-layout::before {
-  width: 867px;
-  height: 552px;
-  border: 14px solid #212324;
-  z-index: 3;
-  top: -40px;
-  right: 64px;
-}
-
-.project-parallax-layout::after {
-  width: 321px;
-  height: 138px;
-  background-color: #181a1b;
-  z-index: 4;
-  bottom: -35px;
-  left: -75px;
-}
-
+*/
 .project-parallax-img,
 .project-parallax-decor {
   -webkit-transition: -webkit-transform 0.3s ease-out;
@@ -1929,10 +1918,6 @@ footer .container {
   background-color: #f51c25;
   content: '';
   z-index: 5;
-}
-
-.project-parallax-layout {
-  pointer-events: auto;
 }
 
 .next-work {
