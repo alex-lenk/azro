@@ -224,7 +224,7 @@ textarea.form-control {
 
 html,
 body {
-  min-width: 768px;
+  height: 100%;
   background: #181a1b;
   color: #ffffff;
   font-size: 16px;
@@ -1841,6 +1841,13 @@ footer .container {
   max-height: 98px;
 }
 
+.project-content {
+  line-height: 1.2;
+  display: inline-block;
+  position: relative;
+  z-index: 20;
+}
+
 .project-title {
   margin: 0 0 20px;
   padding: 0;
@@ -1854,48 +1861,59 @@ footer .container {
   margin-bottom: 80px;
   font-size: 18px;
   line-height: 1.2;
+  position: relative !important;
   font-family: 'ceragr-lightuploaded_file', sans-serif;
 }
-
-/*
 
 .project-parallax {
   width: 100%;
   height: 552px;
   position: absolute;
-  top: 320px;
+  top: -80px;
   right: 0;
   z-index: 15;
-  text-align: right;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .project-parallax-layout {
-  max-width: 858px;
-  display: inline-block;
+  width: 858px;
   position: relative;
   z-index: 10;
-  &::before, &::after {
-    content: '';
-    position: absolute;
-  }
-  &::before {
-    width: 867px;
-    height: 552px;
-    border: 14px solid #212324;
-    z-index: 3;
-    top: -40px;
-    right: 64px;
-  }
-  &::after {
-    width: 321px;
-    height: 138px;
-    background-color: #181a1b;
-    z-index: 4;
-    bottom: -35px;
-    left: -75px;
-  }
 }
-*/
+
+.project-parallax-layout::before, .project-parallax-layout::after {
+  content: '';
+  position: absolute;
+}
+
+.project-parallax-layout::before {
+  width: 867px;
+  height: 552px;
+  border: 14px solid #212324;
+  z-index: 3;
+  top: -40px;
+  right: 64px;
+}
+
+.project-parallax-layout::after {
+  width: 321px;
+  height: 138px;
+  background-color: #181a1b;
+  z-index: 4;
+  bottom: -35px;
+  left: -75px;
+}
+
 .project-parallax-img,
 .project-parallax-decor {
   -webkit-transition: -webkit-transform 0.3s ease-out;
@@ -1911,7 +1929,7 @@ footer .container {
 
 .project-parallax-decor {
   width: 257px;
-  height: 94%;
+  height: 321px;
   position: absolute;
   top: -4px;
   left: 0;

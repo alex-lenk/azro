@@ -2,7 +2,8 @@
 //= lib/smoothscroll.js
 //= lib/jquery-ui.min.js
 //= ../../bower_components/fullpage.js/jquery.fullPage.min.js
-//= lib/masterslider.min.js
+
+//= lib/jquery.parallax.js
 
 
 // = lib/imagesloaded.pkgd.min.js
