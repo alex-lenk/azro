@@ -552,6 +552,14 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   font-family: 'ceragr-mediumuploaded_file', sans-serif;
 }
 
+.col {
+  fill: #ADADAD;
+}
+
+#volume-control {
+  width: 32px;
+}
+
 @-webkit-keyframes showSocials {
   0% {
     -webkit-transform: translate3d(0, 40px, 0);
@@ -755,35 +763,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-}
-
-.volume-control svg {
-  fill: #fff;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.volume-control .volume {
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-}
-
-.volume-control .volume:hover {
-  fill: #3cc9e5;
-}
-
-.slider-range {
-  width: 70px;
-  margin-top: -5px;
-  margin-left: 45px;
-  outline: none;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.slider-range:not(.slider-range-open) {
-  opacity: 0;
 }
 
 .header-content {
@@ -1213,12 +1192,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .panel-sound {
   position: relative;
-}
-
-.panel-sound .slider-range {
-  position: absolute;
-  top: -77px;
-  margin-left: 11px;
 }
 
 .slider-vertical {
@@ -1843,9 +1816,44 @@ footer .container {
 
 .project-content {
   line-height: 1.2;
-  display: inline-block;
   position: relative;
   z-index: 20;
+}
+
+.project-content-left {
+  position: relative;
+  z-index: 20;
+}
+
+.project-content-right {
+  width: 857px;
+  position: absolute;
+  z-index: 15;
+  right: 0;
+  top: -47px;
+}
+
+.project-content-right::before, .project-content-right::after {
+  content: '';
+  position: absolute;
+}
+
+.project-content-right::before {
+  width: 867px;
+  height: 552px;
+  border: 14px solid #212324;
+  z-index: 3;
+  top: -40px;
+  right: 64px;
+}
+
+.project-content-right::after {
+  width: 321px;
+  height: 138px;
+  background-color: #181a1b;
+  z-index: 4;
+  bottom: -64px;
+  left: -75px;
 }
 
 .project-title {
@@ -1865,89 +1873,44 @@ footer .container {
   font-family: 'ceragr-lightuploaded_file', sans-serif;
 }
 
-.project-parallax {
-  width: 100%;
-  height: 552px;
-  position: absolute;
-  top: -80px;
-  right: 0;
-  z-index: 15;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-}
-
-.project-parallax-layout {
-  width: 858px;
-  position: relative;
-  z-index: 10;
-}
-
-.project-parallax-layout::before, .project-parallax-layout::after {
-  content: '';
-  position: absolute;
-}
-
-.project-parallax-layout::before {
-  width: 867px;
-  height: 552px;
-  border: 14px solid #212324;
-  z-index: 3;
-  top: -40px;
-  right: 64px;
-}
-
-.project-parallax-layout::after {
-  width: 321px;
-  height: 138px;
-  background-color: #181a1b;
-  z-index: 4;
-  bottom: -35px;
-  left: -75px;
-}
-
-.project-parallax-img,
-.project-parallax-decor {
+.project-content-media,
+.project-rectangle-decor {
   -webkit-transition: -webkit-transform 0.3s ease-out;
   transition: -webkit-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 
-.project-parallax-img {
+.project-content-media {
   position: relative;
   z-index: 7;
 }
 
-.project-parallax-decor {
+.project-rectangle-decor {
   width: 257px;
   height: 321px;
   position: absolute;
   top: -4px;
   left: 0;
-  background-color: #f51c25;
   content: '';
   z-index: 5;
 }
 
-.next-work {
+.project-content-img {
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.project-rhombus {
   width: 122px;
   height: 122px;
   position: absolute;
-  bottom: -109px;
+  bottom: -136px;
   z-index: 10;
   left: -112px;
 }
 
-.next-work::before {
+.project-rhombus:not(.project-all)::before {
   width: 1px;
   height: 34px;
   content: '';
@@ -1958,7 +1921,7 @@ footer .container {
   z-index: 9;
 }
 
-.next-work .arrow {
+.project-rhombus .arrow {
   width: 32px;
   height: 32px;
   fill: #33ddfb;
@@ -1967,7 +1930,29 @@ footer .container {
   left: 27px;
 }
 
-.next-layer-number {
+.project-all .project-rhombus-text {
+  top: 26px;
+}
+
+.project-all::before, .project-all::after {
+  width: 30px;
+  height: 1px;
+  top: 43px;
+  background-color: #33ddfb;
+  z-index: 9;
+  content: '';
+  position: absolute;
+}
+
+.project-all::before {
+  left: -13px;
+}
+
+.project-all::after {
+  right: 23px;
+}
+
+.project-rhombus-text {
   top: 21px;
   left: 25px;
   font-size: 30px;
@@ -1977,7 +1962,7 @@ footer .container {
   font-family: 'ceragr-mediumuploaded_file', sans-serif;
 }
 
-.next-work-decor {
+.project-rhombus-decor {
   width: 86px;
   height: 86px;
   top: 0;
@@ -1994,7 +1979,7 @@ footer .container {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#990180bd', GradientType=1);
 }
 
-.next-work-decor::after {
+.project-rhombus-decor::after {
   width: 80px;
   height: 80px;
   top: 3px;
@@ -2003,6 +1988,63 @@ footer .container {
   position: absolute;
   left: 3px;
   z-index: 3;
+}
+
+.project-rentpro .project-rectangle-decor {
+  background-color: #f51c25;
+}
+
+.rentpro-car {
+  width: 630px;
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  margin-left: -287px;
+}
+
+.rentpro-logo {
+  width: 283px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -46px 0 0 -168px;
+}
+
+.project-karma .project-rectangle-decor {
+  background-color: #2592c7;
+}
+
+.karma-messenger {
+  width: 264px;
+  position: absolute;
+  top: -15px;
+  right: 50px;
+  -webkit-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+}
+
+.project-gazmodel .project-rectangle-decor {
+  background-color: #d42411;
+}
+
+.gazmodel-logo {
+  width: 174px;
+  position: absolute;
+  top: 50%;
+  right: 68px;
+  margin-top: -71px;
+}
+
+.project-locad .project-rectangle-decor {
+  background-color: #df5500;
+}
+
+.locad-logo {
+  width: 203px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  margin: -84px -101px 0 0;
 }
 
 /*# sourceMappingURL=../maps/styles.css.map */

@@ -285,3 +285,11 @@ button, input, select, textarea {
   z-index: 9;
   @include CeraGRMedium;
 }
+
+.col {
+  fill: #ADADAD;
+}
+
+#volume-control {
+  width: 32px;
+}

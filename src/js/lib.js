@@ -1,11 +1,9 @@
 //= lib/svgxuse.min.js
 //= lib/smoothscroll.js
-//= lib/jquery-ui.min.js
 //= ../../bower_components/fullpage.js/jquery.fullPage.min.js
 
-//= lib/jquery.parallax.js
-
-
+// = lib/jquery-ui.min.js
+// = lib/jquery.parallax.js
 // = lib/imagesloaded.pkgd.min.js
 // = lib/anime.min.js
 // = lib/scrollMonitor.js

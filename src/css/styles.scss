@@ -1,3 +1,5 @@
+$color-red: #f51c25;
+$color-light-blue: #2592c7;
 @import 'lib/breakpoint';
 @import 'lib/breakpoint-slicer';
 @import "common/mixin";
@@ -32,9 +34,41 @@
 
 .project-content {
   line-height: 1.2;
-  display: inline-block;
   position: relative;
   z-index: 20;
+}
+
+.project-content-left {
+  position: relative;
+  z-index: 20;
+}
+
+.project-content-right {
+  width: 857px;
+  position: absolute;
+  z-index: 15;
+  right: 0;
+  top: -47px;
+  &::before, &::after {
+    content: '';
+    position: absolute;
+  }
+  &::before {
+    width: 867px;
+    height: 552px;
+    border: 14px solid #212324;
+    z-index: 3;
+    top: -40px;
+    right: 64px;
+  }
+  &::after {
+    width: 321px;
+    height: 138px;
+    background-color: #181a1b;
+    z-index: 4;
+    bottom: -64px;
+    left: -75px;
+  }
 }
 
 .project-title {
@@ -54,82 +88,51 @@
   @include CeraGRLight;
 }
 
-.project-parallax {
-  width: 100%;
-  height: 552px;
-  position: absolute;
-  top: -80px;
-  right: 0;
-  z-index: 15;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.project-parallax-layout {
-  width: 858px;
-  position: relative;
-  z-index: 10;
-  &::before, &::after {
-    content: '';
-    position: absolute;
-  }
-  &::before {
-    width: 867px;
-    height: 552px;
-    border: 14px solid #212324;
-    z-index: 3;
-    top: -40px;
-    right: 64px;
-  }
-  &::after {
-    width: 321px;
-    height: 138px;
-    background-color: #181a1b;
-    z-index: 4;
-    bottom: -35px;
-    left: -75px;
-  }
-}
-
-.project-parallax-img,
-.project-parallax-decor {
+.project-content-media,
+.project-rectangle-decor {
   transition: transform 0.3s ease-out;
 }
 
-.project-parallax-img {
+.project-content-media {
   position: relative;
   z-index: 7;
 }
 
-.project-parallax-decor {
+.project-rectangle-decor {
   width: 257px;
   height: 321px;
   position: absolute;
   top: -4px;
   left: 0;
-  background-color: #f51c25;
   content: '';
   z-index: 5;
 }
 
-.next-work {
+.project-content-img {
+  box-shadow: 0 0 40px rgba(#000000, .3);
+}
+
+.project-rhombus {
   width: 122px;
   height: 122px;
   position: absolute;
-  bottom: -109px;
+  bottom: -136px;
   z-index: 10;
   left: -112px;
-  &::before {
-    width: 1px;
-    height: 34px;
-    content: '';
-    position: absolute;
-    top: 65px;
-    left: 43px;
-    background-color: #33ddfb;
-    z-index: 9;
+
+  &:not(.project-all) {
+    &::before {
+      width: 1px;
+      height: 34px;
+      content: '';
+      position: absolute;
+      top: 65px;
+      left: 43px;
+      background-color: #33ddfb;
+      z-index: 9;
+    }
   }
+
   .arrow {
     width: 32px;
     height: 32px;
@@ -140,7 +143,28 @@
   }
 }
 
-.next-layer-number {
+.project-all {
+  .project-rhombus-text {
+    top: 26px;
+  }
+  &::before, &::after {
+    width: 30px;
+    height: 1px;
+    top: 43px;
+    background-color: #33ddfb;
+    z-index: 9;
+    content: '';
+    position: absolute;
+  }
+  &::before {
+    left: -13px;
+  }
+  &::after {
+    right: 23px;
+  }
+}
+
+.project-rhombus-text {
   top: 21px;
   left: 25px;
   font-size: 30px;
@@ -150,7 +174,7 @@
   @include CeraGRMedium;
 }
 
-.next-work-decor {
+.project-rhombus-decor {
   width: 86px;
   height: 86px;
   top: 0;
@@ -173,4 +197,60 @@
     left: 3px;
     z-index: 3;
   }
+}
+
+.project-rentpro .project-rectangle-decor {
+  background-color: $color-red;
+}
+
+.rentpro-car {
+  width: 630px;
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  margin-left: -287px;
+}
+
+.rentpro-logo {
+  width: 283px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -46px 0 0 -168px;
+}
+
+.project-karma .project-rectangle-decor {
+  background-color: $color-light-blue;
+}
+
+.karma-messenger {
+  width: 264px;
+  position: absolute;
+  top: -15px;
+  right: 50px;
+  box-shadow: 0 8px 25px rgba(#000000, .35);
+}
+
+.project-gazmodel .project-rectangle-decor {
+  background-color: #d42411;
+}
+
+.gazmodel-logo {
+  width: 174px;
+  position: absolute;
+  top: 50%;
+  right: 68px;
+  margin-top: -71px;
+}
+
+.project-locad .project-rectangle-decor {
+  background-color: #df5500;
+}
+
+.locad-logo {
+  width: 203px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  margin: -84px -101px 0 0;
 }
