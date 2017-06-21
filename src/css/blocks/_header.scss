@@ -78,31 +78,6 @@
   align-items: center;
 }
 
-.volume-control {
-  svg {
-    fill: #fff;
-    transition: all 0.3s ease;
-  }
-  .volume {
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    &:hover {
-      fill: #3cc9e5;
-    }
-  }
-}
-
-.slider-range {
-  width: 70px;
-  margin-top: -5px;
-  margin-left: 45px;
-  outline: none;
-  transition: all 0.3s ease;
-  &:not(.slider-range-open) {
-    opacity: 0;
-  }
-}
 
 .header-content {
   width: 1400px;
