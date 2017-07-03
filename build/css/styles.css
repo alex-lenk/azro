@@ -224,12 +224,12 @@ textarea.form-control {
 
 html,
 body {
+  width: 100%;
   height: 100%;
   background: #181a1b;
   color: #ffffff;
   font-size: 16px;
   line-height: 1.4;
-  overflow-x: hidden;
   font-family: 'ceragr-regularuploaded_file', sans-serif;
 }
 
@@ -2045,6 +2045,96 @@ footer .container {
   top: 50%;
   right: 50%;
   margin: -84px -101px 0 0;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.no-scroll body {
+  padding-right: 15px;
+  overflow: hidden;
+}
+
+.home-header {
+  overflow: hidden;
+  position: absolute;
+  width: -webkit-calc(100% - 15px);
+  width: calc(100% - 15px);
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 55;
+  transition: -webkit-transform 0.8s;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  will-change: transform;
+}
+
+.home-header.header-out {
+  overflow: inherit;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+.our-mission {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  overflow: hidden;
+  position: absolute;
+  width: -webkit-calc(100% - 15px);
+  width: calc(100% - 15px);
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 55;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  transition: -webkit-transform 0.8s;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  will-change: transform;
+}
+
+.our-work {
+  overflow: hidden;
+  position: relative;
+  width: -webkit-calc(100% - 15px);
+  width: calc(100% - 15px);
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 55;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  transition: -webkit-transform 0.8s;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  will-change: transform;
+}
+
+.our-work.active-work {
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+.our-mission.second-active, .our-work.active-work {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.block-out {
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
 }
 
 /*# sourceMappingURL=../maps/styles.css.map */

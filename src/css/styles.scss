@@ -254,3 +254,74 @@ $color-light-blue: #2592c7;
   right: 50%;
   margin: -84px -101px 0 0;
 }
+
+.no-scroll {
+  overflow: hidden;
+  body {
+    padding-right: 15px;
+    overflow: hidden;
+  }
+}
+
+.home-header {
+  overflow: hidden;
+  position: absolute;
+  width: calc(100% - 15px);
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 55;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  will-change: transform;
+}
+
+.home-header.header-out {
+  overflow: inherit;
+  transform: translate3d(0, -100%, 0);
+}
+
+.our-mission {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  overflow: hidden;
+  position: absolute;
+  width: calc(100% - 15px);
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 55;
+  transform: translate3d(0, 100%, 0);
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  will-change: transform;
+}
+
+.our-work {
+  overflow: hidden;
+  position: relative;
+  width: calc(100% - 15px);
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 55;
+  transform: translate3d(0, 100%, 0);
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  will-change: transform;
+}
+
+.our-work.active-work {
+  transform: translate3d(0, -100%, 0);
+}
+
+.our-mission.second-active, .our-work.active-work {
+  transform: translate3d(0, 0, 0);
+}
+
+.block-out {
+  transform: translate3d(0, -100%, 0);
+}

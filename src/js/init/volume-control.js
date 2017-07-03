@@ -1,27 +1,6 @@
-/*
-$(document).ready(function () {
-  $(".navbar-toggle").click(function () {
-    $('.nav-panel').toggleClass("nav-panel-open");
-  });
-
-  var formControl = $(".form-control"),
-    formGroup = ".form-group",
-    formGroupFocus = "form-group-focus";
-
-  formControl.focus(function () {
-    $(this).closest(formGroup).addClass(formGroupFocus);
-  });
-  formControl.blur(function () {
-    $(this).closest(formGroup).removeClass(formGroupFocus);
-  });
-
-  //= init/nav-left.js
-});
-
-//= init/transformicons.js
-
-//= init/animated-gradient.js
-
+/**
+ * Created by newuser on 03.07.17.
+ */
 
 'use strict';
 
@@ -53,5 +32,3 @@ function go() {
 go();
 
 document.getElementById('volume-control').addEventListener("click", go, false);
-
-*/

@@ -38,7 +38,7 @@
         arrowScroll       : 50,    // [px]
 
         // Other
-        fixedBackground   : true,
+        fixedBackground   : false,
         excluded          : ''
     };
 
