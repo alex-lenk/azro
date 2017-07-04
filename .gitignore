@@ -12,3 +12,10 @@ build/vieloco
 build/icon
 build/ScrollOverfow Reset - fullPage.js_files
 build/Simple-Lightweight-jQuery-Parallax-Engine-Parallax-js
+.DS_Store
+build/.DS_Store
+sources
+src/.DS_Store
+src/img/.DS_Store
+src/js/lib/.DS_Store
+src/video/.DS_Store

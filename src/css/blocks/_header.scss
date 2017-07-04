@@ -76,6 +76,12 @@
 .header-panel-sound {
   display: flex;
   align-items: center;
+  audio {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 7px;
+  }
 }
 
 
