@@ -1,54 +1,59 @@
 .home-header {
+  width: 100%;
   height: 100vh;
-  padding: 20px;
-  position: relative;
+  padding: 57px 20px 20px;
   background-size: cover;
-  .fp-tableCell {
-    height: 100% !important;
-    padding: 37px 80px 0;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
+  top: 0;
+  left: 0;
+  z-index: 55;
+  overflow: hidden;
+  position: absolute;
+  transition: transform 0.8s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  will-change: transform;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-out {
+  transform: translate(0, -100%);
 }
 
 .header-down {
   width: 1px;
   height: 65px;
-  bottom: 0;
+  bottom: 20px;
   left: 50%;
   margin-left: -1px;
   z-index: 92;
+  background-color: #fff;
   position: absolute;
   overflow: hidden;
-  background-color: #fff;
   &::after {
     width: 100%;
     height: 100%;
     position: absolute;
     content: '';
     background-color: #3cc9e5;
-    transform: translate3d(0, - 100%, 0);
-    animation: spin  .7s infinite linear;
+    transform: translate(0, - 100%);
+    animation: spin 2s infinite linear;
   }
 }
 
 .video-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  top: 20px;
+  left: 20px;
   right: 0;
   bottom: 0;
+  position: absolute;
   background-image: url(../img/bg/bg-header@2x.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 2;
   overflow: hidden;
-  height: 100%;
-  width: 100%;
 }
 
 .fullscreen-video {
@@ -65,6 +70,7 @@
 .header-panel {
   width: 100%;
   height: 50px;
+  padding: 0 80px;
   position: relative;
   z-index: 5;
   display: flex;
@@ -84,12 +90,21 @@
   }
 }
 
+.linecol {
+  fill: #fff;
+}
+
+#volume-control {
+  width: 32px;
+}
 
 .header-content {
-  width: 1400px;
+  max-width: 1400px;
+  width: 100%;
   height: calc(100% - 95px);
   max-height: 776px;
-  margin-top: -50px;
+  margin: auto;
+  top: -107px;
   position: relative;
   z-index: 3;
   display: flex;
@@ -99,7 +114,7 @@
 }
 
 .header-content-right {
-  max-width: 525px;
+  max-width: 556px;
   height: inherit;
   display: flex;
   flex-direction: column;
@@ -107,21 +122,21 @@
 }
 
 .header-content-text {
-  padding-top: 160px;
+  padding-top: 241px;
   font-size: 20px;
   color: #fff;
   line-height: 1.2;
   @include CeraGRLight;
   img {
     max-width: 340px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 }
 
 .logo {
   max-width: 733px;
-  left: -68px;
-  bottom: -72px;
+  left: -63px;
+  bottom: -92px;
   position: relative;
   display: block;
 }
@@ -130,7 +145,7 @@
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
-  font-size: 18px;
+  font-size: 20px;
   text-transform: uppercase;
   line-height: 1;
   display: flex;

@@ -134,7 +134,7 @@ button, input, select, textarea {
 
 .social {
   height: 30px;
-  margin-right: 55px;
+  margin-right: 38px;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
@@ -284,12 +284,4 @@ button, input, select, textarea {
   position: relative;
   z-index: 9;
   @include CeraGRMedium;
-}
-
-.col {
-  fill: #ADADAD;
-}
-
-#volume-control {
-  width: 32px;
 }

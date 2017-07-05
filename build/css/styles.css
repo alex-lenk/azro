@@ -377,7 +377,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .social {
   height: 30px;
-  margin-right: 55px;
+  margin-right: 38px;
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
@@ -552,14 +552,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   font-family: 'ceragr-mediumuploaded_file', sans-serif;
 }
 
-.col {
-  fill: #ADADAD;
-}
-
-#volume-control {
-  width: 32px;
-}
-
 @-webkit-keyframes showSocials {
   0% {
     -webkit-transform: translate3d(0, 40px, 0);
@@ -613,16 +605,32 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 }
 
 @-webkit-keyframes spin {
-  to {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  50% {
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
   }
 }
 
 @keyframes spin {
-  to {
+  0% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  50% {
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
   }
 }
 
@@ -655,40 +663,49 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 }
 
 .home-header {
+  width: 100%;
   height: 100vh;
-  padding: 20px;
-  position: relative;
+  padding: 57px 20px 20px;
   background-size: cover;
-}
-
-.home-header .fp-tableCell {
-  height: 100% !important;
-  padding: 37px 80px 0;
-  background-size: cover;
-  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 55;
+  overflow: hidden;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.8s;
+  transition: -webkit-transform 0.8s;
+  transition: transform 0.8s;
+  transition: transform 0.8s, -webkit-transform 0.8s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  will-change: transform;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.header-out {
+  -webkit-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
 }
 
 .header-down {
   width: 1px;
   height: 65px;
-  bottom: 0;
+  bottom: 20px;
   left: 50%;
   margin-left: -1px;
   z-index: 92;
+  background-color: #fff;
   position: absolute;
   overflow: hidden;
-  background-color: #fff;
 }
 
 .header-down::after {
@@ -697,26 +714,29 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   position: absolute;
   content: '';
   background-color: #3cc9e5;
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
-  -webkit-animation: spin  .7s infinite linear;
-  animation: spin  .7s infinite linear;
+  -webkit-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
 }
 
 .video-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: -webkit-calc(100% - 40px);
+  width: calc(100% - 40px);
+  height: -webkit-calc(100% - 40px);
+  height: calc(100% - 40px);
+  top: 20px;
+  left: 20px;
   right: 0;
   bottom: 0;
+  position: absolute;
   background-image: url(../img/bg/bg-header@2x.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 2;
   overflow: hidden;
-  height: 100%;
-  width: 100%;
 }
 
 .fullscreen-video {
@@ -735,6 +755,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .header-panel {
   width: 100%;
   height: 50px;
+  padding: 0 80px;
   position: relative;
   z-index: 5;
   display: -webkit-box;
@@ -772,12 +793,22 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   top: 7px;
 }
 
+.linecol {
+  fill: #fff;
+}
+
+#volume-control {
+  width: 32px;
+}
+
 .header-content {
-  width: 1400px;
+  max-width: 1400px;
+  width: 100%;
   height: -webkit-calc(100% - 95px);
   height: calc(100% - 95px);
   max-height: 776px;
-  margin-top: -50px;
+  margin: auto;
+  top: -107px;
   position: relative;
   z-index: 3;
   display: -webkit-box;
@@ -798,7 +829,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 }
 
 .header-content-right {
-  max-width: 525px;
+  max-width: 556px;
   height: inherit;
   display: -webkit-box;
   display: -webkit-flex;
@@ -816,7 +847,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 }
 
 .header-content-text {
-  padding-top: 160px;
+  padding-top: 241px;
   font-size: 20px;
   color: #fff;
   line-height: 1.2;
@@ -825,13 +856,13 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 
 .header-content-text img {
   max-width: 340px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .logo {
   max-width: 733px;
-  left: -68px;
-  bottom: -72px;
+  left: -63px;
+  bottom: -92px;
   position: relative;
   display: block;
 }
@@ -840,7 +871,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   margin-bottom: 0;
   padding-left: 0;
   list-style: none;
-  font-size: 18px;
+  font-size: 20px;
   text-transform: uppercase;
   line-height: 1;
   display: -webkit-box;
@@ -2061,30 +2092,6 @@ footer .container {
 .no-scroll body {
   padding-right: 15px;
   overflow: hidden;
-}
-
-.home-header {
-  overflow: hidden;
-  position: absolute;
-  width: -webkit-calc(100% - 15px);
-  width: calc(100% - 15px);
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 55;
-  transition: -webkit-transform 0.8s;
-  -webkit-transition: -webkit-transform 0.8s;
-  transition: transform 0.8s;
-  transition: transform 0.8s, -webkit-transform 0.8s;
-  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-  will-change: transform;
-}
-
-.home-header.header-out {
-  overflow: inherit;
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
 }
 
 .our-mission {
