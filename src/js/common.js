@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $(".navbar-toggle").click(function () {
+  $(".nav-left_toggle").click(function () {
     $('.nav-panel').toggleClass("nav-panel-open");
   });
 
@@ -16,7 +16,7 @@ $(document).ready(function () {
 
   // = init/jquery-ui-init.js
 
-  //= init/nav-left.js
+  // = init/nav-left.js
 
   // $('#scene').parallax();
 });

@@ -4,7 +4,7 @@
   padding-bottom: 56px;
   position: absolute;
   top: 0;
-  left: 64px;
+  left: 0;
   z-index: 90;
   background: url(../img/bg/bg-nav.png) no-repeat center #3dc0ee;
   background-size: cover;
@@ -34,7 +34,7 @@
   }
 }
 
-.navbar-toggle::before {
+.nav-left_toggle::before {
   content: '';
   background-color: transparent;
   width: 160rem;
@@ -44,10 +44,6 @@
   top: 0;
   display: none;
   cursor: default;
-}
-
-.tcon-transform::before {
-  display: block;
 }
 
 .nav-panel-menu {
@@ -123,7 +119,7 @@
   height: 100%;
   padding: 52px 0 70px;
   background-color: #141516;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 95;
@@ -131,37 +127,25 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.3s ease;
-  &.fixed {
+  transition: all 0.8s;
+  transform: translate(-100%, 0);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  will-change: transform;
+  + .nav-panel {
     position: fixed;
-    left: 0;
-    top: 0;
-    + .nav-panel {
-      position: fixed;
-    }
   }
+}
+
+.block-out + .nav-left {
+  transform: translate(0, 0);
 }
 
 .panel-sound {
   position: relative;
 }
 
-.slider-vertical {
-  width: 3px;
-  height: 70px;
-  .ui-slider-handle {
-    width: 15px;
-    height: 1px;
-    left: -.4em;
-    margin-left: 0;
-    margin-bottom: -.1em;
-  }
-}
-
-.clone-nav {
-  position: absolute;
-  left: 0;
-  top: 0;
+.tcon-transform::before {
+  display: block;
 }
 
 $tcon-size: 25px !default;
@@ -176,7 +160,7 @@ $tcon-menu-arrowleft-transformation: (
 $tcon-menu-arrow360left-transformation: (
   transform: scale3d(.8, .8, .8) rotate3d(0, 0, 1, 360deg)
 ) !default;
-.tcon {
+.nav-left_toggle {
   appearance: none;
   border: none;
   cursor: pointer;
@@ -240,7 +224,7 @@ $tcon-menu-arrow360left-transformation: (
   }
 }
 
-.tcon-menu--xbutterfly {
+.nav-left_toggle {
   width: auto;
 
   .tcon-menu__lines {

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $(".navbar-toggle").click(function () {
+  $(".nav-left_toggle").click(function () {
     $('.nav-panel').toggleClass("nav-panel-open");
   });
 
@@ -205,7 +205,7 @@ $(document).ready(function () {
   return tcon;
 }));
 
-transformicons.add('.tcon');
+transformicons.add('.nav-left_toggle');
 
 var colors = new Array(
   [15, 92, 128],

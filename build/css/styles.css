@@ -1020,7 +1020,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   padding-bottom: 56px;
   position: absolute;
   top: 0;
-  left: 64px;
+  left: 0;
   z-index: 90;
   background: url(../img/bg/bg-nav.png) no-repeat center #3dc0ee;
   background-size: cover;
@@ -1070,7 +1070,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   line-height: 58px;
 }
 
-.navbar-toggle::before {
+.nav-left_toggle::before {
   content: '';
   background-color: transparent;
   width: 160rem;
@@ -1081,10 +1081,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   top: 0;
   display: none;
   cursor: default;
-}
-
-.tcon-transform::before {
-  display: block;
 }
 
 .nav-panel-menu {
@@ -1193,7 +1189,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   height: 100%;
   padding: 52px 0 70px;
   background-color: #141516;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 95;
@@ -1214,44 +1210,35 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  -webkit-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  will-change: transform;
 }
 
-.nav-left.fixed {
+.nav-left + .nav-panel {
   position: fixed;
-  left: 0;
-  top: 0;
 }
 
-.nav-left.fixed + .nav-panel {
-  position: fixed;
+.block-out + .nav-left {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
 .panel-sound {
   position: relative;
 }
 
-.slider-vertical {
-  width: 3px;
-  height: 70px;
+.tcon-transform::before {
+  display: block;
 }
 
-.slider-vertical .ui-slider-handle {
-  width: 15px;
-  height: 1px;
-  left: -.4em;
-  margin-left: 0;
-  margin-bottom: -.1em;
-}
-
-.clone-nav {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.tcon {
+.nav-left_toggle {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1283,15 +1270,15 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   -webkit-tap-highlight-color: transparent;
 }
 
-.tcon > * {
+.nav-left_toggle > * {
   display: block;
 }
 
-.tcon:hover, .tcon:focus {
+.nav-left_toggle:hover, .nav-left_toggle:focus {
   outline: none;
 }
 
-.tcon::-moz-focus-inner {
+.nav-left_toggle::-moz-focus-inner {
   border: 0;
 }
 
@@ -1334,11 +1321,11 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   transform: scale3d(0.8, 0.8, 0.8);
 }
 
-.tcon-menu--xbutterfly {
+.nav-left_toggle {
   width: auto;
 }
 
-.tcon-menu--xbutterfly .tcon-menu__lines::before, .tcon-menu--xbutterfly .tcon-menu__lines::after {
+.nav-left_toggle .tcon-menu__lines::before, .nav-left_toggle .tcon-menu__lines::after {
   -webkit-transform-origin: 50% 50%;
   -ms-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
@@ -1348,11 +1335,11 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   transition: top .3s .6s ease, transform .3s ease, -webkit-transform .3s ease;
 }
 
-.tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines {
+.nav-left_toggle.tcon-transform .tcon-menu__lines {
   background: transparent;
 }
 
-.tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::before, .tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::after {
+.nav-left_toggle.tcon-transform .tcon-menu__lines::before, .nav-left_toggle.tcon-transform .tcon-menu__lines::after {
   top: 0;
   -webkit-transition: top .3s ease, -webkit-transform .3s .5s ease;
   transition: top .3s ease, -webkit-transform .3s .5s ease;
@@ -1361,12 +1348,12 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   width: 25px;
 }
 
-.tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::before {
+.nav-left_toggle.tcon-transform .tcon-menu__lines::before {
   -webkit-transform: rotate3d(0, 0, 1, 45deg);
   transform: rotate3d(0, 0, 1, 45deg);
 }
 
-.tcon-menu--xbutterfly.tcon-transform .tcon-menu__lines::after {
+.nav-left_toggle.tcon-transform .tcon-menu__lines::after {
   -webkit-transform: rotate3d(0, 0, 1, -45deg);
   transform: rotate3d(0, 0, 1, -45deg);
 }

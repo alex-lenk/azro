@@ -182,4 +182,4 @@
   return tcon;
 }));
 
-transformicons.add('.tcon');
+transformicons.add('.nav-left_toggle');

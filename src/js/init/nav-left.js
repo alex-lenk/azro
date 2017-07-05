@@ -1,23 +1,13 @@
-var navPos, winPos, navHeight, nav = $(".nav-left");
+var navLeft = $(".nav-left"),
+  fixedClass = 'fixed';
 
-function refreshVar() {
-  navPos = nav.offset().top;
-  navHeight = nav.outerHeight(true);
-}
-
-refreshVar();
-$(window).resize(refreshVar);
-
-//$('<div class="clone-nav"></div>').insertBefore(".nav-left").css("height", navHeight).hide();
-
-$(window).scroll(function () {
-  winPos = $(window).scrollTop();
-
-  if (winPos >= navPos) {
-    nav.addClass("fixed shadow");
-    $(".clone-nav").show();
-  } else {
-    nav.removeClass("fixed shadow");
-    $(".clone-nav").hide();
-  }
+jQuery(function ($) {
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 140) {
+      navLeft.addClass(fixedClass);
+    }
+    else if ($(this).scrollTop() < 140) {
+      navLeft.removeClass(fixedClass);
+    }
+  });
 });
