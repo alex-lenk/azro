@@ -1,7 +1,3 @@
-/**
- * Created by newuser on 03.07.17.
- */
-
 'use strict';
 
 var sheet = document.createElement('style');
