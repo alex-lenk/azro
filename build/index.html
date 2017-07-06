@@ -111,7 +111,7 @@
 </header>
 
 
-<section class="our-mission">
+<section style="position: fixed; z-index: -1; opacity: 0; visibility: hidden" class="hidden our-mission">
   <div class="container">
     <h2 class="title-line-bottom">
         <span>Our mission is to challenge the limits of imagination and technology in order to deliver
@@ -159,60 +159,9 @@
   </a>
 </section>
 
-<div class="nav-left">
-  <button type="button" class="nav-left_toggle" aria-label="toggle menu">
-    <span class="tcon-menu__lines" aria-hidden="true"></span>
-    <span class="tcon-visuallyhidden">Menu</span>
-  </button>
+<!-- 7include "temp/nav-left.html" -->
 
-  <div class="panel-sound">
-    <div class="volume-control">
-<!--      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 77.9 65.7" style="enable-background:new 0 0 77.9 65.7;" xml:space="preserve">
-          <g id="L1">
-            <rect id="rect1" y="12.5" class="linecol" width="6" height="41"></rect>
-            <rect id="rect2" x="12" y="11.5" class="linecol" width="6" height="42"></rect>
-            <rect id="rect3" x="24" y="12" class="linecol" width="6" height="42"></rect>
-            <rect id="rect4" x="36" y="11.5" class="linecol" width="6" height="43"></rect>
-            <rect id="rect5" x="48" y="5.5" class="linecol" width="6" height="54"></rect>
-            <rect id="rect6" x="60" y="14.5" class="linecol" width="6" height="37"></rect>
-            <rect id="rect7" x="72" y="17" class="linecol" width="6" height="32"></rect>
-          </g>
-        </svg>-->
-    </div>
-  </div>
-</div>
-
-<nav class="nav-panel">
-  <ul class="nav-panel-menu">
-    <li><a href="about-us.html">About Us</a></li>
-    <li><a href="#">Portfolio</a></li>
-    <li><a href="contacts.html">Contacts</a></li>
-  </ul>
-
-  <div class="support-block">
-    <ul class="social">
-      <li>
-        <a href="#" rel="nofollow" target="_blank">
-          <svg class="icon-be">
-            <use xlink:href="img/icons.svg#be"></use>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="#" rel="nofollow" target="_blank">
-          <svg class="icon-fb">
-            <use xlink:href="img/icons.svg#fb"></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
-
-    <a href="#" class="btn btn-white"><span>Hire us</span></a>
-  </div>
-</nav>
-
-
-<section id="our-work" class="our-work project">
+<section style="position: fixed; z-index: -1; opacity: 0; visibility: hidden" id="our-work" class="hidden our-work project">
   <div class="container">
     <h2 class="title-block">
       <picture>
@@ -423,11 +372,35 @@
     </div>
 
     <div class="footer-right">
-      ﻿Our mission is to challenge the limits of imagination and technology in order to deliver best content, create
-      value and make a difference.
+      <ul class="footer-social">
+        <li>
+          <a href="#" rel="nofollow" target="_blank">
+            <svg class="icon-be">
+              <use xlink:href="img/icons.svg#be"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" rel="nofollow" target="_blank">
+            <svg class="icon-ig">
+              <use xlink:href="img/icons.svg#ig"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" rel="nofollow" target="_blank">
+            <svg class="icon-fb">
+              <use xlink:href="img/icons.svg#fb"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </footer>
+
 
 <script src="js/jquery.js"></script>
 

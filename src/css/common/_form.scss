@@ -3,7 +3,7 @@
 .hide-placeholder {
   @include hidePlaceholder {
     opacity: 1;
-    color: #e6e6e6;
+    color: #a6a6a6;
     font-size: 17px;
     transition: opacity 0.3s ease;
     @include CeraGRThin;
@@ -41,7 +41,7 @@
   font-size: 17px;
   color: #fff;
   border: 0;
-  border-bottom: 1px solid #d2d2d2;
+  border-bottom: 1px solid rgba(#d2d2d2, .3);
   background-color: transparent;
   font-weight: normal;
   display: block;

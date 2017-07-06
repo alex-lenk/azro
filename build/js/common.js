@@ -1,7 +1,14 @@
 $(document).ready(function () {
+
   $(".nav-left_toggle").click(function () {
     $('.nav-panel').toggleClass("nav-panel-open");
   });
+
+  /**
+   *
+   * BEGIN focus form-control
+   *
+   */
 
   var formControl = $(".form-control"),
     formGroup = ".form-group",
@@ -10,16 +17,175 @@ $(document).ready(function () {
   formControl.focus(function () {
     $(this).closest(formGroup).addClass(formGroupFocus);
   });
+
   formControl.blur(function () {
     $(this).closest(formGroup).removeClass(formGroupFocus);
   });
 
-  // = init/jquery-ui-init.js
+  /**
+   *
+   * END focus form-control
+   *
+   */
 
-  // = init/nav-left.js
-
-  // $('#scene').parallax();
 });
+
+
+/**
+ *
+ * BEGIN volume-control
+ *
+ * Created on 03.07.17.
+ *
+ */
+
+'use strict';
+
+var sheet = document.createElement('style');
+sheet.type = 'text/css';
+document.body.appendChild(sheet);
+
+var state;
+
+function go() {
+  var res = '';
+  state = state == 'running' ? 'paused' : 'running';
+  var testimonials = document.querySelectorAll("#L1 rect");
+  var an = function an(nY, nH, id, dur) {
+    var st = state; // paused
+    return '\n      #' + id + ' {\n       -webkit-animation: pic' + id + ' ' + dur + ' infinite linear;\n       -webkit-animation-play-state: ' + st + ';\n      }\n      @keyframes pic' + id + ' {\n        50% {\n          y: ' + nY + ';\n          height: ' + nH + 'px;\n        }\n      }\n    ';
+  };
+  var data = [{ nY: 23, nH: 20, dur: '1.2s' }, { nY: 8, nH: 50, dur: '1s' }, { nY: 17, nH: 32, dur: '1s' }, { nY: 6, nH: 54, dur: '1s' }, { nY: 0, nH: 66, dur: '1s' }, { nY: 9, nH: 48, dur: '1s' }, { nY: 21, nH: 24, dur: '1s' }];
+  Array.prototype.forEach.call(testimonials, function (el, index) {
+    if (data[index] != -1) {
+      var d = data[index];
+      console.log(el.getAttribute("id"));
+      res += an(d.nY, d.nH, el.getAttribute("id"), d.dur);
+    }
+  });
+  sheet.innerHTML = res;
+}
+
+go();
+
+document.getElementById('volume-control').addEventListener("click", go, false);
+
+/**
+ *
+ * END volume-control
+ *
+ */
+
+
+
+/**
+ *
+ * BEGIN full-page-control by Oleg tviggyr
+ *
+ */
+
+/**
+ * Created by newuser on 03.07.17.
+ */
+(function ($) {
+  var section = 1;
+  var noscrol = false;
+  var startEl = $('.home-header'),
+    ourMission = $('.our-mission'),
+    ourWork = $('.our-work');
+
+
+  $('html,body').on('wheel', function (event) {
+
+    WinTop = $(window).scrollTop();
+    console.log(WinTop);
+    console.log(section);
+
+    if (WinTop < 50) {
+      if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
+        scrollHome('top', 0);
+      }
+      else {
+        scrollHome('bottom', 0);
+      }
+    }
+  });
+
+
+  function scrollHome(direction, WinTop) {
+
+    if (section == 3) {
+      noscrol = false;
+    }
+
+    if (!noscrol && WinTop == 0) {
+
+      noscrol = true;
+
+      if (direction == 'bottom') {
+        if (section == 1) {
+          section = 2;
+          startEl.addClass('header-out');
+          ourMission.addClass('second-active block-out');
+
+        }
+        else if (section == 2) {
+          section = 3;
+        }
+
+
+      }
+      else if (direction == 'top') {
+
+
+        if (section == 3) {
+          section = 2;
+
+          ourWork.removeClass('active-work');
+          ourMission.addClass('second-active');
+        }
+        else if (section == 2) {
+          section = 1;
+          startEl.removeClass('header-out');
+          ourMission.removeClass('block-out');
+          ourMission.removeClass('second-active');
+
+        } else if (section == 1) {
+          ourMission.removeClass('second-active');
+
+        }
+      }
+
+      if (section == 3) {
+        ourMission.removeClass('second-active');
+        ourWork.addClass('active-work');
+        setTimeout(function () {
+          setTimeout(function () {
+            // videoshow();
+          }, 1000);
+
+          $('html').removeClass('no-scroll');
+
+        }, 1000);
+      }
+      else {
+        $('html').addClass('no-scroll');
+      }
+
+      setTimeout(function () {
+        noscrol = false;
+      }, 1000);
+    }
+  }
+
+
+})(jQuery);
+
+/**
+ *
+ * END full-page-control
+ *
+ */
 
 (function (root, factory) {
   if (typeof define === 'function' && define.amd) {
@@ -274,135 +440,3 @@ function updateGradient() {
 }
 
 setInterval(updateGradient, 10);
-
-/**
- * Created by newuser on 03.07.17.
- */
-
-'use strict';
-
-var sheet = document.createElement('style');
-sheet.type = 'text/css';
-document.body.appendChild(sheet);
-
-var state;
-
-function go() {
-  var res = '';
-  state = state == 'running' ? 'paused' : 'running';
-  var testimonials = document.querySelectorAll("#L1 rect");
-  var an = function an(nY, nH, id, dur) {
-    var st = state; // paused
-    return '\n      #' + id + ' {\n       -webkit-animation: pic' + id + ' ' + dur + ' infinite linear;\n       -webkit-animation-play-state: ' + st + ';\n      }\n      @keyframes pic' + id + ' {\n        50% {\n          y: ' + nY + ';\n          height: ' + nH + 'px;\n        }\n      }\n    ';
-  };
-  var data = [{ nY: 23, nH: 20, dur: '1.2s' }, { nY: 8, nH: 50, dur: '1s' }, { nY: 17, nH: 32, dur: '1s' }, { nY: 6, nH: 54, dur: '1s' }, { nY: 0, nH: 66, dur: '1s' }, { nY: 9, nH: 48, dur: '1s' }, { nY: 21, nH: 24, dur: '1s' }];
-  Array.prototype.forEach.call(testimonials, function (el, index) {
-    if (data[index] != -1) {
-      var d = data[index];
-      console.log(el.getAttribute("id"));
-      res += an(d.nY, d.nH, el.getAttribute("id"), d.dur);
-    }
-  });
-  sheet.innerHTML = res;
-}
-
-go();
-
-document.getElementById('volume-control').addEventListener("click", go, false);
-
-/**
- * Created by newuser on 03.07.17.
- */
-(function ($) {
-  var section = 1;
-  var noscrol = false;
-  var startEl = $('.home-header'),
-    ourMission = $('.our-mission'),
-    ourWork = $('.our-work');
-
-
-  $('html,body').on('wheel', function (event) {
-
-    WinTop = $(window).scrollTop();
-    console.log(WinTop);
-    console.log(section);
-
-    if (WinTop < 50) {
-      if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-        scrollHome('top', 0);
-      }
-      else {
-        scrollHome('bottom', 0);
-      }
-    }
-  });
-
-
-  function scrollHome(direction, WinTop) {
-
-    if (section == 3) {
-      noscrol = false;
-    }
-
-    if (!noscrol && WinTop == 0) {
-
-      noscrol = true;
-
-      if (direction == 'bottom') {
-        if (section == 1) {
-          section = 2;
-          startEl.addClass('header-out');
-          ourMission.addClass('second-active block-out');
-
-        }
-        else if (section == 2) {
-          section = 3;
-        }
-
-
-      }
-      else if (direction == 'top') {
-
-
-        if (section == 3) {
-          section = 2;
-
-          ourWork.removeClass('active-work');
-          ourMission.addClass('second-active');
-        }
-        else if (section == 2) {
-          section = 1;
-          startEl.removeClass('header-out');
-          ourMission.removeClass('block-out');
-          ourMission.removeClass('second-active');
-
-        } else if (section == 1) {
-          ourMission.removeClass('second-active');
-
-        }
-      }
-
-      if (section == 3) {
-        ourMission.removeClass('second-active');
-        ourWork.addClass('active-work');
-        setTimeout(function () {
-          setTimeout(function () {
-            // videoshow();
-          }, 1000);
-
-          $('html').removeClass('no-scroll');
-
-        }, 1000);
-      }
-      else {
-        $('html').addClass('no-scroll');
-      }
-
-      setTimeout(function () {
-        noscrol = false;
-      }, 1000);
-    }
-  }
-
-
-})(jQuery);

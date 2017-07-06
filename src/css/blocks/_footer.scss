@@ -26,18 +26,6 @@ footer {
   flex-shrink: 1;
 }
 
-.footer-right {
-  max-width: 320px;
-  padding-top: 85px;
-  padding-left: 60px;
-  font-size: 21px;
-  color: #E6E6E6;
-  line-height: 1.2;
-  flex-shrink: 0;
-  flex-basis: 320px;
-  @include CeraGRLight;
-}
-
 .footer-title {
   font-size: 36px;
   text-align: center;
@@ -62,6 +50,10 @@ footer {
   }
   .btn-white {
     margin-top: 43px;
+    &:not(:hover) {
+      color: #a6a6a6;
+      border-color: rgba(255, 255, 255, 0.3);
+    }
   }
   .form-group {
     margin-top: 43px;
@@ -70,5 +62,81 @@ footer {
   .form-control {
     height: 100%;
     padding: 15px 10px 5px;
+  }
+}
+
+.footer-right {
+  max-width: 320px;
+  flex-basis: 320px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social {
+  margin-bottom: -89px;
+  padding-left: 0;
+  position: relative;
+  list-style: none;
+  display: flex;
+  align-items: baseline;
+  svg {
+    fill: #fff;
+    position: absolute;
+    z-index: 5;
+  }
+  li {
+    position: relative;
+    &:first-child {
+      margin-right: 53px;
+    }
+    &:not(:first-child):not(:last-child) {
+      position: absolute;
+      top: -71px;
+      left: 54px;
+    }
+    a {
+      width: 57px;
+      height: 57px;
+      display: inline-block;
+      position: relative;
+      z-index: 5;
+      &:before {
+        width: 56px;
+        height: 56px;
+        border: 2px solid #33ddfb;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        z-index: 2;
+        transform: rotateZ(45deg);
+        transition: all 0.3s;
+        transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+      }
+      &:hover:before {
+          background-color: #33ddfb;
+          transform: rotateZ(0);
+      }
+    }
+  }
+  .icon-be {
+    width: 24px;
+    height: 24px;
+    top: 17px;
+    left: 17px;
+  }
+  .icon-fb {
+    width: 20px;
+    height: 18px;
+    top: 19px;
+    left: 18px;
+  }
+  .icon-ig {
+    width: 30px;
+    height: 30px;
+    top: 13px;
+    left: 13px;
   }
 }
