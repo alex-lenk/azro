@@ -5,9 +5,9 @@
   background: transparent;
   text-align: center;
   cursor: pointer;
+  position: relative;
   line-height: 1;
   display: inline-block;
-  position: relative;
   transition: all .3s ease;
   &-white {
     min-width: 145px;
@@ -50,11 +50,11 @@
   &-offset {
     width: 191px;
     height: 55px;
+    margin-left: 5px;
     border: 2px solid #212324;
     color: #fff;
     font-size: 18px;
     text-transform: uppercase;
-    position: relative;
     @include CeraGRRegular;
     &:hover,
     &:active,

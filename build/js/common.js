@@ -440,3 +440,33 @@ function updateGradient() {
 }
 
 setInterval(updateGradient, 10);
+
+
+/**
+ *
+ * BEGIN parallax effect
+ *
+ */
+
+var rentPro = document.getElementById('rentPro'),
+  rentPro2 = document.getElementById('rentPro2'),
+  karma = document.getElementById('karma'),
+  karma2 = document.getElementById('karma2'),
+  gazmodel = document.getElementById('gazmodel'),
+  gazmodel2 = document.getElementById('gazmodel2'),
+  locad = document.getElementById('locad'),
+  locad2 = document.getElementById('locad2'),
+
+  parallax = new Parallax(rentPro),
+  parallax = new Parallax(rentPro2),
+  parallax = new Parallax(karma),
+  parallax = new Parallax(karma2),
+  parallax = new Parallax(gazmodel),
+  parallax = new Parallax(gazmodel2),
+  parallax = new Parallax(locad),
+  parallax = new Parallax(locad2);
+/**
+ *
+ * END To parallax effect
+ *
+ */

@@ -4,6 +4,9 @@
 //= lib/smoothscroll.js
 
 
+//= lib/parallax.min.js
+
+
 // = lib/audioplayer.min.js
 // = ../../bower_components/fullpage.js/jquery.fullPage.min.js
 // = lib/jquery-ui.min.js
