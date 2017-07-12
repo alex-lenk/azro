@@ -91,8 +91,24 @@ var rentPro = document.getElementById('rentPro'),
   parallax = new Parallax(gazmodel2),
   parallax = new Parallax(locad),
   parallax = new Parallax(locad2);
+
 /**
  *
  * END To parallax effect
  *
  */
+
+var mainNav = $(".our-mission"),
+  mainNavFixed = 'main-nav-fixed',
+  $window = $(window),
+  $h2 = mainNav.offset().top;// Определяем координаты верха блока навигации
+
+$window.scroll(function () {
+  // Если прокрутили скролл ниже макушки блока, включаем фиксацию
+  if ($window.scrollTop() > $h2) {
+    mainNav.addClass(mainNavFixed);
+  } else {
+    //Иначе возвращаем всё назад
+    mainNav.removeClass(mainNavFixed);
+  }
+});

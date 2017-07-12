@@ -93,11 +93,11 @@ button, input, select, textarea {
 
 .container {
   width: 100%;
-  max-width: 1330px;
+  max-width: 1400px;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .wrapper {
@@ -231,10 +231,10 @@ button, input, select, textarea {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  font-size: 23px;
   li {
     padding-left: 45px;
     position: relative;
-    font-size: 23px;
     @include CeraGRRegular;
     &:not(:last-child) {
       margin-bottom: 23px;
