@@ -226,7 +226,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background: #181a1b;
+  background: #1b1d1e;
   color: #ffffff;
   font-size: 16px;
   line-height: 1.4;
@@ -1627,11 +1627,6 @@ footer .container {
 }
 
 .contacts-page-list {
-  max-width: 41%;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
   color: #e6e6e6;
   font-size: 20px;
   text-align: left;
@@ -1646,22 +1641,10 @@ footer .container {
 }
 
 .contacts-page-list li {
-  width: 34%;
   min-width: 133px;
   padding-top: 160px;
-  margin-bottom: 110px;
   position: relative;
   text-align: center;
-}
-
-.contacts-page-list li:nth-child(2) {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.contacts-page-list li:last-child {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .contacts-page-list a {
@@ -1756,7 +1739,7 @@ footer .container {
   position: absolute;
   bottom: -55px;
   left: -40px;
-  border: 14px solid #181a1b;
+  border: 14px solid #1b1d1e;
   width: 195px;
   height: 200px;
   content: '';
@@ -1861,7 +1844,7 @@ footer .container {
 .project-content-right::after {
   width: 321px;
   height: 138px;
-  background-color: #181a1b;
+  background-color: #1b1d1e;
   z-index: 4;
   bottom: 0;
   left: -75px;

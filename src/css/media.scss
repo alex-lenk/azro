@@ -14,6 +14,12 @@
   }
 }
 
+@media (min-width: 768px) {
+  .contacts-page-list-text br {
+    display: none;
+  }
+}
+
 @media (min-width: 993px) {
   .no-scroll {
     overflow: hidden;
@@ -121,7 +127,7 @@
   }
 }
 
-@media (min-width: 1164px) {
+@media (min-width: 1166px) {
   body {
     padding-left: 65px;
   }
@@ -152,6 +158,23 @@
     border-left: 1px solid #1d1f20;
     border-right: 1px solid #1d1f20;
   }
+  
+  .contacts-page-list {
+    max-width: 41%;
+    flex-grow: 1;
+    li {
+      width: 34%;
+      margin-bottom: 110px;
+      &:nth-child(2) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &:last-child {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
 }
 
 @media (min-width: 1550px) {
@@ -170,7 +193,7 @@
   }
 }
 
-@media (max-width: 1549px) and (min-width: 1164px) {
+@media (max-width: 1549px) and (min-width: 1166px) {
   .header-content {
     max-width: 1490px;
   }
@@ -208,7 +231,7 @@
   }
 }
 
-@media (max-width: 1163px) and (min-width: 993px) {
+@media (max-width: 1165px) and (min-width: 993px) {
   body {
     padding-left: 55px;
   }
@@ -246,6 +269,10 @@
     height: 107%;
     right: -5%;
   }
+  
+  .contacts-page-list {
+    padding: 0 50px;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -258,7 +285,7 @@
   }
 }
 
-@media (max-width: 1163px) {
+@media (max-width: 1165px) {
   .container {
     max-width: 1055px;
     padding-left: 40px;
@@ -328,6 +355,23 @@
   .locad-logo {
     max-width: 155px;
   }
+  
+  .contacts-page {
+    flex-direction: column;
+  }
+  .contacts-page-list {
+    margin-bottom: 70px;
+    justify-content: space-between;
+  }
+  .contacts-page-right {
+    width: 100%;
+    height: 415px;
+    max-width: none;
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
 }
 
 @media (max-width: 992px) and (min-width: 568px) {
@@ -364,9 +408,19 @@
       left: 0;
     }
   }
+  
+  .contacts-page-list li {
+    &:first-child, &:nth-child(3) {
+      transform: translateY(-50px);
+    }
+  }
 }
 
 @media (max-width: 992px) {
+  .page .nav-left {
+    transform: translate3d(0, 0, 0);
+  }
+  
   .container {
     max-width: 770px;
   }
@@ -563,6 +617,10 @@
   .projects-list {
     padding-bottom: 0;
   }
+  
+  .contacts-page-right {
+    height: 380px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -577,6 +635,23 @@
   .footer-center {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .contacts-page-list {
+    margin-bottom: 35px;
+    font-size: 19px;
+    li {
+      width: 34%;
+      margin-bottom: 25px;
+    }
+    .email, .phone, .skype, .address {
+      font-size: 13px;
+    }
+  }
+  .contacts-page-list li:first-child, .contacts-page-list li:nth-child(3) {
+    transform: translateY(0);
   }
 }
 
@@ -751,5 +826,9 @@
   .nav-left-wrap {
     padding-left: 15px;
     padding-right: 15px;
+  }
+  
+  .contacts-page-list {
+    padding: 0 5px;
   }
 }
