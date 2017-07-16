@@ -2,12 +2,6 @@
 @import 'lib/breakpoint-slicer';
 @import "common/mixin";
 
-@media (max-width: 1549px) and (min-width: 993px) {
-  .header-content {
-    max-height: 470px;
-  }
-}
-
 @media (min-width: 568px) {
   .footer-form {
     flex-wrap: wrap;
@@ -26,6 +20,10 @@
     body {
       padding-right: 15px;
       overflow: hidden;
+    }
+    .nav-left {
+      transform: translate(-100%, 0);
+      transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
     }
   }
   
@@ -54,6 +52,9 @@
   }
   
   .our-mission {
+    width: 100%;
+    height: 100%;
+    padding-left: 65px;
     padding-bottom: 100px;
     position: absolute;
     transform: translate3d(0, 100%, 0);
@@ -62,6 +63,15 @@
     will-change: transform;
     top: 0;
     left: 0;
+    .container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .our-mission-list {
+    justify-content: space-around;
   }
   
   .our-work {
@@ -80,14 +90,14 @@
     transform: translate3d(0, -100%, 0);
   }
   
+  .nav-panel .support-block {
+    padding-left: 64px;
+  }
   .nav-left {
-    width: 64px;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    transform: translate(-100%, 0);
-    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
     + .nav-panel {
       position: fixed;
     }
@@ -105,31 +115,39 @@
   .block-out + .nav-left {
     transform: translate(0, 0);
   }
-  .our-mission-list {
-    justify-content: space-around;
-  }
-  
-  .our-mission {
-    width: calc(100% - 15px);
-    height: 100%;
-    padding-left: 64px;
-    .container {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-  }
   
   .nav-left .social {
     display: none;
   }
 }
 
-@media (min-width: 1163px) {
-  .header-content-right {
-    max-width: 600px;
+@media (min-width: 1164px) {
+  body {
+    padding-left: 65px;
   }
+  .container {
+    box-shadow: inset 95px 0 0 rgba(255, 0, 0, 0.3), inset -95px 0 0 rgba(255, 0, 0, 0.3);
+  }
+  .header-panel {
+    padding-left: 75px;
+    padding-right: 75px;
+    box-shadow: inset 75px 0 0 rgba(255, 0, 0, 0.3), inset -75px 0 0 rgba(255, 0, 0, 0.3);
+  }
+  .header-content {
+    max-width: 1550px;
+    max-height: 612px;
+    padding-left: 75px;
+    padding-right: 75px;
+    box-shadow: inset 75px 0 0 rgba(255, 0, 0, 0.3), inset -75px 0 0 rgba(255, 0, 0, 0.3);
+  }
+  .header-content-right {
+    max-width: 550px;
+  }
+  
+  .nav-left {
+    width: 65px;
+  }
+  
   .footer-center {
     border-left: 1px solid #1d1f20;
     border-right: 1px solid #1d1f20;
@@ -137,33 +155,35 @@
 }
 
 @media (min-width: 1550px) {
-  .header-panel {
-    padding-left: 80px;
-    padding-right: 80px;
-  }
-  .header-content {
-    max-width: 1560px;
-    max-height: 612px;
-    padding-left: 80px;
-    padding-right: 80px;
-  }
   .logo img {
     width: 733px;
     height: 776px;
     bottom: -84px;
     left: -73px;
   }
+  .header-content-right {
+    max-width: 600px;
+  }
+  
+  .nav-panel-menu li:not(:last-child) {
+    margin-bottom: 150px;
+  }
 }
 
-@media (max-width: 1549px) and (min-width: 1163px) {
+@media (max-width: 1549px) and (min-width: 1164px) {
   .header-content {
     max-width: 1490px;
   }
   .logo img {
     height: 660px;
     bottom: -70px;
-    left: -65px;
+    left: -61px;
   }
+  
+  .nav-panel-menu li:not(:last-child) {
+    margin-bottom: 100px;
+  }
+  
   #karma .project-text {
     width: 35%;
     br {
@@ -177,16 +197,21 @@
     height: 50px;
   }
   
-  .our-mission-list > li:not(:first-child):not(:last-child) .list-line {
-    padding-top: 90px;
-  }
-  
   .next-layer {
     bottom: 60px;
   }
 }
 
-@media (max-width: 1162px) and (min-width: 993px) {
+@media (max-width: 1549px) and (min-width: 993px) {
+  .header-content {
+    max-height: 470px;
+  }
+}
+
+@media (max-width: 1163px) and (min-width: 993px) {
+  body {
+    padding-left: 55px;
+  }
   .header-panel {
     max-width: 1080px;
   }
@@ -203,6 +228,13 @@
       left: -56px;
     }
   }
+  
+  .nav-left {
+    width: 55px;
+  }
+  .nav-panel-menu li:not(:last-child) {
+    margin-bottom: 80px;
+  }
   .menu {
     font-size: 19px;
   }
@@ -216,12 +248,23 @@
   }
 }
 
-@media (max-width: 1162px) {
+@media (max-width: 1300px) {
+  .project-rhombus-decor, .arrow-long {
+    display: none;
+  }
+  .project-rhombus {
+    bottom: -74px;
+    left: -96px;
+  }
+}
+
+@media (max-width: 1163px) {
   .container {
-    max-width: 1080px;
+    max-width: 1055px;
     padding-left: 40px;
     padding-right: 40px;
   }
+  
   .home-header-inner {
     padding-bottom: 40px;
   }
@@ -263,13 +306,6 @@
   .our-work {
     width: 100%;
   }
-  .project-rhombus-decor, .arrow-long {
-    display: none;
-  }
-  .project-rhombus {
-    bottom: -74px;
-    left: -96px;
-  }
   
   .footer-social {
     flex-direction: column;
@@ -291,6 +327,12 @@
   
   .locad-logo {
     max-width: 155px;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 568px) {
+  .our-mission {
+    margin-bottom: 130px;
   }
 }
 
@@ -376,14 +418,44 @@
     transition: transform 0.8s;
     transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
     will-change: transform;
+    .social {
+      position: relative;
+    }
   }
-  
   .main-nav-fixed + .nav-left {
     transform: translate3d(0, 0, 0);
   }
   .nav-left_toggle {
     margin: 16px 0 0 auto;
   }
+  .nav-left-wrap {
+    max-width: 770px;
+    padding: 0 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+  }
+  .nav-panel {
+    width: 100%;
+    position: fixed;
+    top: 55px;
+    padding-bottom: 100px;
+    .social {
+      display: none;
+    }
+    .support-block .btn-white {
+      margin: 0 auto;
+    }
+  }
+  .nav-panel-menu {
+    display: inline-flex;
+    width: auto;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 50px 0;
+    justify-content: space-around;
+  }
+  
   .our-mission-list {
     flex-wrap: wrap;
     justify-content: space-between;
@@ -490,34 +562,6 @@
   }
   .projects-list {
     padding-bottom: 0;
-  }
-  
-  .nav-panel .social {
-    display: none;
-  }
-  .nav-left .social {
-    position: relative;
-  }
-  .nav-left-wrap {
-    max-width: 770px;
-    padding: 0 40px;
-    margin: 0 auto;
-    display: flex;
-    align-items: baseline;
-  }
-  .nav-panel {
-    width: 100%;
-    position: fixed;
-  }
-  .nav-panel-menu {
-    display: inline-flex;
-    width: auto;
-    min-width: 300px;
-    margin: 0 auto;
-    padding-left: 0;
-  }
-  .nav-panel .support-block .btn-white {
-    margin: 0 auto;
   }
 }
 
@@ -629,6 +673,11 @@
   .menu {
     font-size: 16px;
   }
+  
+  .our-mission {
+    margin-bottom: 55px;
+  }
+  
   .footer-form {
     flex-direction: column;
   }
@@ -688,8 +737,6 @@
   }
   .logo {
     display: none;
-  }
-  .header-content-right {
   }
   .header-content-text {
     margin-bottom: 55px;

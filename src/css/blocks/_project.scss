@@ -1,28 +1,24 @@
 .our-work {
-  width: calc(100% - 15px);
-  padding-left: 64px;
+  width: 100%;
   top: 0;
   left: 0;
   position: relative;
   z-index: 50;
+  background: url(../img/bg/bg-page.png) no-repeat top left fixed;
 }
 
 .project {
   color: #fff;
-  .container {
+  .title-block {
     padding-top: 65px;
-    position: relative;
-  }
-  .title-block img {
-    max-height: 98px;
+    img {
+      max-height: 98px;
+    }
   }
 }
 
-.projects-list {
-  padding-bottom: 55px;
-  .project-content:last-of-type {
-    margin-bottom: 51px;
-  }
+.projects-list .project-content:last-of-type {
+  margin-bottom: 51px;
 }
 
 .project-content {
@@ -39,7 +35,7 @@
 }
 
 .project-content-right {
-  width: 66.5%;
+  width: 66%;
   max-width: 864px;
   padding: 41px 0 60px;
   position: absolute;
@@ -145,7 +141,7 @@
 .project-all-wrap {
   width: 66.5%;
   max-width: 864px;
-  margin-bottom: -55px;
+  margin-top: -55px;
   margin-left: auto;
   position: relative;
 }

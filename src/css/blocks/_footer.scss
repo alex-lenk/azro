@@ -1,5 +1,5 @@
 footer {
-  padding: 60px 0 60px 64px;
+  padding: 60px 0;
   background-color: #141516;
   color: #fff;
   .container {
@@ -102,13 +102,13 @@ footer {
         left: 0;
         content: '';
         z-index: 2;
-        transform: rotateZ(45deg);
+        transform: rotateZ(-45deg);
         transition: all 0.3s;
         transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
       }
       &:hover:before {
-          background-color: #33ddfb;
-          transform: rotateZ(0);
+        background-color: #33ddfb;
+        transform: rotateZ(0);
       }
     }
   }
