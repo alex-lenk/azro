@@ -36,23 +36,19 @@
 }
 
 @mixin CeraGRLight {
-  font-family: 'ceragr-lightuploaded_file', sans-serif;
+  font-family: 'ceragr-light', sans-serif;
 }
 
 @mixin CeraGRRegular {
-  font-family: 'ceragr-regularuploaded_file', sans-serif;
+  font-family: 'ceragr-regular', sans-serif;
 }
 
 @mixin CeraGRMedium {
-  font-family: 'ceragr-mediumuploaded_file', sans-serif;
+  font-family: 'ceragr-medium', sans-serif;
 }
 
 @mixin CeraGRBold {
-  font-family: 'ceragr-bolduploaded_file', sans-serif;
-}
-
-@mixin CeraGRThin {
-  font-family: 'CeraGR-Thin', sans-serif;
+  font-family: 'ceragr-bold', sans-serif;
 }
 
 @mixin hidePlaceholder {

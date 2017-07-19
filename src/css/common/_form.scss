@@ -6,7 +6,7 @@
     color: #a6a6a6;
     font-size: 17px;
     transition: opacity 0.3s ease;
-    @include CeraGRThin;
+    @include CeraGRLight;
   }
 
   &:focus {
@@ -46,7 +46,7 @@
   font-weight: normal;
   display: block;
   transition: all .3s ease;
-  @include CeraGRThin;
+  @include CeraGRLight;
 }
 
 textarea.form-control {
