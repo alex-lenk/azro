@@ -1,34 +1,27 @@
 @font-face {
-  font-family: 'CeraGR-Thin';
-  src: url("../fonts/CeraGR-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/CeraGR-Thin.otf") format("opentype"), url("../fonts/CeraGR-Thin.woff") format("woff"), url("../fonts/CeraGR-Thin.ttf") format("truetype"), url("../fonts/CeraGR-Thin.svg#CeraGR-Thin") format("svg");
+  font-family: 'ceragr-bold';
+  src: url("../fonts/cera_gr_bold-webfont.woff2") format("woff2"), url("../fonts/cera_gr_bold-webfont.woff") format("woff"), url("../fonts/cera_gr_bold-webfont.svg#ceragr-bold") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ceragr-bolduploaded_file';
-  src: url("../fonts/cera_gr_bold-webfont.woff2") format("woff2"), url("../fonts/cera_gr_bold-webfont.woff") format("woff"), url("../fonts/cera_gr_bold-webfont.svg#ceragr-bolduploaded_file") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ceragr-lightuploaded_file';
+  font-family: 'ceragr-light';
   src: url("../fonts/cera_gr_light-webfont.woff2") format("woff2"), url("../fonts/cera_gr_light-webfont.woff") format("woff"), url("../fonts/cera_gr_light-webfont.svg#ceragr-lightuploaded_file") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ceragr-mediumuploaded_file';
-  src: url("../fonts/cera_gr_medium-webfont.woff2") format("woff2"), url("../fonts/cera_gr_medium-webfont.woff") format("woff"), url("../fonts/cera_gr_medium-webfont.svg#ceragr-mediumuploaded_file") format("svg");
+  font-family: 'ceragr-medium';
+  src: url("../fonts/cera_gr_medium-webfont.woff2") format("woff2"), url("../fonts/cera_gr_medium-webfont.woff") format("woff"), url("../fonts/cera_gr_medium-webfont.svg#ceragr-medium") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'ceragr-regularuploaded_file';
-  src: url("../fonts/cera_gr-webfont.woff2") format("woff2"), url("../fonts/cera_gr-webfont.woff") format("woff"), url("../fonts/cera_gr-webfont.svg#ceragr-regularuploaded_file") format("svg");
+  font-family: 'ceragr-regular';
+  src: url("../fonts/cera_gr-webfont.woff2") format("woff2"), url("../fonts/cera_gr-webfont.woff") format("woff"), url("../fonts/cera_gr-webfont.svg#ceragr-regular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -56,7 +49,7 @@
   text-transform: uppercase;
   font-weight: normal;
   overflow: hidden;
-  font-family: 'ceragr-regularuploaded_file', sans-serif;
+  font-family: 'ceragr-regular', sans-serif;
 }
 
 .btn-white::after {
@@ -98,7 +91,7 @@
   color: #fff;
   font-size: 18px;
   text-transform: uppercase;
-  font-family: 'ceragr-regularuploaded_file', sans-serif;
+  font-family: 'ceragr-regular', sans-serif;
 }
 
 .btn-offset:hover, .btn-offset:active, .btn-offset:focus {
@@ -133,7 +126,7 @@
   font-size: 17px;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  font-family: 'CeraGR-Thin', sans-serif;
+  font-family: 'ceragr-light', sans-serif;
 }
 
 .hide-placeholder::-moz-placeholder {
@@ -142,7 +135,7 @@
   font-size: 17px;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  font-family: 'CeraGR-Thin', sans-serif;
+  font-family: 'ceragr-light', sans-serif;
 }
 
 .hide-placeholder:-ms-input-placeholder {
@@ -151,7 +144,7 @@
   font-size: 17px;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  font-family: 'CeraGR-Thin', sans-serif;
+  font-family: 'ceragr-light', sans-serif;
 }
 
 .hide-placeholder::-webkit-input-placeholder {
@@ -160,7 +153,7 @@
   font-size: 17px;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
-  font-family: 'CeraGR-Thin', sans-serif;
+  font-family: 'ceragr-light', sans-serif;
 }
 
 .hide-placeholder:focus:-moz-placeholder {
@@ -212,7 +205,7 @@
   display: block;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
-  font-family: 'CeraGR-Thin', sans-serif;
+  font-family: 'ceragr-light', sans-serif;
 }
 
 textarea.form-control {
@@ -230,7 +223,7 @@ body {
   color: #ffffff;
   font-size: 16px;
   line-height: 1.4;
-  font-family: 'ceragr-regularuploaded_file', sans-serif;
+  font-family: 'ceragr-light', sans-serif;
 }
 
 a, .as-link {
@@ -339,18 +332,11 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   background-size: cover;
 }
 
-.header-page {
-  height: 312px;
-  padding-top: 92px;
-}
-
 .page-content {
-  padding-bottom: 80px;
   font-size: 21px;
   text-align: center;
   color: #e6e6e6;
   line-height: 1.3;
-  font-family: 'ceragr-lightuploaded_file', sans-serif;
 }
 
 .page-content p {
@@ -442,27 +428,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   max-height: 83px;
 }
 
-.title-top-line {
-  margin: 0 0 65px;
-  text-align: center;
-  color: #33ddfb;
-  font-size: 24px;
-  text-transform: uppercase;
-}
-
-.title-top-line-text {
-  display: inline-block;
-}
-
-.title-top-line-text::before {
-  width: 100%;
-  height: 1px;
-  margin-bottom: 90px;
-  background-color: #33ddfb;
-  display: inline-block;
-  content: '';
-}
-
 .section {
   padding: 0 90px 0 154px;
 }
@@ -473,7 +438,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   color: #e6e6e6;
   line-height: 1.2;
   text-align: center;
-  font-family: 'ceragr-lightuploaded_file', sans-serif;
+  font-family: 'ceragr-light', sans-serif;
 }
 
 .title-line-bottom span {
@@ -500,7 +465,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .list-line li {
   padding-left: 45px;
   position: relative;
-  font-family: 'ceragr-regularuploaded_file', sans-serif;
+  font-family: 'ceragr-regular', sans-serif;
 }
 
 .list-line li:not(:last-child) {
@@ -553,7 +518,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   text-transform: uppercase;
   position: relative;
   z-index: 9;
-  font-family: 'ceragr-mediumuploaded_file', sans-serif;
+  font-family: 'ceragr-medium', sans-serif;
 }
 
 @-webkit-keyframes showSocials {
@@ -696,7 +661,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   left: 50%;
   margin-left: -1px;
   z-index: 92;
-  background-color: #fff;
   position: absolute;
   overflow: hidden;
 }
@@ -710,8 +674,8 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   -webkit-transform: translate(0, -100%);
   -ms-transform: translate(0, -100%);
   transform: translate(0, -100%);
-  -webkit-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s 1000 linear;
+  animation: spin 2s 1000 linear;
 }
 
 .video-bg {
@@ -818,7 +782,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   font-size: 20px;
   color: #fff;
   line-height: 1.2;
-  font-family: 'ceragr-lightuploaded_file', sans-serif;
+  font-family: 'ceragr-light', sans-serif;
 }
 
 .header-content-text img {
@@ -845,7 +809,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  font-family: 'ceragr-mediumuploaded_file', sans-serif;
+  font-family: 'ceragr-medium', sans-serif;
 }
 
 .menu-link {
@@ -899,7 +863,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 }
 
 .our-mission {
-  background: url(../img/bg/bg-our-mission.png) no-repeat top left;
+  background: url(../img/bg/bg-page.png) no-repeat top left fixed;
   background-size: cover;
   overflow: hidden;
   z-index: 55;
@@ -1051,7 +1015,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-family: 'ceragr-mediumuploaded_file', sans-serif;
+  font-family: 'ceragr-medium', sans-serif;
 }
 
 .nav-panel-menu li {
@@ -1132,8 +1096,10 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 .nav-left {
   background-color: #141516;
   z-index: 97;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
   -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
   will-change: transform;
@@ -1331,13 +1297,12 @@ footer .container {
   font-size: 36px;
   text-align: center;
   color: #33ddfb;
-  font-family: 'ceragr-mediumuploaded_file', sans-serif;
+  font-family: 'ceragr-medium', sans-serif;
 }
 
 .copy {
   font-size: 16px;
   margin: 35px 0 0;
-  font-family: 'CeraGR-Thin', sans-serif;
 }
 
 .footer-form {
@@ -1478,10 +1443,10 @@ footer .container {
 }
 
 .about-us-advantages {
-  padding-left: 71px;
-  padding-right: 108px;
+  padding-left: 0;
   margin-bottom: 67px;
   list-style: none;
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1495,30 +1460,7 @@ footer .container {
 .about-us-advantages > li {
   padding: 55px 0 50px;
   position: relative;
-  font-family: 'ceragr-mediumuploaded_file', sans-serif;
-}
-
-.about-us-advantages-decor,
-.about-us-advantages > li::after {
-  width: 100px;
-  height: 100px;
-  content: '';
-  position: absolute;
-  top: 23px;
-  left: 50%;
-  margin: 0 0 0 -50px;
-  z-index: 3;
-  -webkit-transform: rotateZ(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotateZ(45deg);
-}
-
-.about-us-advantages > li::after {
-  width: 94px;
-  height: 94px;
-  top: 26px;
-  margin-left: -47px;
-  background-color: #181a1b;
+  font-family: 'ceragr-medium', sans-serif;
 }
 
 .about-us-advantages-text {
@@ -1533,7 +1475,8 @@ footer .container {
 }
 
 .who-we {
-  margin-bottom: 190px;
+  padding-top: 32px;
+  margin-bottom: 135px;
 }
 
 .who-we-list {
@@ -1552,56 +1495,16 @@ footer .container {
 }
 
 .who-we-list li {
-  position: relative;
+  width: 100%;
+  max-width: 255px;
+  padding-right: 3.5%;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-.who-we-list li::before, .who-we-list li::after {
-  content: '';
-  position: absolute;
-  z-index: 3;
-  bottom: 47px;
-  left: 0;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-.who-we-list li::before {
-  width: 215px;
-  height: 298px;
-  border: 8px solid #232525;
-}
-
-.who-we-list li::after {
-  width: 67px;
-  height: 67px;
-  background-color: #181a1b;
-}
-
-.who-we-list li:first-child {
-  margin-top: 27px;
-}
-
-.who-we-list li:nth-child(3) {
-  margin-top: 30px;
-}
-
-.who-we-list li:last-child {
-  margin-top: 23px;
-}
-
-.who-we-list img {
-  max-width: 205px;
-  margin-left: 33px;
-  position: relative;
-  z-index: 4;
-  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
-}
-
 .who-we-title {
-  padding-top: 25px;
+  width: -webkit-calc(100% + 45px);
+  width: calc(100% + 45px);
   margin-bottom: 13px;
   font-size: 25px;
   line-height: 1;
@@ -1609,17 +1512,87 @@ footer .container {
   color: #33ddfb;
   position: relative;
   z-index: 5;
-  font-family: 'ceragr-mediumuploaded_file', sans-serif;
+  font-family: 'ceragr-medium', sans-serif;
 }
 
 .who-we-position {
+  width: -webkit-calc(100% + 33px);
+  width: calc(100% + 33px);
   font-size: 20px;
   color: #fff;
   line-height: 1;
-  font-family: 'ceragr-regularuploaded_file', sans-serif;
+  z-index: 3;
+  position: relative;
+  font-family: 'ceragr-regular', sans-serif;
+}
+
+.who-we-media {
+  width: 100%;
+  max-width: 215px;
+  height: 100%;
+  max-height: 300px;
+  padding-left: 10px;
+  padding-bottom: 19px;
+  position: relative;
+  -webkit-transform: translateY(8px);
+  -ms-transform: translateY(8px);
+  transform: translateY(8px);
+}
+
+.who-we-media::before, .who-we-media::after {
+  content: '';
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.who-we-media::before {
+  width: 100%;
+  height: 100%;
+  border: 8px solid #232525;
+}
+
+.who-we-media::after {
+  width: 67px;
+  height: 67px;
+  background-color: #1b1d1e;
+}
+
+.who-we-media img {
+  position: relative;
+  z-index: 6;
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translate3d(16%, -8%, 0);
+  transform: translate3d(16%, -8%, 0);
+}
+
+.title-top-line {
+  margin: 0 0 83px;
+  text-align: center;
+  color: #33ddfb;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.title-top-line-text {
+  display: inline-block;
+}
+
+.title-top-line-text::before {
+  width: 100%;
+  height: 1px;
+  margin-bottom: 100px;
+  background-color: #33ddfb;
+  display: block;
+  content: '';
 }
 
 .contacts-page {
+  padding-bottom: 80px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1637,7 +1610,7 @@ footer .container {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  font-family: 'ceragr-lightuploaded_file', sans-serif;
+  font-family: 'ceragr-light', sans-serif;
 }
 
 .contacts-page-list li {
@@ -1710,7 +1683,7 @@ footer .container {
   display: block;
   text-align: center;
   text-transform: uppercase;
-  font-family: 'ceragr-mediumuploaded_file', sans-serif;
+  font-family: 'ceragr-medium', sans-serif;
 }
 
 .contacts-page-right {
@@ -1767,7 +1740,7 @@ footer .container {
   top: 40px;
   left: 0;
   width: 100%;
-  font-family: 'ceragr-mediumuploaded_file', sans-serif;
+  font-family: 'ceragr-medium', sans-serif;
 }
 
 .contacts-page-list-text {
@@ -1776,7 +1749,7 @@ footer .container {
   left: 50%;
   margin-left: -95px;
   top: 71px;
-  font-family: 'ceragr-regularuploaded_file', sans-serif;
+  font-family: 'ceragr-regular', sans-serif;
 }
 
 .our-work {
@@ -1856,14 +1829,14 @@ footer .container {
   font-size: 48px;
   line-height: 1.2;
   font-weight: normal;
-  font-family: 'ceragr-mediumuploaded_file', sans-serif;
+  font-family: 'ceragr-medium', sans-serif;
 }
 
 .project-text {
   margin-bottom: 80px;
   font-size: 18px;
   line-height: 1.2;
-  font-family: 'ceragr-lightuploaded_file', sans-serif;
+  font-family: 'ceragr-light', sans-serif;
 }
 
 .project-content-media,
@@ -1944,7 +1917,7 @@ footer .container {
   z-index: 10;
   left: -125px;
   font-size: 30px;
-  font-family: 'ceragr-mediumuploaded_file', sans-serif;
+  font-family: 'ceragr-medium', sans-serif;
 }
 
 .project-all::after {
@@ -1980,7 +1953,7 @@ footer .container {
   color: #f1f1f1;
   position: absolute;
   z-index: 10;
-  font-family: 'ceragr-mediumuploaded_file', sans-serif;
+  font-family: 'ceragr-medium', sans-serif;
 }
 
 .project-rhombus-decor {

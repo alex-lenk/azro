@@ -1,8 +1,8 @@
 .about-us-advantages {
-  padding-left: 71px;
-  padding-right: 108px;
+  padding-left: 0;
   margin-bottom: 67px;
   list-style: none;
+  position: relative;
   display: flex;
   justify-content: space-between;
 }
@@ -11,27 +11,6 @@
   padding: 55px 0 50px;
   position: relative;
   @include CeraGRMedium;
-}
-
-.about-us-advantages-decor,
-.about-us-advantages > li::after {
-  width: 100px;
-  height: 100px;
-  content: '';
-  position: absolute;
-  top: 23px;
-  left: 50%;
-  margin: 0 0 0 -50px;
-  z-index: 3;
-  transform: rotateZ(45deg);
-}
-
-.about-us-advantages > li::after {
-  width: 94px;
-  height: 94px;
-  top: 26px;
-  margin-left: -47px;
-  background-color: #181a1b;
 }
 
 .about-us-advantages-text {

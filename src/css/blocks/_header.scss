@@ -21,7 +21,6 @@
   left: 50%;
   margin-left: -1px;
   z-index: 92;
-  background-color: #fff;
   position: absolute;
   overflow: hidden;
   &::after {
@@ -31,7 +30,7 @@
     content: '';
     background-color: #3cc9e5;
     transform: translate(0, - 100%);
-    animation: spin 2s infinite linear;
+    animation: spin 2s 1000 linear;
   }
 }
 

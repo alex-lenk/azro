@@ -6,7 +6,7 @@ body {
   color: #ffffff;
   font-size: 16px;
   line-height: 1.4;
-  @include CeraGRRegular;
+  @include CeraGRLight;
 }
 
 a, .as-link {
@@ -108,18 +108,11 @@ button, input, select, textarea {
   background-size: cover;
 }
 
-.header-page {
-  height: 312px;
-  padding-top: 92px;
-}
-
 .page-content {
-  padding-bottom: 80px;
   font-size: 21px;
   text-align: center;
   color: #e6e6e6;
   line-height: 1.3;
-  @include CeraGRLight;
   p {
     margin-bottom: 20px;
   }
@@ -181,26 +174,6 @@ button, input, select, textarea {
   }
   img {
     max-height: 83px;
-  }
-}
-
-.title-top-line {
-  margin: 0 0 65px;
-  text-align: center;
-  color: #33ddfb;
-  font-size: 24px;
-  text-transform: uppercase;
-}
-
-.title-top-line-text {
-  display: inline-block;
-  &::before {
-    width: 100%;
-    height: 1px;
-    margin-bottom: 90px;
-    background-color: #33ddfb;
-    display: inline-block;
-    content: '';
   }
 }
 

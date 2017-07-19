@@ -173,6 +173,26 @@
   .nav-left .social {
     display: none;
   }
+  .who-we-list li:not(:first-child):not(:last-child) {
+    margin: 0 15px;
+  }
+  .who-we-list li:first-child {
+    margin-right: 15px;
+    -webkit-transform: translateY(27px);
+    -ms-transform: translateY(27px);
+    transform: translateY(27px);
+  }
+  .who-we-list li:nth-child(3) {
+    -webkit-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  .who-we-list li:last-child {
+    margin-left: 15px;
+    -webkit-transform: translateY(23px);
+    -ms-transform: translateY(23px);
+    transform: translateY(23px);
+  }
 }
 
 @media (min-width: 1166px) {
@@ -182,6 +202,10 @@
   .container {
     -webkit-box-shadow: inset 95px 0 0 rgba(255, 0, 0, 0.3), inset -95px 0 0 rgba(255, 0, 0, 0.3);
     box-shadow: inset 95px 0 0 rgba(255, 0, 0, 0.3), inset -95px 0 0 rgba(255, 0, 0, 0.3);
+  }
+  .title-block {
+    padding-top: 92px;
+    margin-bottom: 135px;
   }
   .header-panel {
     padding-left: 75px;
@@ -228,6 +252,13 @@
   }
 }
 
+@media (min-width: 1201px) {
+  .about-us-advantages {
+    padding-left: 71px;
+    padding-right: 105px;
+  }
+}
+
 @media (min-width: 1550px) {
   .logo img {
     width: 733px;
@@ -240,6 +271,9 @@
   }
   .nav-panel-menu li:not(:last-child) {
     margin-bottom: 150px;
+  }
+  .contacts-page-list li {
+    left: -12px;
   }
 }
 
@@ -281,6 +315,16 @@
 @media (max-width: 1165px) and (min-width: 993px) {
   body {
     padding-left: 55px;
+  }
+  .title-block {
+    margin-bottom: 122px;
+    padding-top: 97px;
+  }
+  .title-block img {
+    max-height: 69px;
+  }
+  .contacts-page {
+    padding-bottom: 109px;
   }
   .header-panel {
     max-width: 1080px;
@@ -325,6 +369,14 @@
   .project-rhombus {
     bottom: -74px;
     left: -96px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .who-we-list {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
 
@@ -420,13 +472,57 @@
   }
 }
 
-@media (max-width: 992px) and (min-width: 568px) {
-  .our-mission {
-    margin-bottom: 130px;
+@media (max-width: 1200px) and (min-width: 993px) {
+  .about-us-advantages {
+    padding: 0 40px 0 20px;
+    margin-bottom: 70px;
+  }
+  .who-we {
+    padding-top: 21px;
+    margin-bottom: 124px;
+  }
+  .title-top-line-text::before {
+    margin-bottom: 72px;
+  }
+  .who-we-list li:last-child {
+    margin-left: 160px;
+    margin-top: 65px;
   }
 }
 
 @media (max-width: 992px) and (min-width: 671px) {
+  .who-we {
+    padding-top: 11px;
+    margin-bottom: 20px;
+  }
+  .title-top-line {
+    margin-bottom: 71px;
+  }
+  .title-top-line-text::before {
+    margin-bottom: 74px;
+  }
+  .who-we-list li {
+    margin-bottom: 86px;
+  }
+  .page-content p {
+    margin-bottom: 26px;
+    line-height: 1.2;
+  }
+  .about-us-advantages {
+    margin-bottom: 19px;
+  }
+  .about-us-advantages .decor-rhombus {
+    top: 10px;
+  }
+  .about-us-advantages > li {
+    padding-top: 35px;
+  }
+  .about-us-advantages > li:last-child {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    margin-left: -106px;
+  }
   .our-mission-list {
     text-align: center;
   }
@@ -468,7 +564,23 @@
   }
 }
 
+@media (max-width: 992px) and (min-width: 568px) {
+  .our-mission {
+    margin-bottom: 130px;
+  }
+}
+
 @media (max-width: 992px) {
+  .title-block {
+    margin-bottom: 145px;
+    padding-top: 150px;
+  }
+  .title-block img {
+    max-height: 69px;
+  }
+  .contacts-page {
+    padding-bottom: 100px;
+  }
   .page .nav-left {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -721,6 +833,19 @@
   .contacts-page-right {
     height: 380px;
   }
+  .about-us-advantages {
+    padding-bottom: 150px;
+  }
+  .about-us-advantages .decor-rhombus {
+    width: 88px;
+    height: 88px;
+    margin-left: -44px;
+  }
+  .about-us-advantages .decor-rhombus::after {
+    width: 82px;
+    height: 82px;
+    margin-left: -41px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -734,6 +859,13 @@
   .footer-center {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 701px) {
+  .about-us-advantages {
+    padding-left: 25px;
+    padding-right: 43px;
   }
 }
 
@@ -835,9 +967,112 @@
   .karma-messenger {
     text-align: right;
   }
+  .who-we-list {
+    margin-bottom: 60px;
+    padding: 0 33px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .who-we-list li {
+    width: auto;
+    margin: 0 auto 40px;
+    padding-right: 0;
+    padding-left: 40px;
+    max-width: none;
+  }
+  .who-we-media {
+    max-width: 205px;
+    padding-bottom: 15px;
+    -webkit-transform: translateY(70px);
+    -ms-transform: translateY(70px);
+    transform: translateY(70px);
+  }
+  .who-we-title, .who-we-position {
+    width: -webkit-calc(100% + 40px);
+    width: calc(100% + 40px);
+    -webkit-transform: translateX(-40px);
+    -ms-transform: translateX(-40px);
+    transform: translateX(-40px);
+  }
+  .page-content {
+    padding-bottom: 100px;
+    font-size: 19px;
+  }
+  .about-us-advantages {
+    padding-bottom: 5px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+  .about-us-advantages li {
+    padding: 50px 0 0;
+  }
+  .about-us-advantages li:not(:first-child) {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+  .about-us-advantages li:nth-child(2) {
+    margin-left: 60px;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .about-us-advantages li:last-child {
+    margin-left: auto;
+  }
+  .about-us-advantages .decor-rhombus {
+    width: 78px;
+    height: 78px;
+    margin-left: -35px;
+  }
+  .about-us-advantages .decor-rhombus::after {
+    width: 72px;
+    height: 72px;
+    margin-left: -36px;
+  }
+  .about-us-advantages-text {
+    font-size: 30px;
+  }
+  .title-top-line {
+    margin-bottom: 10px;
+  }
+  .title-top-line-text::before {
+    margin-bottom: 53px;
+  }
+  .title-block img {
+    max-height: 38px;
+  }
+  .who-we {
+    margin-bottom: 80px;
+  }
 }
 
 @media (max-width: 567px) {
+  .title-block {
+    margin-bottom: 94px;
+    padding-top: 95px;
+  }
+  .title-block::before {
+    width: 40px;
+    margin-right: 15px;
+  }
+  .container, .header-panel {
+    padding-left: 15px;
+    padding-right: 15px;
+    -webkit-box-shadow: inset 15px 0 0 rgba(255, 0, 0, 0.5), inset -15px 0 0 rgba(255, 0, 0, 0.5);
+    box-shadow: inset 15px 0 0 rgba(255, 0, 0, 0.5), inset -15px 0 0 rgba(255, 0, 0, 0.5);
+  }
   .logo {
     display: none;
   }
@@ -910,10 +1145,47 @@
   }
 }
 
+@media (max-width: 567px) and (min-width: 415px) {
+  .contacts-page-list li:nth-child(odd) {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+  }
+  .contacts-page-list li:nth-child(even) {
+    -webkit-transform: translateX(-15px);
+    -ms-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
+}
+
 @media (max-width: 414px) {
-  .container, .header-panel {
-    padding-left: 20px;
-    padding-right: 20px;
+  .contacts-page-list li:nth-child(odd) {
+    -webkit-transform: translateX(10px);
+    -ms-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  .contacts-page-list li:nth-child(even) {
+    -webkit-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  .contacts-page-list-text {
+    top: 65px;
+    width: 155px;
+    margin-left: -79px;
+  }
+  .decor-rhombus {
+    width: 92px;
+    height: 92px;
+    margin-left: -46px;
+  }
+  .decor-rhombus::after {
+    width: 86px;
+    height: 86px;
+    margin-left: -43px;
+  }
+  .who-we-list li {
+    width: 100%;
   }
   .home-header-inner {
     padding-top: 20px;
@@ -938,6 +1210,29 @@
   }
   .contacts-page-list {
     padding: 0 5px;
+  }
+}
+
+@media (max-width: 374px) {
+  .contacts-page-list-text {
+    top: 74px;
+  }
+  .contacts-page-list {
+    font-size: 17px;
+  }
+  .contacts-page-list .decor-rhombus {
+    width: 90px;
+    height: 90px;
+    top: 36px;
+    margin-left: -45px;
+  }
+  .contacts-page-list .decor-rhombus::after {
+    width: 84px;
+    height: 84px;
+    margin-left: -42px;
+  }
+  .contacts-page-list .email, .contacts-page-list .phone, .contacts-page-list .skype, .contacts-page-list .address {
+    top: 50px;
   }
 }
 

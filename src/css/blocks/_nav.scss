@@ -118,7 +118,7 @@
 .nav-left {
   background-color: #141516;
   z-index: 97;
-  transition: all 0.6s;
+  transition: transform 0.6s;
   transition-delay: 0.5s;
   will-change: transform;
 }
