@@ -33,7 +33,7 @@
   background: -moz-linear-gradient(-45deg, #0f5c80 0%, #232525 50%);
   background: -webkit-linear-gradient(-45deg, #0f5c80 0%, #232525 50%);
   background: linear-gradient(135deg, #0f5c80 0%, #232525 50%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0f5c80', endColorstr='#232525', GradientType=0.5);
+  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0f5c80', endColorstr='#232525', GradientType=0.5);
 }
 
 .decor-rhombus::before,
@@ -54,8 +54,8 @@
   background: -moz-linear-gradient(-45deg, #232525 0%, #0f5c80 100%);
   background: -webkit-linear-gradient(-45deg, #232525 0%, #0f5c80 100%);
   background: linear-gradient(135deg, #232525 0%, #0f5c80 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#232525', endColorstr='#0f5c80', GradientType=1);
-  animation: backgroundChange 3s alternate-reverse infinite;
+  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#232525', endColorstr='#0f5c80', GradientType=1);
+  //animation: backgroundChange 3s alternate-reverse infinite;
 }
 
 .decor-rhombus::after {
