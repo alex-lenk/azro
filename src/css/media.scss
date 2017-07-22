@@ -114,7 +114,6 @@
     padding: 52px 0 70px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
   }
   
@@ -149,10 +148,6 @@
     padding-left: 65px;
   }
   
-  .container {
-    box-shadow: inset 95px 0 0 rgba(255, 0, 0, 0.3), inset -95px 0 0 rgba(255, 0, 0, 0.3);
-  }
-  
   .title-block {
     padding-top: 92px;
     margin-bottom: 135px;
@@ -161,14 +156,12 @@
   .header-panel {
     padding-left: 75px;
     padding-right: 75px;
-    box-shadow: inset 75px 0 0 rgba(255, 0, 0, 0.3), inset -75px 0 0 rgba(255, 0, 0, 0.3);
   }
   .header-content {
     max-width: 1550px;
     max-height: 612px;
     padding-left: 75px;
     padding-right: 75px;
-    box-shadow: inset 75px 0 0 rgba(255, 0, 0, 0.3), inset -75px 0 0 rgba(255, 0, 0, 0.3);
   }
   .header-content-right {
     max-width: 550px;
@@ -966,7 +959,6 @@
   .container, .header-panel {
     padding-left: 15px;
     padding-right: 15px;
-    box-shadow: inset 15px 0 0 rgba(255, 0, 0, .5), inset -15px 0 0 rgba(255, 0, 0, .5);
   }
   
   .logo {
