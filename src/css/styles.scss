@@ -27,63 +27,68 @@ $color-light-blue: #2592c7;
 
 .portfolio-nav {
   width: 100%;
-  padding-top: 263px;
+  padding-top: 259px;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
   display: none;
+}
+
+.portfolio-nav-next,
+.portfolio-nav-prev {
+  height: 55px;
+  margin-bottom: 2px;
+  padding-top: 15px;
+  background-color: #1b1d1e;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
   svg {
     width: 25px;
     height: 25px;
     fill: #33ddfb;
     transition: fill 0.5s ease;
   }
-  li {
-    height: 55px;
-    margin-bottom: 2px;
-    padding-top: 15px;
-    background-color: #1b1d1e;
-    text-align: center;
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-    &::before {
-      width: 100%;
-      position: absolute;
-      left: 0;
-      font-size: 11px;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-    &:hover {
-      background-color: #33ddfb;
-      &::before {
-        opacity: 1;
-      }
-      svg {
-        fill: #fff;
-      }
-    }
-  }
-}
-
-.portfolio-nav-prev {
   &::before {
-    bottom: -20px;
-    content: '' attr(data-prev) '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    font-size: 11px;
+    z-index: -1;
+    transition: all 0.5s ease;
   }
-  svg {
-    transform: rotateZ(90deg);
+  &:hover {
+    background-color: #33ddfb;
+    svg {
+      fill: #fff;
+    }
   }
 }
 
 .portfolio-nav-next {
   &::before {
-    top: -20px;
+    top: 0;
     content: '' attr(data-next) '';
   }
   svg {
     transform: rotateZ(-90deg);
+  }
+  &:hover::before {
+    transform: translateY(-20px);
+  }
+}
+
+.portfolio-nav-prev {
+  &::before {
+    bottom: 0;
+    content: '' attr(data-prev) '';
+  }
+  svg {
+    transform: rotateZ(90deg);
+  }
+  &:hover::before {
+    transform: translateY(20px);
   }
 }
 
@@ -152,14 +157,25 @@ $color-light-blue: #2592c7;
 .portfolio-header-link {
   text-align: right;
   font-size: 19px;
-  a::before {
-    width: 25px;
-    height: 1px;
-    margin-right: 16px;
-    display: inline-block;
-    vertical-align: middle;
-    background-color: #33ddfb;
-    content: '';
+  a {
+    padding-left: 41px;
+    position: relative;
+    &::before {
+      width: 25px;
+      height: 1px;
+      position: absolute;
+      top: 11px;
+      left: 0;
+      background-color: #33ddfb;
+      content: '';
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      &::before {
+        width: 100%;
+        background-color: #fff;
+      }
+    }
   }
 }
 
@@ -169,7 +185,7 @@ $color-light-blue: #2592c7;
 }
 
 .process-content {
-  padding-right: 60px;
+  padding-right: 4%;
   flex: 1 1 auto;
 }
 
@@ -211,11 +227,13 @@ $color-light-blue: #2592c7;
   position: relative;
   z-index: 5;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  align-self: flex-start;
 }
 
 .process-media-img-2 {
   width: 270px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  align-self: flex-start;
 }
 
 .branding {
@@ -358,10 +376,8 @@ $color-light-blue: #2592c7;
   display: flex;
 }
 
-.portfolio-style-fonts {
-  li:not(:last-child) {
-    margin-bottom: 59px;
-  }
+.portfolio-style-fonts li:not(:last-child) {
+  margin-bottom: 59px;
 }
 
 .portfolio-style-right {
@@ -464,8 +480,8 @@ $color-light-blue: #2592c7;
 }
 
 .adaptivity-media {
-  width: 33%;
-  flex: none;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
   display: flex;
 }
 
@@ -483,44 +499,50 @@ $color-light-blue: #2592c7;
 }
 
 .iphone-frame {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.iphone-frame-block {
   width: 371px;
   height: 752px;
-  margin: 0 2% 0 3%;
+  margin: 0 auto;
+  padding-top: 92px;
   border-radius: 55px;
   background: url(../img/cases/rentpro/iphone-6s.png) no-repeat center top;
   background-size: 371px 752px;
   box-shadow: 0 0 40px rgba(#000, .4);
-  flex: none;
 }
 
-.iphone-frame-block {
+.iphone-frame-screen {
   width: 320px;
   height: 570px;
-  margin: 92px auto 0;
+  margin: 0 auto;
 }
 
 .iphone-content {
-  padding: 33px 10px 0 25px;
+  margin-left: auto;
+  padding: 33px 30px 0 0;
   position: relative;
-  flex: 1 1 auto;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
   align-self: flex-start;
   &::before, &::after {
-    right: 0;
-    top: 0;
+    left: 0;
+    bottom: 0;
     position: absolute;
     border: 10px solid #212324;
     z-index: -1;
     content: '';
   }
   &::before {
-    width: 93%;
+    width: 100%;
     height: 100%;
   }
   &::after {
     width: 30%;
     height: 80%;
-    left: 30px;
-    top: auto;
+    left: 0;
     bottom: 0;
     border-color: #1b1d1e;
     border-top-width: 0;
@@ -539,56 +561,74 @@ $color-light-blue: #2592c7;
 
 .portfolio-pagination {
   margin-bottom: 100px;
+  list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  li {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
 }
 
 .portfolio-pagination-btn {
-  margin: 0 65px;
-  .btn-offset {
-    min-width: 320px;
+  text-align: center;
+  flex: 1 1 33%;
+  .btn-white {
     height: 65px;
-    &:not(:hover):not(:active):not(:focus) .btn-offset-text {
-      transform: translate(-13px, -11px);
+    line-height: 65px;
+    padding-left: 35px;
+    padding-right: 35px;
+    border-color: #33ddfb;
+    &::after {
+      background-color: #33ddfb;
     }
-  }
-  .btn-offset-text {
-    min-width: 320px;
-    height: 65px;
-    padding: 0 35px;
-    line-height: 63px;
+    &:hover, &:active {
+      color: #fff;
+      &::after {
+        height: 270px;
+      }
+    }
   }
 }
 
-.portfolio-pagination-prev, .portfolio-pagination-next {
-  font-size: 19px;
+.portfolio-pagination-text {
   position: relative;
-  top: -11px;
+  font-size: 19px;
   &::before, &::after {
     width: 25px;
     height: 1px;
-    display: inline-block;
-    vertical-align: middle;
+    position: absolute;
+    top: 11px;
     background-color: #33ddfb;
+    transition: width 0.3s ease;
   }
   &:hover {
     color: #fff;
     &::before, &::after {
+      width: 100%;
       background-color: #fff;
     }
   }
 }
 
 .portfolio-pagination-prev {
-  left: -20px;
-  &::after {
-    margin-left: 11px;
-    content: '';
+  text-align: right;
+  .portfolio-pagination-text {
+    padding-right: 36px;
+    &::after {
+      right: 0;
+      content: '';
+    }
   }
 }
 
-.portfolio-pagination-next::before {
-  margin-right: 11px;
-  content: '';
+.portfolio-pagination-next {
+  .portfolio-pagination-text {
+    padding-left: 36px;
+    &::before {
+      left: 0;
+      content: '';
+    }
+  }
 }
