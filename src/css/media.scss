@@ -14,7 +14,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .contacts-page-list-text br {
     display: none;
   }
@@ -334,9 +334,9 @@
 
 @media (max-width: 1165px) {
   .container {
-    max-width: 1055px;
-    padding-left: 40px;
-    padding-right: 40px;
+    max-width: 1080px;
+    padding-left: 3.65%;
+    padding-right: 3.65%;
   }
   
   .home-header-inner {
@@ -517,6 +517,11 @@
 }
 
 @media (max-width: 992px) {
+  .container {
+    padding-left: 4.5%;
+    padding-right: 4.5%
+  }
+  
   .title-block {
     margin-bottom: 145px;
     padding-top: 150px;
@@ -531,10 +536,6 @@
   
   .page .nav-left {
     transform: translate3d(0, 0, 0);
-  }
-  
-  .container {
-    max-width: 770px;
   }
   
   .home-header {
@@ -749,7 +750,11 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+  
   .home-header-inner {
     background: url(../img/bg/bg-header-sm.jpg) center center no-repeat;
     background-size: cover;
@@ -785,6 +790,19 @@
   }
   .contacts-page-list li:first-child, .contacts-page-list li:nth-child(3) {
     transform: translateY(0);
+  }
+  
+  .portfolio-style-fonts li {
+    max-width: 100%;
+    flex-basis: 100%;
+    margin-right: 0;
+    &:not(:first-child):not(:last-child) {
+      max-width: none;
+    }
+  }
+  
+  .iphone-frame {
+    display: none;
   }
 }
 
