@@ -746,7 +746,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   fill: #fff;
 }
 
-#volume-control {
+.volume-control {
   width: 32px;
 }
 
@@ -1103,6 +1103,10 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   -webkit-transition-delay: 0.5s;
   transition-delay: 0.5s;
   will-change: transform;
+}
+
+.nav-left .panel-sound {
+  margin-top: auto;
 }
 
 .panel-sound {
@@ -2085,6 +2089,10 @@ footer .container {
   position: relative;
 }
 
+.portfolio-wrapper {
+  overflow: hidden;
+}
+
 .portfolio-nav {
   width: 100%;
   padding-top: 259px;
@@ -2543,6 +2551,9 @@ footer .container {
 .portfolio-style-colors li {
   width: 106px;
   height: 106px;
+  -webkit-flex-basis: 106px;
+  -ms-flex-preferred-size: 106px;
+  flex-basis: 106px;
   position: relative;
   top: 0;
   left: 0;
@@ -3096,6 +3107,9 @@ footer .container {
 }
 
 @media (max-width: 992px) {
+  .portfolio .portfolio-nav {
+    display: none;
+  }
   .portfolio-header {
     margin-bottom: 253px;
   }
@@ -3244,6 +3258,158 @@ footer .container {
   .portfolio-header {
     min-height: 571px;
     height: auto;
+  }
+}
+
+@media (max-width: 567px) {
+  .adaptivity-media {
+    width: 100%;
+    margin-right: 0;
+  }
+  .adaptivity-media-img {
+    width: auto;
+    max-width: 49%;
+    margin-left: auto;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .adaptivity-media-img:first-of-type {
+    max-width: 49%;
+    width: auto;
+    margin-left: 0;
+    margin-right: auto;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .portfolio-pagination {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .portfolio-pagination li:last-child {
+    text-align: right;
+  }
+  .portfolio-pagination li:nth-child(2) {
+    margin: 65px 0 0;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .portfolio-pagination-btn .btn-white {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .portfolio-header-title {
+    line-height: 1.2;
+    margin-bottom: 25px;
+    font-size: 32px;
+  }
+  .portfolio-header-logo {
+    width: 277px;
+    margin-bottom: 5px;
+  }
+  .portfolio-header-desc {
+    padding: 30px;
+  }
+  .portfolio-header-right {
+    margin-top: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .portfolio-header-right-text {
+    margin-bottom: 20px;
+  }
+  .portfolio-header {
+    margin-bottom: 155px;
+  }
+  .portfolio-title {
+    font-size: 42px;
+    margin-bottom: 25px;
+  }
+  .portfolio-title::before {
+    width: 40px;
+    height: 1px;
+    margin-right: 13px;
+  }
+  .process-media {
+    padding-top: 9px;
+    min-width: 0;
+    margin: 0;
+    max-width: none;
+    position: relative;
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+  .process-media-img {
+    margin-right: 0;
+  }
+  .process-media-img-2 {
+    position: absolute;
+    right: 0;
+    top: 14px;
+  }
+  .branding {
+    margin-bottom: 109px;
+  }
+  .branding-img {
+    margin-top: 25px;
+    margin-bottom: 38px;
+  }
+  .branding-final-content {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .branding-final-left {
+    margin-top: 27px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .branding-final-img {
+    width: 100%;
+    padding: 45px 80px;
+    text-align: center;
+  }
+  .branding-final-img:first-of-type {
+    margin-right: 0;
+  }
+  .portfolio-head-title {
+    font-size: 42px;
+  }
+  .portfolio-head {
+    margin-bottom: 60px;
+  }
+  .portfolio-style {
+    margin-bottom: 280px;
+  }
+  .portfolio-style-colors {
+    margin-top: 60px;
+    position: relative;
+    overflow: visible;
+  }
+  .portfolio-style-colors li:nth-child(2) {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+  }
+  .portfolio-style-colors li:last-child {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    margin-left: -53px;
+  }
+  .result {
+    padding-top: 37px;
   }
 }
 
