@@ -12,7 +12,14 @@
     -ms-flex-align: baseline;
     align-items: baseline;
   }
-  .footer-form .form-group, .footer-form .btn-white {
+  .footer-form .form-group:not(:last-of-type) {
+    margin-bottom: 73px;
+  }
+  .footer-form .form-group:last-of-type {
+    margin-bottom: 0;
+  }
+  .footer-form .form-group,
+  .footer-form .btn-white {
     height: 55px;
     width: -webkit-calc(100% / 2 - 15px);
     width: calc(100% / 2 - 15px);
@@ -108,7 +115,7 @@
     -ms-flex-pack: distribute;
     justify-content: space-around;
   }
-  .our-work {
+  .no-scroll .our-work {
     -webkit-transform: translate3d(0, 100%, 0);
     transform: translate3d(0, 100%, 0);
     -webkit-transition: -webkit-transform 0.8s;
@@ -644,9 +651,11 @@
   }
   .nav-left_toggle {
     margin: 16px 0 0 auto;
+    padding: 0;
   }
   .nav-left-wrap {
-    padding: 0 40px;
+    padding-left: 4.5%;
+    padding-right: 4.5%;
     margin: 0 auto;
     display: -webkit-box;
     display: -webkit-flex;
@@ -834,6 +843,10 @@
     height: 82px;
     margin-left: -41px;
   }
+  .btn-white:hover::after,
+  .btn-white:active::after {
+    height: 290px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -878,7 +891,7 @@
     transform: translateY(0);
   }
   .portfolio-style-fonts li {
-    max-width: 100%;
+    max-width: 330px !important;
     -webkit-flex-basis: 100%;
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
@@ -1143,7 +1156,7 @@
   }
   .btn-white:hover::after,
   .btn-white:active::after {
-    height: 360px;
+    height: 380px;
   }
 }
 
@@ -1235,6 +1248,9 @@
   }
   .contacts-page-list .email, .contacts-page-list .phone, .contacts-page-list .skype, .contacts-page-list .address {
     top: 50px;
+  }
+  .footer-title {
+    font-size: 26px;
   }
 }
 

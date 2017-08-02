@@ -26,6 +26,28 @@
 <meta name="msapplication-config" content="img/touch/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
+  <style>
+    .portfolio-header {
+      height: 570px;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    @media (min-width: 415px) {
+      .portfolio-karma {
+        background-image: url(img/app/karma/bg-karma@2x.png);
+      }
+    }
+
+    @media (max-width: 414px) {
+      .portfolio-karma {
+        background-image: url(img/app/karma/bg-karma-375@2x.png);
+        background-position: 0 -35px;
+        background-size: 100% 100%;
+      }
+    }
+  </style>
 </head>
 <body class="page portfolio">
 <div class="nav-left">
@@ -114,45 +136,47 @@
 </nav>
 
 
-<header class="portfolio-header">
-  <div class="container">
-    <div class="portfolio-header-logo">
-      <picture>
-        <source srcset="img/cases/rentpro/logo-rentpro@2x.png"
-                media="(-webkit-min-device-pixel-ratio: 1.3), (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 4/3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.33dppx)">
-        <img src="img/cases/rentpro/logo-rentpro.png" alt="">
-      </picture>
+<header class="portfolio-header" style="background-image: url(img/cases/rentpro/bg-rentpro@2x.jpg);">
+      <div class="portfolio-header-logo">
+        <picture>
+          <source srcset="img/cases/rentpro/logo-rentpro@2x.png"
+                  media="(-webkit-min-device-pixel-ratio: 1.3), (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 4/3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.33dppx)">
+          <img src="img/cases/rentpro/logo-rentpro.png" alt="">
+        </picture>
+      </div>
+</header>
+
+<div class="portfolio-info container">
+  <div class="portfolio-info-desc">
+    <div class="portfolio-info-left">
+      <h1 class="portfolio-info-title">RentPro - Car dealer’s website</h1>
+
+      <div class="portfolio-info-text">
+        RentPro is a leading international mobility provider offering vehicle
+        rental and leasing in more than 100
+        countries.<br>
+        Our customer base spans private and business travelers, offering products and services individually tailored
+        for all vehicle hire needs.
+      </div>
     </div>
 
-    <div class="portfolio-header-desc">
-      <div class="portfolio-header-left">
-        <h1 class="portfolio-header-title">RentPro - Car dealer’s website</h1>
-
-        <div class="portfolio-header-text">RentPro is a leading international mobility provider offering vehicle rental and leasing in more than 100
-          countries.<br>
-          Our customer base spans private and business travelers, offering products and services individually tailored
-          for all vehicle hire needs.
+    <div class="portfolio-info-right">
+      <div class="portfolio-info-block">
+        <h3 class="portfolio-info-right-title">We create:</h3>
+        <div class="portfolio-info-right-text">
+          Adaptive design / Front-end / Back-end / CMS Integration
         </div>
       </div>
 
-      <div class="portfolio-header-right">
-        <div class="portfolio-header-block">
-          <h3 class="portfolio-header-right-title">We create:</h3>
-          <div class="portfolio-header-right-text">
-            Adaptive design / Front-end / Back-end / CMS Integration
-          </div>
-        </div>
-
-        <div class="portfolio-header-block">
-          <h3 class="portfolio-header-right-title">Year:</h3>
-          <div class="portfolio-header-right-text">2016 - 2017</div>
-        </div>
-
-        <div class="portfolio-header-link"><a href="#">View Project</a></div>
+      <div class="portfolio-info-block">
+        <h3 class="portfolio-info-right-title">Year:</h3>
+        <div class="portfolio-info-right-text">2016 - 2017</div>
       </div>
+
+      <div class="portfolio-info-link"><a href="#">View Project</a></div>
     </div>
   </div>
-</header>
+</div>
 
 <div class="portfolio-wrapper container">
   <div class="process ">

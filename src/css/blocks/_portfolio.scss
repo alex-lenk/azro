@@ -74,47 +74,54 @@
 }
 
 .portfolio-header {
-  height: 570px;
-  padding-top: 125px;
-  margin-bottom: 227px;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
 }
 
 .portfolio-header-logo {
   width: 329px;
-  margin: 0 auto 60px;
+  margin: 0 auto;
+  padding-top: 125px;
 }
 
-.portfolio-header-desc {
-  padding: 40px 50px 30px;
-  color: #e6e6e6;
-  transform: translateY(86px);
+.portfolio-info-desc {
+  padding: 40px 50px 25px;
+  color: #b0b0b0;
   box-shadow: 0 0 40px rgba(#000, .4);
   background: url(../img/cases/rentpro/decor.png) no-repeat 101% 114% #141516;
   display: flex;
 }
 
-.portfolio-header-left {
-  padding-top: 20px;
+.portfolio-info-left {
+  padding-top: 3px;
   border-right: 1px solid #1d1f20;
   @include CeraGRLight;
 }
 
-.portfolio-header-text {
+.portfolio-info-text {
   line-height: 1.3;
   font-size: 18px;
+  p {
+    &:first-of-type {
+      margin-bottom: 25px;
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }
 
-.portfolio-header-title {
-  margin-bottom: 35px;
+.portfolio-info-title {
+  margin-bottom: 20px;
   color: #fff;
   font-size: 40px;
   @include CeraGRMedium;
 }
 
-.portfolio-header-right-title {
+.portfolio-info-block:first-of-type {
+  margin-bottom: 50px;
+}
+
+.portfolio-info-right-title {
   margin-bottom: 10px;
   font-size: 20px;
   text-transform: uppercase;
@@ -122,11 +129,8 @@
   @include CeraGRRegular;
 }
 
-.portfolio-header-right-text {
-  margin-bottom: 30px;
-}
-
-.portfolio-header-link {
+.portfolio-info-link {
+  padding-top: 35px;
   text-align: right;
   font-size: 19px;
   a {
@@ -181,7 +185,6 @@
 }
 
 .portfolio-text {
-  color: #e6e6e6;
   font-size: 18px;
   line-height: 1.3;
 }
