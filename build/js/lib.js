@@ -14,7 +14,6 @@
     c.top&&0===c.bottom;c&&0===c.width&&0===c.height&&!b?a.length&&(b=e[a],!0!==b&&setTimeout(n({useEl:h[g],base:a,hash:l,isXlink:k}),0),void 0===b&&(k=v(a),void 0!==k&&(b=new k,e[a]=b,b.onload=m(b),b.onerror=p(b),b.ontimeout=p(b),b.open("GET",a),b.send(),r+=1))):b?a.length&&e[a]&&setTimeout(n({useEl:h[g],base:a,hash:l,isXlink:k}),0):void 0===e[a]?e[a]=!0:e[a].onload&&(e[a].abort(),delete e[a].onload,e[a]=!0)}h="";r+=1;d()};window.addEventListener("load",function n(){window.removeEventListener("load",
     n,!1);t=setTimeout(m,0)},!1)}})();
 
-
 //
 // SmoothScroll for websites v1.4.6 (Balazs Galambosi)
 // http://www.smoothscroll.net/
@@ -763,7 +762,6 @@
         window.SmoothScroll = SmoothScroll;
 
 })();
-
 
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.Parallax = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
   /*
@@ -1754,22 +1752,3 @@
 
 },{"object-assign":1,"raf":4}]},{},[5])(5)
 });
-
-
-// = lib/audioplayer.min.js
-// = ../../bower_components/fullpage.js/jquery.fullPage.min.js
-// = lib/jquery-ui.min.js
-// = lib/jquery.parallax.js
-// = lib/imagesloaded.pkgd.min.js
-// = lib/anime.min.js
-// = lib/scrollMonitor.js
-// = lib/bootstrap.min.js
-// = ../../bower_components/jquery-background-video/jquery.background-video.js
-// = lib/bootstrap.min.js
-// = lib/jquery.fancybox.min.js
-// = ../../bower_components/jquery-ui/ui/widget.js
-// = ../../bower_components/jquery-ui/ui/keycode.js
-// = ../../bower_components/jquery-ui/ui/effect.js
-// = ../../bower_components/jquery-ui/ui/widgets/mouse.js
-// = ../../bower_components/jquery-ui/ui/widgets/slider.js
-// = ../../bower_components/jquery-ui/ui/effects/effect-slide.js

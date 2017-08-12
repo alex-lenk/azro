@@ -13,6 +13,8 @@ function init() {
     // How zoomed in you want the map to start at (always required)
     zoom: 11,
 
+    scrollwheel: false,
+
     // The latitude and longitude to center the map (always required)
     center: new google.maps.LatLng(40.6700, -73.9400), // New York
 
@@ -289,6 +291,15 @@ function init() {
     ]
   };
 
+  var azurePin = {
+    path: 'M184.85,0A154.82,154.82,0,0,0,30,154.82c0,85.51,154.81,214.9,154.81,214.9s154.83-129.39,154.83-214.9A154.82,154.82,0,0,0,184.85,0Zm0,206.86a68.29,68.29,0,1,1,68.31-68.3A68.29,68.29,0,0,1,184.85,206.86Z',
+    fillColor: '#33f7ff',
+    fillOpacity: 1,
+    scale: 0.1,
+    strokeColor: 'transparent',
+    strokeWeight: 1
+  };
+
   // Get the HTML DOM element that will contain your map
   // We are using a div with id="map" seen below in the <body>
   var mapElement = document.getElementById('map-canvas');
@@ -299,6 +310,7 @@ function init() {
   // Let's also add a marker while we're at it
   var marker = new google.maps.Marker({
     position: new google.maps.LatLng(40.6700, -73.9400),
+    icon: azurePin,
     map: map,
     title: 'Snazzy!'
   });

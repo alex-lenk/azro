@@ -39,7 +39,7 @@ $(document).ready(function () {
  *
  */
 
-//= init/volume-control
+// = init/volume-control
 
 /**
  *
@@ -71,6 +71,7 @@ $(document).ready(function () {
 /**
  *
  * BEGIN parallax effect
+ *
  *
  */
 

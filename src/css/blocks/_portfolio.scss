@@ -15,7 +15,6 @@
 .portfolio-nav-prev {
   height: 55px;
   margin-bottom: 2px;
-  padding-top: 15px;
   background-color: #1b1d1e;
   text-align: center;
   position: relative;
@@ -26,6 +25,10 @@
     height: 25px;
     fill: #33ddfb;
     transition: fill 0.5s ease;
+  }
+  div {
+    top: 12px;
+    position: absolute;
   }
   &::before {
     width: 100%;
@@ -48,8 +51,9 @@
     top: 0;
     content: '' attr(data-next) '';
   }
-  svg {
-    transform: rotateZ(-90deg);
+  div {
+    transform: rotate(-90deg);
+    left: 23px;
   }
   &:hover::before {
     transform: translateY(-20px);
@@ -61,8 +65,9 @@
     bottom: 0;
     content: '' attr(data-prev) '';
   }
-  svg {
-    transform: rotateZ(90deg);
+  div {
+    transform: rotate(90deg);
+    left: 16px;
   }
   &:hover::before {
     transform: translateY(20px);

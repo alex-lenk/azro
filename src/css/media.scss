@@ -6,7 +6,6 @@
   .footer-form {
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: baseline;
     .form-group {
       &:not(:last-of-type) {
         margin-bottom: 73px;
@@ -210,6 +209,13 @@
   }
 }
 
+@media (min-width: 1301px) {
+  .container {
+    padding-left: 95px;
+    padding-right: 95px;
+  }
+}
+
 @media (min-width: 1550px) {
   .logo img {
     width: 733px;
@@ -322,6 +328,12 @@
   
   .contacts-page-list {
     padding: 0 50px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .project .title-block {
+    margin-bottom: 0;
   }
 }
 
