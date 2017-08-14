@@ -22,9 +22,24 @@
   }
 }
 
+@media (min-width: 700px) {
+  .slider-nav .slick-track {
+    width: 100% !important;
+    transform: translate3d(0, 0, 0) !important;
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @media (min-width: 769px) {
   .contacts-page-list-text br {
     display: none;
+  }
+}
+
+@media (min-height: 900px) {
+  .modal-form .btn-white {
+    margin-top: 100px;
   }
 }
 
@@ -149,6 +164,22 @@
       transform: translateY(23px);
     }
   }
+  
+  .portfolio-info {
+    margin-top: -25px;
+    transform: translateY(-160px);
+  }
+  .portfolio-info-left {
+    max-width: 64%;
+    flex: 1 0 64%;
+    padding-right: 51px;
+  }
+  
+  .portfolio-info-right {
+    max-width: 36%;
+    flex: 1 1 36%;
+    padding: 24px 0 0 65px;
+  }
 }
 
 @media (min-width: 1166px) {
@@ -213,6 +244,27 @@
   .container {
     padding-left: 95px;
     padding-right: 95px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .iphone-content {
+    order: 2;
+  }
+  .adaptivity-media {
+    max-width: 32%;
+    flex: 1 1 32%;
+    margin-right: auto;
+  }
+  .iphone-frame {
+    width: 36%;
+  }
+  
+  .portfolio-pagination-btn {
+    flex: 1 1 33%;
+  }
+  .portfolio-pagination li {
+    flex: 1 1 33%;
   }
 }
 
@@ -329,11 +381,69 @@
   .contacts-page-list {
     padding: 0 50px;
   }
+  
+  .portfolio-app .process-media {
+    padding-top: 138px;
+  }
+  
+  .portfolio-info-desc {
+    background-position: 110% 115%;
+  }
+  
+  .portfolio-style-colors {
+    justify-content: space-around;
+  }
+  
+  .portfolio-info-title {
+    white-space: nowrap;
+  }
+  .portfolio-info-right {
+    display: flex;
+    flex-direction: column;
+  }
+  .portfolio-info-link {
+    padding-top: 10px;
+    margin-top: auto;
+  }
+  
+  .portfolio-info-left {
+    padding-right: 20px;
+    max-width: 65%;
+    flex: 1 0 65%;
+  }
+  .portfolio-info-right {
+    max-width: 35%;
+    flex: 1 1 35%;
+    padding-left: 40px;
+  }
+  
 }
 
 @media (max-width: 1440px) {
   .project .title-block {
     margin-bottom: 0;
+  }
+  
+  .adaptivity-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .adaptivity-media {
+    margin-right: 55px;
+  }
+  .iphone-content {
+    width: 100%;
+    margin-bottom: 70px;
+    max-width: none;
+    flex: none;
+  }
+  .iphone-frame {
+    margin-right: 80px;
+    margin-left: 55px;
+  }
+  
+  .portfolio-pagination-btn {
+    margin: 0 70px;
   }
 }
 
@@ -440,6 +550,138 @@
       display: none;
     }
   }
+  
+  .branding-final {
+    flex-direction: column;
+  }
+  .branding-final-left {
+    margin-top: 22px;
+    margin-right: 0;
+    order: 2;
+    justify-content: center;
+  }
+  .branding-final-img:first-of-type {
+    margin-right: 50px;
+  }
+  
+  .portfolio-style-wrap {
+    flex-direction: column;
+  }
+  .portfolio-style-fonts {
+    margin-bottom: 70px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .portfolio-style-fonts li {
+    max-width: calc(100% / 2 - 30px);
+    flex-basis: calc(100% / 2 - 30px);
+    margin-right: auto;
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+  .portfolio-style-right {
+    max-width: none;
+    width: 100%;
+    flex: none;
+  }
+  
+  .portfolio-info-desc {
+    padding: 40px 40px 30px 40px;
+  }
+  .process-media {
+    padding-top: 118px;
+  }
+  
+  .process-media-img {
+    max-width: 69%;
+    margin-right: -22%;
+    margin-top: 21px;
+  }
+  
+  .process-media-img-2 {
+    width: 53%;
+  }
+  
+  .process {
+    margin-bottom: 105px;
+  }
+  
+  .branding-img {
+    margin-top: 42px;
+    margin-bottom: 45px;
+  }
+  
+  .branding-final-content {
+    padding: 30px 4% 15px 4%;
+  }
+  
+  .branding {
+    margin-bottom: 130px;
+  }
+  
+  .portfolio-style .portfolio-text {
+    padding: 40px 30px 40px 40px;
+    &::after {
+      width: 279px;
+      height: 53px;
+      left: 0;
+    }
+    &::before {
+      width: 100%;
+    }
+  }
+  
+  .portfolio-style-colors {
+    margin-top: 95px;
+  }
+  .portfolio-style {
+    margin-bottom: 185px;
+  }
+  .result-content .portfolio-text {
+    padding-right: 0;
+  }
+  
+  .result {
+    padding-top: 65px;
+    padding-bottom: 128px;
+  }
+  .result-project {
+    height: 570px;
+  }
+  .result-nav-title {
+    margin-bottom: 87px;
+  }
+  .result-nav {
+    width: 204px;
+  }
+  .result-nav .nav-panel-menu li:not(:last-child) {
+    margin-bottom: 80px;
+  }
+  
+  .adaptivity-wrap {
+    justify-content: space-between;
+  }
+  .iphone-content {
+    padding-bottom: 12px;
+  }
+  .iphone-content-title {
+    margin-bottom: 15px;
+    padding-left: 50px;
+    text-align: left;
+  }
+  .adaptivity-media {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .iphone-frame {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .process-content {
+    min-width: 0;
+  }
 }
 
 @media (max-width: 1200px) and (min-width: 993px) {
@@ -457,6 +699,12 @@
   .who-we-list li:last-child {
     margin-left: 160px;
     margin-top: 65px;
+  }
+}
+
+@media (max-width: 1165px) and (min-width: 700px) {
+  .portfolio-style-fonts li:nth-child(even) {
+    margin-left: auto;
   }
 }
 
@@ -775,6 +1023,178 @@
   .btn-white:active::after {
     height: 290px;
   }
+  
+  .portfolio-app .process-media {
+    margin-left: 10%;
+  }
+  .slider-nav .slick-list {
+    padding: 0 2%;
+  }
+  .slick-next {
+    padding: 0;
+    right: -34%;
+  }
+  .slick-prev {
+    min-width: 140px;
+    left: -34%;
+    padding: 0;
+  }
+  
+  .panel-sound {
+    display: none;
+  }
+  
+  .portfolio-info {
+    margin-top: -90px;
+    transform: translateY(-95px);
+  }
+  .portfolio-info-block:not(:first-of-type) {
+    width: 20%;
+  }
+  
+  .portfolio .portfolio-nav {
+    display: none;
+  }
+  
+  .portfolio-info-desc {
+    padding: 40px 7% 20px;
+    background-position: 103% 121%;
+    flex-direction: column;
+  }
+  .portfolio-info-title {
+    margin-bottom: 20px;
+  }
+  .portfolio-info-left {
+    padding-top: 0;
+    border-right-width: 0;
+  }
+  .portfolio-info-text {
+    line-height: 1.2;
+    p:first-of-type {
+      margin-bottom: 12px;
+    }
+  }
+  .portfolio-info-right {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .portfolio-info-right-text {
+    margin-bottom: 25px;
+  }
+  .portfolio-info-block:first-of-type {
+    flex: 0 0 65%;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .portfolio-info-link {
+    width: 100%;
+    padding-top: 25px;
+  }
+  
+  .process {
+    flex-direction: column;
+  }
+  .portfolio-title {
+    margin-bottom: 33px;
+  }
+  .process-content {
+    padding-right: 0;
+  }
+  .process-media {
+    padding-top: 30px;
+    margin: auto;
+  }
+  
+  .portfolio-style-fonts {
+    margin-bottom: 64px;
+    li:not(:last-child) {
+      margin-bottom: 42px;
+    }
+  }
+  
+  .portfolio-style .portfolio-text {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .portfolio-style-colors {
+    padding: 23px 25px 65px;
+    margin-top: 30px;
+    overflow: hidden;
+    justify-content: space-between;
+  }
+  
+  .result-nav {
+    display: none;
+  }
+  .result {
+    padding-top: 49px;
+    padding-bottom: 115px;
+  }
+  
+  .adaptivity {
+    margin-bottom: 150px;
+    .portfolio-head {
+      margin-bottom: 53px;
+    }
+  }
+  .adaptivity-wrap {
+    position: relative;
+  }
+  .iphone-content {
+    margin-bottom: 55px;
+  }
+  .adaptivity-media-img:first-of-type {
+    transform: translate3d(0, 40px, 0);
+  }
+  .adaptivity-media-img {
+    transform: translateX(-26px);
+  }
+  .iphone-frame {
+    height: 709px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    right: 0;
+  }
+  .iphone-frame-block {
+    width: 349px;
+    height: 709px;
+    padding-top: 88px;
+    background-size: 349px 709px;
+  }
+  .iphone-frame-screen {
+    width: 302px;
+    height: 538px;
+    margin: 0 auto;
+  }
+  .adaptivity-media {
+    margin-left: 0;
+  }
+  
+  .portfolio-pagination li {
+    flex: 1 1 auto;
+  }
+  .portfolio-pagination-text span {
+    display: none;
+  }
+  .portfolio-pagination-prev {
+    text-align: left;
+  }
+}
+
+@media (max-height: 899px) {
+  .modal {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .modal-header {
+    margin-bottom: 22%;
+  }
+  .modal-form .form-group {
+    margin-bottom: 20%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -830,6 +1250,14 @@
   
   .iphone-frame {
     display: none;
+  }
+  
+  .slick-prev, .slick-next {
+    display: none !important;
+  }
+  
+  .portfolio-info-desc {
+    background-position: 103% 115%;
   }
 }
 
@@ -1065,6 +1493,205 @@
   .btn-white:active::after {
     height: 380px;
   }
+  
+  .modal {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+  }
+  .modal-close {
+    right: 10px;
+    left: auto;
+    top: 10px;
+  }
+  .modal-header {
+    margin-top: -15px;
+    margin-bottom: 17%;
+  }
+  .modal-title {
+    margin-bottom: 20px;
+    font-size: 28px;
+  }
+  .modal-form {
+    padding: 0;
+  }
+  .modal-form .form-group {
+    margin-bottom: 14%;
+  }
+  .modal-form .btn-white {
+    width: 100%;
+    min-width: 0;
+    margin-top: 20px;
+  }
+  
+  .portfolio-app .process-media {
+    margin-left: 0;
+    padding-top: 27px;
+  }
+  .portfolio-info {
+    margin-top: -180px;
+    transform: translateY(-70px);
+  }
+  .interaction-block {
+    margin: 25px 0 125px;
+    height: 325px;
+    background-color: #3e3f40;
+  }
+  .portfolio-info-desc {
+    background-position: 80% 108%;
+  }
+  
+  .adaptivity-media {
+    width: 100%;
+    margin-right: 0;
+  }
+  .adaptivity-media-img {
+    width: auto;
+    max-width: 49%;
+    margin-left: auto;
+    transform: translateX(0);
+    &:first-of-type {
+      max-width: 49%;
+      width: auto;
+      margin-left: 0;
+      margin-right: auto;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .portfolio-pagination {
+    flex-wrap: wrap;
+    li {
+      &:last-child {
+        text-align: right;
+      }
+      &:nth-child(2) {
+        width: 100%;
+        margin: 65px 0 0;
+        order: 2;
+      }
+    }
+  }
+  .portfolio-pagination-btn .btn-white {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .portfolio-info-title {
+    line-height: 1.2;
+    margin-bottom: 25px;
+    font-size: 32px;
+  }
+  .portfolio-header-logo {
+    width: 277px;
+    padding-top: 130px;
+  }
+  .portfolio-info-desc {
+    padding: 30px 8%;
+  }
+  .portfolio-info-right {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  .portfolio-info-right-text {
+    margin-bottom: 20px;
+  }
+  
+  .portfolio-title {
+    font-size: 42px;
+    margin-bottom: 25px;
+  }
+  .portfolio-title::before {
+    width: 40px;
+    height: 1px;
+    margin-right: 13px;
+  }
+  
+  .process-media {
+    padding-top: 9px;
+    min-width: 0;
+    margin: 0;
+    max-width: none;
+    position: relative;
+    flex: none;
+  }
+  .process-media-img {
+    margin-right: 0;
+  }
+  .process-media-img-2 {
+    position: absolute;
+    right: 0;
+    top: 14px;
+  }
+  
+  .branding {
+    margin-bottom: 109px;
+  }
+  .branding-img {
+    margin-top: 25px;
+    margin-bottom: 38px;
+  }
+  .branding-final-content {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .branding-final-left {
+    margin-top: 27px;
+    flex-direction: column;
+  }
+  .branding-final-img {
+    width: 100%;
+    padding: 45px 80px;
+    text-align: center;
+  }
+  .branding-final-img:first-of-type {
+    margin-right: 0;
+  }
+  
+  .portfolio-head-title {
+    font-size: 42px;
+  }
+  .portfolio-head {
+    margin-bottom: 60px;
+  }
+  
+  .portfolio-style {
+    margin-bottom: 280px;
+  }
+  .portfolio-style-colors {
+    margin-top: 60px;
+    position: relative;
+    overflow: visible;
+    li {
+      &:nth-child(2) {
+        order: 2;
+      }
+      &:last-child {
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        margin-left: -53px;
+      }
+    }
+  }
+  
+  .result {
+    padding-top: 37px;
+  }
+  
+  .main-slider {
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .portfolio-style .portfolio-text::after {
+    width: 28%;
+    height: 47%;
+  }
 }
 
 @media (max-width: 567px) and (min-width: 415px) {
@@ -1159,5 +1786,26 @@
   
   .footer-title {
     font-size: 26px;
+  }
+  
+  .portfolio-title {
+    font-size: 36px;
+    &::before {
+      width: 30px;
+    }
+  }
+  
+  .portfolio-style .portfolio-head-title {
+    font-size: 38px;
+  }
+  
+  .portfolio-style-colors li {
+    width: 94px;
+    height: 94px;
+    flex-basis: 94px;
+    &::before {
+      bottom: -45px;
+      left: 88px;
+    }
   }
 }

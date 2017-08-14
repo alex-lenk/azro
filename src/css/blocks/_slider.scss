@@ -1,0 +1,88 @@
+.slider {
+  margin-bottom: 50px;
+  padding-top: 73px;
+  overflow: hidden;
+}
+
+.main-slider {
+  width: 371px;
+  height: 752px;
+  margin: 0 auto;
+  background: url(../img/iphone-6s.png) no-repeat center top;
+  border-radius: 55px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.45);
+}
+
+.main-slider .slick-list {
+  width: 320px;
+  height: 752px;
+  margin: 0 auto;
+  padding-top: 92px;
+  border-radius: 55px;
+  background-size: 371px 752px;
+}
+
+.main-slider .slick-track {
+  background-color: white;
+}
+
+.main-slider .slider-item {
+  width: 320px;
+  height: 568px;
+  background-position: -100% -100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-slider .slider-item::before {
+  width: 320px;
+  height: 567px;
+  background-image: inherit;
+  margin: 0 auto 50px;
+  content: '';
+}
+
+.slider-nav .slider-item {
+  width: 33px !important;
+  height: 56px;
+  margin: 0 8px;
+  border: 3px solid #252728;
+  background-size: contain;
+  background-repeat: inherit;
+}
+
+.slider-nav .slick-current {
+  border-color: #33ddfb;
+}
+
+.slider-nav .slick-current::before {
+  display: block;
+}
+
+.slider-nav .slick-list {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #141516;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.30);
+  transform: translate3d(0, -90px, 0px);
+}
+
+.slider-nav .slick-track {
+  padding: 30px 0;
+}
+
+.slick-prev, .slick-next {
+  background: none;
+  border: 0;
+  position: absolute;
+  top: 44%;
+}
+
+.slick-prev {
+  left: -258px;
+}
+
+.slick-next {
+  right: -211px;
+}

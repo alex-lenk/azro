@@ -1,0 +1,91 @@
+.modal {
+  width: 521px;
+  height: calc(100vh - 40px);
+  padding: 110px 35px 50px;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  z-index: 97;
+  background: url(../img/bg-modal@2x.png) no-repeat center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translate3d(105%, 0, 0);
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  will-change: transform;
+}
+
+.modal-opened {
+  transform: translate3d(0, 0, 0);
+}
+
+.modal-close {
+  padding: 10px;
+  left: 13px;
+  top: 44px;
+  position: absolute;
+  cursor: pointer;
+  transition: all .3s ease;
+  &:hover {
+    transform: rotate(90deg);
+  }
+  
+  .icon-close {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+  }
+}
+
+.modal-header {
+  margin-bottom: 100px;
+}
+
+.modal-title {
+  margin-bottom: 30px;
+  font-size: 36px;
+  line-height: 1.2;
+  @include CeraGRMedium;
+}
+
+.modal-text {
+  font-size: 18px;
+  line-height: 1.2;
+  @include CeraGRLight;
+}
+
+.modal-form {
+  padding: 0 50px;
+  .hide-placeholder {
+    @include hidePlaceholder {
+      color: #fff;
+      font-size: 16px;
+      @include CeraGRLight;
+    }
+  }
+  .form-group {
+    margin-bottom: 70px;
+    &::after {
+      border-bottom-color: #fff;
+    }
+  }
+  .form-control {
+    border-bottom-color: #fff;
+  }
+  .btn-white {
+    min-width: 280px;
+    height: 60px;
+    line-height: 60px;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+}
+
+.form-group-focus::after {
+  background-color: #fff;
+  height: 2px;
+}
