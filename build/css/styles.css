@@ -2960,6 +2960,133 @@ footer .container {
   height: 860px;
 }
 
+.modal {
+  width: 521px;
+  height: -webkit-calc(100vh - 40px);
+  height: calc(100vh - 40px);
+  padding: 110px 35px 50px;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  z-index: 97;
+  background: url(../img/bg-modal@2x.png) no-repeat center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transform: translate3d(105%, 0, 0);
+  transform: translate3d(105%, 0, 0);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  will-change: transform;
+}
+
+.modal-opened {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.modal-close {
+  padding: 10px;
+  left: 13px;
+  top: 44px;
+  position: absolute;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.modal-close:hover {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.modal-close .icon-close {
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+
+.modal-header {
+  margin-bottom: 100px;
+}
+
+.modal-title {
+  margin-bottom: 30px;
+  font-size: 36px;
+  font-family: 'ceragr-medium', sans-serif;
+}
+
+.modal-text {
+  font-size: 18px;
+  font-family: 'ceragr-light', sans-serif;
+}
+
+.modal-form {
+  padding: 0 50px;
+}
+
+.modal-form .hide-placeholder:-moz-placeholder {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'ceragr-light', sans-serif;
+}
+
+.modal-form .hide-placeholder::-moz-placeholder {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'ceragr-light', sans-serif;
+}
+
+.modal-form .hide-placeholder:-ms-input-placeholder {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'ceragr-light', sans-serif;
+}
+
+.modal-form .hide-placeholder::-webkit-input-placeholder {
+  color: #fff;
+  font-size: 16px;
+  font-family: 'ceragr-light', sans-serif;
+}
+
+.modal-form .form-group {
+  margin-bottom: 70px;
+}
+
+.modal-form .form-group::after {
+  border-bottom-color: #3dc0ee;
+}
+
+.modal-form .form-control {
+  border-bottom-color: #fff;
+}
+
+.modal-form .btn-white {
+  min-width: 280px;
+  height: 60px;
+  line-height: 60px;
+  margin-top: 100px;
+  font-size: 20px;
+}
+
 @media (min-width: 993px) {
   .portfolio-info {
     margin-top: -25px;

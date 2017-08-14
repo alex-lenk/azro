@@ -4,6 +4,10 @@ $(document).ready(function () {
     $('.nav-panel').toggleClass("nav-panel-open");
   });
 
+  $(".hire-us-open,.modal-close").click(function () {
+    $('.modal').toggleClass("modal-opened");
+  });
+
   /**
    *
    * BEGIN focus form-control
