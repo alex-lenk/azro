@@ -46,3 +46,8 @@
   }
 }
 
+.decor-rhombus.active::before {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#232525', endColorstr='#0f5c80', GradientType=1);
+  -webkit-animation: backgroundChange 3s alternate-reverse infinite;
+  animation: backgroundChange 3s alternate-reverse infinite;
+}

@@ -932,6 +932,12 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   padding-top: 90px;
 }
 
+.decor-rhombus.active::before {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#232525', endColorstr='#0f5c80', GradientType=1);
+  -webkit-animation: backgroundChange 3s alternate-reverse infinite;
+  animation: backgroundChange 3s alternate-reverse infinite;
+}
+
 .nav-panel {
   height: 100%;
   width: 521px;
@@ -3031,11 +3037,13 @@ footer .container {
 .modal-title {
   margin-bottom: 30px;
   font-size: 36px;
+  line-height: 1.2;
   font-family: 'ceragr-medium', sans-serif;
 }
 
 .modal-text {
   font-size: 18px;
+  line-height: 1.2;
   font-family: 'ceragr-light', sans-serif;
 }
 
@@ -3072,7 +3080,7 @@ footer .container {
 }
 
 .modal-form .form-group::after {
-  border-bottom-color: #3dc0ee;
+  border-bottom-color: #fff;
 }
 
 .modal-form .form-control {
@@ -3083,8 +3091,32 @@ footer .container {
   min-width: 280px;
   height: 60px;
   line-height: 60px;
-  margin-top: 100px;
+  margin: 0 auto;
   font-size: 20px;
+}
+
+.form-group-focus::after {
+  background-color: #fff;
+  height: 2px;
+}
+
+@media (max-height: 899px) {
+  .modal {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .modal-header {
+    margin-bottom: 22%;
+  }
+  .modal-form .form-group {
+    margin-bottom: 20%;
+  }
+}
+
+@media (min-height: 900px) {
+  .modal-form .btn-white {
+    margin-top: 100px;
+  }
 }
 
 @media (min-width: 993px) {
@@ -3584,6 +3616,34 @@ footer .container {
 }
 
 @media (max-width: 567px) {
+  .modal {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+  }
+  .modal-close {
+    right: 10px;
+    left: auto;
+    top: 10px;
+  }
+  .modal-header {
+    margin-bottom: 15%;
+  }
+  .modal-title {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  .modal-form {
+    padding: 0;
+  }
+  .modal-form .form-group {
+    margin-bottom: 15%;
+  }
+  .modal-form .btn-white {
+    width: 100%;
+    min-width: 0;
+  }
   .portfolio-app .process-media {
     margin-left: 0;
     padding-top: 27px;
