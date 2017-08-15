@@ -415,6 +415,9 @@
     bottom: -65px;
     left: -56px;
   }
+  .block-out ~ .modal-left {
+    left: 55px;
+  }
   .nav-left {
     width: 55px;
   }
@@ -876,6 +879,16 @@
 }
 
 @media (max-width: 992px) {
+  .block-out ~ .modal-left {
+    left: 0;
+  }
+  .modal-left {
+    width: 100%;
+  }
+  .modal-left:not(.modal-left-opened) {
+    -webkit-transform: translate3d(0, 105%, 0);
+    transform: translate3d(0, 105%, 0);
+  }
   .container {
     padding-left: 4.5%;
     padding-right: 4.5%;

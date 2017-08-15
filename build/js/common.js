@@ -1,11 +1,17 @@
 $(document).ready(function () {
 
+  var navPanel = $('.nav-panel');
+
   $(".nav-left_toggle").click(function () {
-    $('.nav-panel').toggleClass("nav-panel-open");
+    navPanel.toggleClass("nav-panel-open");
   });
 
   $(".hire-us-open,.modal-close").click(function () {
-    $('.modal').toggleClass("modal-opened");
+    $('.modal-top').toggleClass("modal-top-opened");
+  });
+
+  $(".hire-us-left-open,.modal-back").click(function () {
+    navPanel.toggleClass("modal-left-opened");
   });
 
   /**

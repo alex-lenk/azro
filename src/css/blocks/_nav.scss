@@ -1,26 +1,21 @@
 .nav-panel {
   height: 100%;
-  width: 521px;
-  padding-bottom: 56px;
+  width: 586px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 95;
   background: url(../img/bg/bg-nav.png) no-repeat center #3dc0ee;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   transform: translate3d(-100%, 0, 0);
   transition: transform 0.4s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   will-change: transform;
-
+  
   .social a:hover svg {
     fill: #181a1b;
   }
-
+  
   .support-block {
     position: relative;
     visibility: hidden;
@@ -32,6 +27,21 @@
       line-height: 58px;
     }
   }
+}
+
+.nav-panel-wrap {
+  height: 100%;
+  padding-bottom: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 1;
+  transition-delay: .5s;
+  transition: transform .6s, opacity .6s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 
 .nav-left_toggle::before {
@@ -47,9 +57,8 @@
 }
 
 .nav-panel-menu {
-  width: 100%;
-  padding-left: 102px;
-  margin-bottom: 0;
+  padding-left: 0;
+  margin: 0 auto;
   list-style: none;
   font-size: 28px;
   text-transform: uppercase;
@@ -86,30 +95,30 @@
   transform: translate3d(0, 0, 0);
   transition: transform 0.8s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
-
+  
   .support-block {
     animation: showSocials .9s ease .3s forwards;
     visibility: visible;
     opacity: 1;
   }
-
+  
   .nav-panel-menu li {
     animation: fadeRight-menu 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) both;
     transition: all 650ms ease-in-out;
   }
-
+  
   .nav-panel-menu li:first-child {
     animation-delay: 650ms;
   }
-
+  
   .nav-panel-menu li:nth-child(2) {
     animation-delay: 800ms;
   }
-
+  
   .nav-panel-menu li:nth-child(3) {
     animation-delay: 950ms;
   }
-
+  
   .nav-panel-menu li:last-child {
     animation-delay: 1050ms;
   }
@@ -161,11 +170,11 @@ $tcon-menu-arrow360left-transformation: (
   outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;
-
+  
   > * {
     display: block;
   }
-
+  
   &:hover,
   &:focus {
     outline: none;
@@ -186,7 +195,7 @@ $tcon-menu-arrow360left-transformation: (
 .tcon-menu__lines {
   @include tcon-menu-lines;
   position: relative;
-
+  
   &::before,
   &::after {
     @include tcon-menu-lines;
@@ -196,15 +205,15 @@ $tcon-menu-arrow360left-transformation: (
     transform-origin: ($tcon-size / 14) center;
     width: 100%;
   }
-
+  
   &::before {
     top: 8px;
   }
-
+  
   &::after {
     top: -8px;
   }
-
+  
   .#{$tcon-jstransform} & {
     transform: scale3d(.8, .8, .8);
   }
@@ -212,7 +221,7 @@ $tcon-menu-arrow360left-transformation: (
 
 .nav-left_toggle {
   width: auto;
-
+  
   .tcon-menu__lines {
     &::before,
     &::after {
@@ -220,22 +229,22 @@ $tcon-menu-arrow360left-transformation: (
       transition: top .3s .6s ease, transform .3s ease;
     }
   }
-
+  
   &.#{$tcon-jstransform} {
     .tcon-menu__lines {
       background: transparent;
-
+      
       &::before,
       &::after {
         top: 0;
         transition: top .3s ease, transform .3s .5s ease;
         width: $tcon-size;
       }
-
+      
       &::before {
         transform: rotate3d(0, 0, 1, 45deg);
       }
-
+      
       &::after {
         transform: rotate3d(0, 0, 1, -45deg);
       }
@@ -252,7 +261,7 @@ $tcon-menu-arrow360left-transformation: (
   padding: 0;
   position: absolute;
   width: 1px;
-
+  
   &:active,
   &:focus {
     clip: auto;

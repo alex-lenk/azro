@@ -109,7 +109,7 @@
 
     <div class="panel-sound">
       <div class="volume-control">
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 77.9 65.7" style="enable-background:new 0 0 77.9 65.7;" xml:space="preserve">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 77.9 65.7" style="enable-background:new 0 0 77.9 65.7;" xml:space="preserve">
             <g class="animation-audio-menu">
                 <rect  data-rect="rect1" y="12.5" class="linecol rect1" width="6" height="41" />
                 <rect  data-rect="rect2" x="12" y="11.5" class="linecol rect2" width="6" height="42"/>
@@ -126,32 +126,70 @@
 </div>
 
 <nav class="nav-panel">
-  <ul class="nav-panel-menu">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about-us.html">About Us</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="contacts.html">Contacts</a></li>
-  </ul>
-
-  <div class="support-block">
-    <ul class="social">
-      <li>
-        <a href="#" rel="nofollow" target="_blank">
-          <svg class="icon-be">
-            <use xlink:href="img/icons.svg#be"></use>
-          </svg>
-        </a>
-      </li>
-      <li>
-        <a href="#" rel="nofollow" target="_blank">
-          <svg class="icon-fb">
-            <use xlink:href="img/icons.svg#fb"></use>
-          </svg>
-        </a>
-      </li>
+  <div class="nav-panel-wrap">
+    <ul class="nav-panel-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contacts.html">Contacts</a></li>
     </ul>
 
-    <a href="#" class="btn btn-white"><span>Hire us</span></a>
+    <div class="support-block">
+      <ul class="social">
+        <li>
+          <a href="#" rel="nofollow" target="_blank">
+            <svg class="icon-be">
+              <use xlink:href="img/icons.svg#be"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" rel="nofollow" target="_blank">
+            <svg class="icon-fb">
+              <use xlink:href="img/icons.svg#fb"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <button class="btn btn-white hire-us-left-open"><span>Hire us</span></button>
+    </div>
+  </div>
+
+  <div class="modal modal-left">
+    <div class="modal-back">
+      <span class="modal-back-text">Back</span>
+      <svg class="arrow">
+        <use xlink:href="img/icons.svg#arrow"></use>
+      </svg>
+    </div>
+
+    <div class="modal-header">
+      <div class="modal-title">Want to work with US?</div>
+
+      <div class="modal-text">
+        This is a non-commercial project that I have designed in my free time. All information appearing in this work is
+        fictitious.
+      </div>
+    </div>
+
+    <div class="modal-body">
+      <form action="#" class="modal-form">
+        <div class="form-group">
+          <input type="email" class="form-control hide-placeholder" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control hide-placeholder" placeholder="Your Name">
+        </div>
+
+        <div class="form-group">
+          <input type="tel" class="form-control hide-placeholder" placeholder="Phone Number">
+        </div>
+
+        <button class="btn btn-white"><span>Send Request</span></button>
+      </form>
+    </div>
   </div>
 </nav>
 
