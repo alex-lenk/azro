@@ -226,11 +226,6 @@ body {
   font-family: 'ceragr-light', sans-serif;
 }
 
-body {
-  -webkit-transition: padding-right 50s ease;
-  transition: padding-right 50s ease;
-}
-
 a, .as-link {
   color: #33ddfb;
   text-decoration: none;
@@ -2666,10 +2661,15 @@ footer .container {
 .result-project {
   height: 775px;
   overflow: hidden;
+  position: relative;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+}
+
+.result-touch {
+  display: none;
 }
 
 .adaptivity {

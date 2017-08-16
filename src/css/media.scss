@@ -790,6 +790,27 @@
 }
 
 @media (max-width: 992px) {
+  .result-touch {
+    padding: 20px 25px 18px 54px;
+    top: 24px;
+    right: 22px;
+    color: #fffefe;
+    font-size: 18px;
+    background-color: rgba(#000, .8);
+    position: absolute;
+    pointer-events: none;
+    display: flex;
+    @include CeraGRRegular;
+    .icon-touch {
+      width: 25px;
+      height: 24px;
+      top: 17px;
+      left: 17px;
+      fill: #00edff;
+      position: absolute;
+    }
+  }
+  
   .block-out ~ .modal-left {
     left: 0;
   }
@@ -1434,6 +1455,17 @@
 }
 
 @media (max-width: 567px) {
+  .result-touch {
+    width: 260px;
+    padding: 15px 18px 10px 55px;
+    top: 16px;
+    right: 50%;
+    margin-right: -130px;
+    .icon-touch {
+      top: 12px;
+    }
+  }
+  
   .title-block {
     margin-bottom: 94px;
     padding-top: 95px;

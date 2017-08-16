@@ -458,7 +458,12 @@
 .result-project {
   height: 775px;
   overflow: hidden;
+  position: relative;
   flex: 1 1 auto;
+}
+
+.result-touch {
+  display: none;
 }
 
 .adaptivity {

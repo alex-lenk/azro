@@ -9,10 +9,6 @@ body {
   @include CeraGRLight;
 }
 
-body {
-  transition: padding-right 50s ease;
-}
-
 a, .as-link {
   color: #33ddfb;
   text-decoration: none;
