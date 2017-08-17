@@ -243,7 +243,7 @@ body:not(.page)::before {
   pointer-events: none;
 }
 
-.page::before {
+.page:not(.portfolio)::before {
   background: url(../img/bg/bg-page@2x.jpg) no-repeat top left;
   background-size: cover;
   width: 100%;
@@ -671,75 +671,6 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   }
 }
 
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 105%, 0);
-    transform: translate3d(0, 105%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 105%, 0);
-    transform: translate3d(0, 105%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-@-webkit-keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
-
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-}
-
 .home-header {
   width: 100%;
   z-index: 55;
@@ -1095,13 +1026,12 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  /*transition-delay: .5s;*/
   opacity: 1;
-  -webkit-transition-delay: .5s;
-  transition-delay: .5s;
-  -webkit-transition: opacity .6s, -webkit-transform .6s;
-  transition: opacity .6s, -webkit-transform .6s;
-  transition: transform .6s, opacity .6s;
-  transition: transform .6s, opacity .6s, -webkit-transform .6s;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
   -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   -webkit-transform: translate3d(0, 0, 0);
@@ -3181,10 +3111,14 @@ footer .container {
   position: absolute;
   left: 0;
   top: 0;
-  /*  opacity: 0;
-    transition-delay: .5s;
-    transition: transform .6s, opacity .6s;
-    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);*/
+  /*  transition-delay: .5s; */
+  opacity: 0;
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   -webkit-transform: translate3d(0, 105%, 0);
   transform: translate3d(0, 105%, 0);
 }
@@ -3239,24 +3173,17 @@ footer .container {
   opacity: 0;
   -webkit-transform: translate3d(0, 105%, 0);
   transform: translate3d(0, 105%, 0);
-  -webkit-animation-duration: 0.6s;
-  animation-duration: 0.6s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
 }
 
 .modal-left-opened .modal-left {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  -webkit-animation-duration: 0.6s;
-  animation-duration: 0.6s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
+  /*
+     animation-duration: 0.6s;
+    opacity: 1;
+     animation-fill-mode: both;
+     animation-name: fadeInUp;*/
 }
 
 .header-out + .modal-top {

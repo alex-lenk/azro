@@ -102,10 +102,10 @@
   position: absolute;
   left: 0;
   top: 0;
-  /*  opacity: 0;
-    transition-delay: .5s;
-    transition: transform .6s, opacity .6s;
-    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);*/
+  /*  transition-delay: .5s; */
+  opacity: 0;
+  transition: transform 1s, opacity 1s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
   transform: translate3d(0, 105%, 0);
 }
 
@@ -154,17 +154,16 @@
   .nav-panel-wrap {
     opacity: 0;
     transform: translate3d(0, 105%, 0);
-    animation-duration: 0.6s;
-    animation-fill-mode: both;
-    animation-name: fadeInDown;
   }
   
   .modal-left {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-    animation-duration: 0.6s;
-    animation-fill-mode: both;
-    animation-name: fadeInUp;
+    /*
+     animation-duration: 0.6s;
+    opacity: 1;
+     animation-fill-mode: both;
+     animation-name: fadeInUp;*/
   }
 }
 

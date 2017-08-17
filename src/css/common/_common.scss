@@ -25,7 +25,7 @@ body {
   }
 }
 
-.page::before {
+.page:not(.portfolio)::before {
   background: url(../img/bg/bg-page@2x.jpg) no-repeat top left;
   background-size: cover;
   width: 100%;
