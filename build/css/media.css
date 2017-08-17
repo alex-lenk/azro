@@ -1615,6 +1615,25 @@
 }
 
 @media (max-width: 567px) {
+  .page:not(.portfolio)::before {
+    background-position: center;
+  }
+  .block-404 {
+    width: auto;
+    text-align: center;
+  }
+  .block-404::before, .block-404::after {
+    left: 0;
+  }
+  .block-404::before {
+    width: 100%;
+  }
+  .title-404 {
+    font-size: 40px;
+  }
+  .text-404 {
+    text-align: center;
+  }
   .result-touch {
     width: 260px;
     padding: 15px 18px 10px 55px;
