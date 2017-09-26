@@ -92,3 +92,44 @@ $color-light-blue: #2592c7;
   position: relative;
   z-index: 5;
 }
+
+.box-result-project {
+  position: relative;
+}
+
+.result-project {
+  display: none;
+  cursor: move;
+}
+
+.result-project.active {
+  display: block;
+}
+
+.result-project.scrolling {
+  overflow: scroll;
+}
+
+.result-touch.active {
+  z-index: 5;
+}
+
+.iScrollVerticalScrollbar {
+  position: absolute;
+  z-index: 9999;
+  width: 4px;
+  bottom: 50px;
+  top: 50px;
+  right: 13px;
+  overflow: hidden;
+  background-color: #141516;
+  
+}
+
+.iScrollIndicator {
+  position: absolute;
+  background: #3dc0ee;
+  width: 100%;
+  cursor: default;
+  
+}

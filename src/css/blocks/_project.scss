@@ -8,11 +8,12 @@
 
 .project {
   color: #fff;
-  .title-block {
-    padding-top: 65px;
-    img {
-      max-height: 98px;
-    }
+}
+
+.home .project .title-block {
+  padding-top: 65px;
+  img {
+    max-height: 98px;
   }
 }
 
@@ -70,6 +71,9 @@
   line-height: 1.2;
   font-weight: normal;
   @include CeraGRMedium;
+  a {
+    color: #fff;
+  }
 }
 
 .project-text {

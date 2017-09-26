@@ -35,8 +35,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  /*transition-delay: .5s;*/
   opacity: 1;
   transition: transform 1s, opacity 1s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
@@ -58,7 +56,7 @@
 
 .nav-panel-menu {
   padding-left: 0;
-  margin: 0 auto;
+  margin-bottom: 0;
   list-style: none;
   font-size: 28px;
   text-transform: uppercase;
@@ -82,8 +80,10 @@
       transition: width 0.3s;
       transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
     }
-    &:hover::before {
-      width: 100%;
+    &:hover, &.active {
+      &::before {
+        width: 100%;
+      }
     }
   }
   a {
@@ -143,7 +143,7 @@
   display: block;
 }
 
-$tcon-size: 25px !default;
+$tcon-size: 32px !default;
 $tcon-transition: .3s !default;
 $tcon-jstransform: 'tcon-transform' !default;
 

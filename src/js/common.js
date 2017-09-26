@@ -38,6 +38,16 @@ $(document).ready(function () {
    *
    */
 
+
+  // BEGIN: Для ошибок форм
+  $(".form-control").change(function () {
+    if ($(this).val().trim().length) {
+      $(this).parent().addClass("field-filled");
+    } else {
+      $(this).parent().removeClass("field-filled");
+    }
+  });
+  //END
 });
 
 

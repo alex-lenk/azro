@@ -1,23 +1,40 @@
+.portfolio .nav-left.mobile {
+  display: none;
+}
+
+.portfolio .nav-left.fixed {
+  display: block;
+}
+
+.portfolio-header {
+  height: 570px;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .portfolio-wrapper {
   overflow: hidden;
 }
 
 .portfolio-nav {
   width: 100%;
-  padding-top: 259px;
+  height: 414px;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
   display: none;
+  position: relative;
 }
 
 .portfolio-nav-next,
 .portfolio-nav-prev {
+  width: 100%;
   height: 55px;
-  margin-bottom: 2px;
+  left: 0;
   background-color: #1b1d1e;
   text-align: center;
-  position: relative;
+  position: absolute;
   cursor: pointer;
   transition: background-color 0.5s ease;
   svg {
@@ -47,6 +64,7 @@
 }
 
 .portfolio-nav-next {
+  bottom: 57px;
   &::before {
     top: 0;
     content: '' attr(data-next) '';
@@ -61,6 +79,7 @@
 }
 
 .portfolio-nav-prev {
+  bottom: 0;
   &::before {
     bottom: 0;
     content: '' attr(data-prev) '';
@@ -124,6 +143,10 @@
 
 .portfolio-info-block:first-of-type {
   margin-bottom: 50px;
+}
+
+.portfolio-info-block:not(:first-of-type) .portfolio-info-right-text {
+    white-space: nowrap;
 }
 
 .portfolio-info-right-title {
@@ -195,21 +218,16 @@
 }
 
 .process-media {
-  min-width: 460px;
-  padding-top: 24px;
-  max-width: 43%;
-  flex: 1 0 50%;
+  padding-top: 13px;
+  max-width: 46%;
+  flex: 1 0 46%;
   display: flex;
 }
 
 .process-media-img {
-  max-width: 64%;
-  margin-right: -70px;
-  margin-top: 23px;
   position: relative;
-  z-index: 5;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-  align-self: flex-start;
+  right: -28px;
+  top: -13px;
 }
 
 .process-media-img-2 {
@@ -427,7 +445,7 @@
     font-size: 18px;
     li {
       padding-left: 49px;
-      &:hover {
+      &:hover, &.active {
         a {
           color: #33ddfb;
         }
@@ -446,6 +464,10 @@
       }
     }
   }
+}
+
+.result-nav .nav-panel-menu li.active::before {
+  width: 100%;
 }
 
 .result-nav-title {
@@ -510,10 +532,9 @@
 }
 
 .iphone-frame-screen {
-  width: 320px;
-  height: 570px;
+  width: 414px;
+  height: 870px;
   margin: 0 auto;
-  border: 2px solid #0c0c0c;
   border-radius: 4px;
 }
 

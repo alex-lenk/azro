@@ -107,15 +107,17 @@
 }
 
 .header-content-text {
-  margin: auto 0;
+  margin-top: auto;
+  margin-bottom: auto;
   font-size: 20px;
   color: #fff;
   line-height: 1.2;
   @include CeraGRLight;
-  img {
-    max-width: 340px;
-    margin-bottom: 30px;
-  }
+}
+
+.header-content-media {
+  max-width: 340px;
+  margin-bottom: 30px;
 }
 
 .logo {

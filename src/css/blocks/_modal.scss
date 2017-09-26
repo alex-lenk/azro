@@ -81,6 +81,11 @@
   .form-control {
     border-bottom-color: #fff;
   }
+  .form-error:not(.field-filled)::after {
+    width: 100%;
+    border-bottom-color: #fa4b4b;
+  }
+  
   .btn-white {
     min-width: 280px;
     height: 60px;
@@ -102,7 +107,6 @@
   position: absolute;
   left: 0;
   top: 0;
-  /*  transition-delay: .5s; */
   opacity: 0;
   transition: transform 1s, opacity 1s;
   transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
@@ -110,44 +114,33 @@
 }
 
 .modal-back {
-  padding-left: 38px;
+  padding-left: 31px;
   left: 90px;
-  top: 52px;
+  top: 56px;
   position: absolute;
   cursor: pointer;
   transition: all .3s ease;
-  .arrow {
+  .arrow-back {
     width: 20px;
     height: 20px;
     fill: #fff;
     position: absolute;
     left: 0;
-    top: 3px;
+    top: 2px;
     transition: all .3s ease;
     transform: rotate(90deg);
     pointer-events: none;
   }
-  &::before {
-    width: 63px;
-    height: 1px;
-    top: 50%;
-    right: -5px;
-    background-color: #fff;
-    position: absolute;
-    content: '';
-    pointer-events: none;
-  }
-  &:hover {
-    .arrow {
-      left: 5%;
-    }
+  &:hover .arrow-back {
+    left: -5%;
   }
 }
 
 .modal-back-text {
   color: #fff;
   font-size: 19px;
-  @include CeraGRLight;
+  text-transform: uppercase;
+  @include CeraGRMedium;
 }
 
 .modal-left-opened {

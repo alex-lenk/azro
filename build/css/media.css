@@ -52,10 +52,10 @@
 
 @media (min-width: 993px) {
   .no-scroll {
-    overflow: hidden;
+    overflow: scroll;
+    overflow-x: hidden;
   }
   .no-scroll body {
-    padding-right: 15px;
     overflow: hidden;
   }
   .no-scroll .nav-left {
@@ -156,8 +156,8 @@
     -webkit-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
   }
-  .nav-panel .support-block {
-    padding-left: 64px;
+  .nav-panel-wrap {
+    padding-left: 160px;
   }
   .nav-left {
     height: 100%;
@@ -242,6 +242,9 @@
   body {
     padding-left: 65px;
   }
+  .page .title-block img {
+    max-height: 83px;
+  }
   .title-block {
     padding-top: 92px;
     margin-bottom: 135px;
@@ -258,6 +261,10 @@
   }
   .header-content-right {
     max-width: 550px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
   }
   .nav-left {
     width: 65px;
@@ -342,6 +349,7 @@
   }
   .header-content-right {
     max-width: 600px;
+    width: 600px;
   }
   .nav-panel-menu li:not(:last-child) {
     margin-bottom: 150px;
@@ -499,6 +507,10 @@
   }
   .adaptivity-media {
     margin-right: 55px;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
   }
   .iphone-content {
     width: 100%;
@@ -512,6 +524,10 @@
   .iphone-frame {
     margin-right: 80px;
     margin-left: 55px;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
   }
   .portfolio-pagination-btn {
     margin: 0 70px;
@@ -689,11 +705,6 @@
   }
   .process-media {
     padding-top: 118px;
-  }
-  .process-media-img {
-    max-width: 69%;
-    margin-right: -22%;
-    margin-top: 21px;
   }
   .process-media-img-2 {
     width: 53%;
@@ -873,12 +884,33 @@
 }
 
 @media (max-width: 992px) and (min-width: 568px) {
+  .header-content-text {
+    min-width: 500px;
+  }
+  .modal-left {
+    width: 100%;
+    max-width: 521px;
+    left: 50%;
+    margin-left: -260px;
+    padding-left: 35px;
+  }
   .our-mission {
     margin-bottom: 130px;
   }
 }
 
 @media (max-width: 992px) {
+  .process-media {
+    max-width: 602px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 100%;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+  }
+  .process-media-img {
+    right: 0;
+    top: 0;
+  }
   .result-touch {
     padding: 20px 25px 18px 54px;
     top: 24px;
@@ -907,10 +939,12 @@
   }
   .modal-left {
     width: 100%;
+    padding-top: 40px;
+    padding-left: 35px;
   }
-  .modal-left:not(.modal-left-opened) {
-    -webkit-transform: translate3d(0, 105%, 0);
-    transform: translate3d(0, 105%, 0);
+  .modal-back {
+    left: 35px;
+    top: 20px;
   }
   .container {
     padding-left: 4.5%;
@@ -921,6 +955,9 @@
     padding-top: 150px;
   }
   .title-block img {
+    max-height: 69px;
+  }
+  .project .title-block img {
     max-height: 69px;
   }
   .contacts-page {
@@ -968,6 +1005,13 @@
   }
   .header-content-text img {
     margin-bottom: 25px;
+  }
+  .header-content-right {
+    margin-right: auto;
+  }
+  .header-content-media {
+    margin-left: auto;
+    margin-right: auto;
   }
   .our-mission .next-layer {
     display: none;
@@ -1060,11 +1104,12 @@
     flex-direction: column;
   }
   .our-mission {
-    padding-top: 110px;
+    padding-top: 115px;
   }
   .title-line-bottom {
     margin: 0 0 67px;
     font-size: 22px;
+    position: relative;
   }
   .our-work {
     padding-left: 0;
@@ -1370,10 +1415,10 @@
 }
 
 @media (max-height: 899px) {
-  .modal {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
+  /*  .modal {
+      padding-top: 0;
+      padding-bottom: 0;
+    }*/
   .modal-header {
     margin-bottom: 22%;
   }
@@ -1383,6 +1428,9 @@
 }
 
 @media (max-width: 768px) {
+  .portfolio-header {
+    height: auto;
+  }
   .container {
     max-width: 768px;
   }
@@ -1606,7 +1654,7 @@
   .title-top-line-text::before {
     margin-bottom: 53px;
   }
-  .title-block img {
+  .title-block img, .project .title-block img {
     max-height: 38px;
   }
   .who-we {
@@ -1615,6 +1663,14 @@
 }
 
 @media (max-width: 567px) {
+  .btn-white {
+    height: 55px;
+    line-height: 55px;
+  }
+  .title-line-bottom {
+    margin-bottom: 60px;
+    font-size: 20px;
+  }
   .page:not(.portfolio)::before {
     background-position: center;
   }
@@ -1658,9 +1714,6 @@
   }
   .logo {
     display: none;
-  }
-  .header-content-text img {
-    max-width: 100%;
   }
   .menu {
     font-size: 16px;
@@ -1950,6 +2003,16 @@
 }
 
 @media (max-width: 414px) {
+  .nav-panel-wrap {
+    padding-bottom: 0;
+  }
+  .modal-header {
+    margin-top: -35px;
+    margin-bottom: 10%;
+  }
+  .modal-form .form-group {
+    margin-bottom: 10%;
+  }
   .contacts-page-list li:nth-child(odd) {
     -webkit-transform: translateX(10px);
     -ms-transform: translateX(10px);
@@ -1979,8 +2042,23 @@
     width: 100%;
   }
   .home-header-inner {
-    padding-top: 20px;
+    height: -webkit-calc(100vh - 75px);
+    height: calc(100vh - 75px);
+    padding-top: 30px;
     padding-bottom: 75px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu {
+    margin-top: auto;
   }
   .logo {
     display: none;
@@ -2001,6 +2079,9 @@
   }
   .contacts-page-list {
     padding: 0 5px;
+  }
+  .header-panel .social {
+    margin-right: 0;
   }
 }
 

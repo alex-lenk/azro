@@ -2,6 +2,9 @@
   margin-bottom: 50px;
   padding-top: 73px;
   overflow: hidden;
+  .slick-arrow {
+    @include CeraGRLight;
+  }
 }
 
 .main-slider {
@@ -28,7 +31,8 @@
 
 .main-slider .slider-item {
   width: 320px;
-  height: 568px;
+  height: 570px;
+  cursor: move;
   background-position: -100% -100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,8 +51,13 @@
   height: 56px;
   margin: 0 8px;
   border: 3px solid #252728;
+  cursor: pointer;
   background-size: contain;
   background-repeat: inherit;
+  transition: all 0.3s ease;
+  &:not(.slick-current):hover {
+    border-color: #ffffff;
+  }
 }
 
 .slider-nav .slick-current {
@@ -59,13 +68,16 @@
   display: block;
 }
 
-.slider-nav .slick-list {
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-  background-color: #141516;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.30);
-  transform: translate3d(0, -90px, 0px);
+.slider-nav {
+  text-align: center;
+  .slick-list {
+    display: inline-block;
+    width: auto;
+    min-width: 414px;
+    background-color: #141516;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.30);
+    transform: translate3d(0, -90px, 0px);
+  }
 }
 
 .slider-nav .slick-track {
