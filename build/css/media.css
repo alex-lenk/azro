@@ -1663,6 +1663,23 @@
 }
 
 @media (max-width: 567px) {
+  .slider-top-wrapper {
+    width: 320px;
+    height: 570px;
+    padding: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+  .slider-thumbs-wrapper {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: -webkit-calc(100% - 40px);
+    width: calc(100% - 40px);
+    margin-top: 0;
+  }
   .btn-white {
     height: 55px;
     line-height: 55px;

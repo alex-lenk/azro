@@ -12,16 +12,16 @@ body {
 body {
   position: relative;
   &:not(.page)::before {
-      background: url(../img/bg/bg-cases@2x.jpg) no-repeat top left;
-      background-size: cover;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      top: 0;
-      position: fixed;
-      will-change: transform;
-      content: '';
-      pointer-events: none;
+    background: url(../img/bg/bg-cases@2x.jpg) no-repeat top left;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    will-change: transform;
+    content: '';
+    pointer-events: none;
   }
 }
 
@@ -304,4 +304,16 @@ button, input, select, textarea {
   z-index: 9;
   transition: all 0.3s ease;
   @include CeraGRMedium;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
 }

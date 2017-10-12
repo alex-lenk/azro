@@ -19,7 +19,7 @@ $color-light-blue: #2592c7;
 @import "blocks/portfolio";
 @import "blocks/loader";
 @import "blocks/modal";
-@import "blocks/slider";
+//@import "blocks/slider";
 
 .no-position {
   position: static;
@@ -131,5 +131,4 @@ $color-light-blue: #2592c7;
   background: #3dc0ee;
   width: 100%;
   cursor: default;
-  
 }

@@ -1499,6 +1499,20 @@
 }
 
 @media (max-width: 567px) {
+  .slider-top-wrapper {
+    width: 320px;
+    height: 570px;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+  }
+  .slider-thumbs-wrapper {
+    box-shadow: none;
+    width: calc(100% - 40px);
+    margin-top: 0;
+  }
+  
   .btn-white {
     height: 55px;
     line-height: 55px;

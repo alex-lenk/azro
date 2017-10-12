@@ -33,8 +33,7 @@
   top: 44px;
   position: absolute;
   cursor: pointer;
-  transition: all .3s ease;
-  &:hover {
+  &:hover .modal-close-wrap {
     transform: rotate(90deg);
   }
   
@@ -43,6 +42,13 @@
     height: 20px;
     fill: #fff;
   }
+}
+
+.modal-close-wrap {
+  width: 21px;
+  height: 21px;
+  overflow: hidden;
+  transition: all .3s ease;
 }
 
 .modal-header {

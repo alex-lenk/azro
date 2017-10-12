@@ -213,40 +213,59 @@
   </div>
 </div>
 
+<!-- Swiper -->
+<!--<div class="slider-top-wrapper">
+  <div class="swiper-container slider-top">
+    <div class="swiper-wrapper">
 
-<div class="slider container">
-  <div class="main-slider">
-    <div class="slider-item" style="background-image:url(img/app/karma/img.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-2.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-3.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-4.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-5.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-6.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-7.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-8.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-9.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-10.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-11.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-12.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-13.jpg)"></div>
-  </div>
-  <div class="slider-nav">
-    <div class="slider-item" style="background-image:url(img/app/karma/img.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-2.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-3.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-4.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-5.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-6.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-7.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-8.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-9.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-10.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-11.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-12.jpg)"></div>
-    <div class="slider-item" style="background-image:url(img/app/karma/img-13.jpg)"></div>
+    </div>
   </div>
 
+  <div class="slick-next portfolio-pagination-next as-link slick-arrow">
+    <span class="portfolio-pagination-text">
+      Next <span>Screen</span>
+    </span>
+  </div>
+
+  <div class="slick-prev portfolio-pagination-prev as-link slick-arrow">
+    <span class="portfolio-pagination-text">
+      Prev. <span>Screen</span>
+    </span>
+  </div>
 </div>
+
+<div class="slider-thumbs-wrapper">
+  <div class="swiper-container slider-thumbs">
+    <div class="swiper-wrapper">
+
+    </div>
+  </div>
+</div>-->
+
+
+<!--<div class="layer-sl">
+  <div id="layerslider">
+    <div class="ls-slide" style="background-image:url(img/app/karma/img.jpg)"></div>
+    <div class="ls-slide" style="background-image:url(img/app/karma/img-2.jpg)"></div>
+    <div class="ls-slide" style="background-image:url(img/app/karma/img-3.jpg)"></div>
+    <div class="ls-slide" style="background-image:url(img/app/karma/img-4.jpg)"></div>
+    <div class="ls-slide" style="background-image:url(img/app/karma/img-5.jpg)"></div>
+    <div class="ls-slide" style="background-image:url(img/app/karma/img-6.jpg)"></div>
+    <div class="ls-slide" style="background-image:url(img/app/karma/img-7.jpg)"></div>
+    <div class="ls-slide" style="background-image:url(img/app/karma/img-8.jpg)"></div>
+    <div class="ls-slide" style="background-image:url(img/app/karma/img-9.jpg)"></div>
+    <div class="ls-slide" style="background-image:url(img/app/karma/img-10.jpg)"></div>
+  </div>
+</div>-->
+
+<script src="js/jquery.js"></script>
+
+<script src="js/fotorama.js"></script>
+
+<script>
+
+</script>
+
 
 <div class="interaction container">
   <div class="portfolio-head">
@@ -277,69 +296,6 @@
 </ul>
 
 <!-- include "temp/footer.html" -->
-
-<script src="js/jquery.js"></script>
-
-<script src="js/lib.js"></script>
-
-<script src="js/common-2.js"></script>
-
-<script src="js/slick.min.js"></script>
-
-<!-- Initialize slick -->
-<script>
-  $('.main-slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: false,
-    asNavFor: '.slider-nav',
-    prevArrow: '<button type="button" data-role="none" class="slick-prev portfolio-pagination-prev as-link" aria-label="Previous" tabindex="0" role="button"><span class="portfolio-pagination-text">Previous <span>Screen</span></span></button>',
-    nextArrow: '<button type="button" data-role="none" class="slick-next portfolio-pagination-next as-link" aria-label="Next" tabindex="0" role="button"><span class="portfolio-pagination-text">Next <span>Screen</span></span></button>'
-  });
-  $('.slider-nav').slick({
-    slidesToScroll: 1,
-    slidesToShow: 20,
-    asNavFor: '.main-slider',
-    dots: false,
-    centerMode: true,
-    focusOnSelect: true,
-    responsive: [
-      {
-        breakpoint: 699,
-        settings: {
-          slidesToShow: 5
-        }
-      },
-      {
-        breakpoint: 599,
-        settings: {
-          slidesToShow: 5
-        }
-      },
-      {
-        breakpoint: 499,
-        settings: {
-          slidesToShow: 5
-        }
-      },
-      {
-        breakpoint: 399,
-        settings: {
-          slidesToShow: 5
-        }
-      },
-      {
-        breakpoint: 320,
-        settings: {
-          slidesToShow: 5
-        }
-      }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
-  });
-</script>
 
 </body>
 </html>
