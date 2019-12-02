@@ -14,7 +14,7 @@ var gulp = require('gulp'),
   newer = require('gulp-newer'),
   rename = require('gulp-rename'),
   svgSprite = require('gulp-svg-sprites'),
-  iconify = require('gulp-iconify'),
+  //iconify = require('gulp-iconify'),
   cheerio = require('gulp-cheerio'),
   replace = require('gulp-replace'),
   create = browserSync.create(),
@@ -85,30 +85,30 @@ gulp.task('webserver', function () {
 gulp.task('clean', function (cb) {
   rimraf(way.clean, cb);
 });
-
-gulp.task('iconify', function () {
-  iconify({
-    src: './src/img/icons/*.svg',
-    scssOutput: './src/css/common',
-    cssOutput: './test/css',
-    defaultWidth: '300px',
-    defaultHeight: '200px',
-    svgoOptions: {
-      enabled: true,
-      options: {
-        plugins: [
-          {removeUnknownsAndDefaults: false},
-          {mergePaths: false}
-        ]
-      }
-    },
-    svg2pngOptions: {
-      scaling: 1.0,
-      verbose: true,
-      concurrency: null
-    }
-  });
-});
+//
+// gulp.task('iconify', function () {
+//   iconify({
+//     src: './src/img/icons/*.svg',
+//     scssOutput: './src/css/common',
+//     cssOutput: './test/css',
+//     defaultWidth: '300px',
+//     defaultHeight: '200px',
+//     svgoOptions: {
+//       enabled: true,
+//       options: {
+//         plugins: [
+//           {removeUnknownsAndDefaults: false},
+//           {mergePaths: false}
+//         ]
+//       }
+//     },
+//     svg2pngOptions: {
+//       scaling: 1.0,
+//       verbose: true,
+//       concurrency: null
+//     }
+//   });
+// });
 
 gulp.task('html:build', function () {
   gulp.src(way.src.html) //Выберем файлы по нужному пути
@@ -155,6 +155,7 @@ gulp.task('fonts:build', function () {
     .pipe(gulp.dest(way.build.fonts))
 });
 
+/*
 gulp.task('build', [
   'html:build',
   'js:build',
@@ -182,3 +183,4 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', ['build', 'webserver', 'watch']);
+*/
